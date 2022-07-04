@@ -4,7 +4,7 @@ import Notice from "../components/main/notice/Notice";
 import Ranking from "../components/main/ranking/Ranking";
 import Rule from "../components/main/rule/Rule";
 import StudyInfo from "../components/main/study-info/StudyInfo";
-import SideBar from "../components/sidebar/sidebar";
+import SideBar from "../components/sidebar/SideBar";
 
 export default function HomePage() {
   return (
