@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { gray100 } from "../../../core/colors";
+
 export default function SideBar() {
   return <SideBarBox />;
 }
