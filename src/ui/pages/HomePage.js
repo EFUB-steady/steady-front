@@ -1,3 +1,23 @@
+import Header from "../components/header/Header";
+import Calendar from "../components/main/calendar/Calendar";
+import Notice from "../components/main/notice/Notice";
+import Ranking from "../components/main/ranking/Ranking";
+import Rule from "../components/main/rule/Rule";
+import StudyInfo from "../components/main/study-info/StudyInfo";
+import SideBar from "../components/sidebar/sidebar";
+
 export default function HomePage() {
-  return <div>Home Page</div>;
+  return (
+    <div style={{ display: "flex" }}>
+      <SideBar />
+      <div style={{ flexDirection: "column" }}>
+        <Header />
+        <StudyInfo />
+        <Calendar />
+        <Ranking />
+        <Rule />
+        <Notice />
+      </div>
+    </div>
+  );
 }
