@@ -16,5 +16,6 @@ const HeaderBox = styled.div`
   display: flex;
   flex-direction: row;
   height: auto;
-  border: 1px solid black;
+  border-bottom: 3px solid black;
+  //margin: 0;
 `;
