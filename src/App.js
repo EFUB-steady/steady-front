@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginPage from "../src/ui/pages/LoginPage";
-import MainPage from "../src/ui/pages/MainPage";
 import JoinPage from "../src/ui/pages/JoinPage";
 import HomePage from "../src/ui/pages/HomePage";
 import MakeNewPage from "../src/ui/pages/MakeNewPage";
@@ -14,7 +13,6 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={routes.MAIN} element={<MainPage />} />
         <Route path={routes.LOGIN} element={<LoginPage />} />
         <Route path={routes.HOME} element={<HomePage />} />
         <Route path={routes.JOIN} element={<JoinPage />} />
