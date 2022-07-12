@@ -1,10 +1,11 @@
 import styled from "styled-components";
-export default function LowerRankItem() {
-  return <Wrapper>하위권 랭커</Wrapper>;
+import { Subtitle5 } from "../../../../core/texts";
+import LowerRankItem from "./LowRankItem";
+export default function LowerRank() {
+  return (
+    <>
+      <LowerRankItem />
+      <LowerRankItem />;
+    </>
+  );
 }
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  background-color: blue;
-`;
