@@ -48,7 +48,7 @@ export default function SideBar() {
 const SideBarBox = styled.div`
   background-color: ${gray100};
   width: 198px;
-  height: 1024px;
+  height: 100vh;
   display: flex;
   /* justify-content: center; */
   flex-direction: column;

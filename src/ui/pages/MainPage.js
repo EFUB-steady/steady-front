@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import Header from "../components/header/Header";
 import Calendar from "../components/main/calendar/Calendar";
 import Notice from "../components/main/notice/Notice";
@@ -8,16 +9,27 @@ import SideBar from "../components/sidebar/SideBar";
 
 export default function MainPage() {
   return (
-    <div style={{ display: "flex" }}>
+    <Wrapper>
       <SideBar />
-      <div style={{ flexDirection: "column" }}>
+      <MainContext>
         <Header />
         <StudyInfo />
         <Calendar />
         <Ranking />
         <Rule />
         <Notice />
-      </div>
-    </div>
+      </MainContext>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+`;
+
+const MainContext = styled.div`
+  flex-direction: column;
+  margin: 58px 90px;
+`;
