@@ -4,7 +4,7 @@ import { gray300 } from "../../../core/colors";
 import { Subtitle4, Title5 } from "../../../core/texts";
 import homewhite from "../../../assets/btn_home_default.png";
 
-export default function SideBarStudyBox({ study }) {
+export default function SideBarStudy({ study }) {
   return (
     <Wrapper>
       <ImageContainer>

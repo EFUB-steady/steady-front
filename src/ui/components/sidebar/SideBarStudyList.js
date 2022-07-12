@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { gray300 } from "../../../core/colors";
-import SideBarStudyBox from "./SideBarStudy2";
+import SideBarStudyItem from "./SideBarStudyItem";
 
 const STUDY_DATA = [
   {
@@ -21,11 +21,11 @@ const STUDY_DATA = [
   },
 ];
 
-export default function SideBarStudy() {
+export default function SideBarStudyList() {
   return (
     <>
       {STUDY_DATA.map((study) => (
-        <SideBarStudyBox key={study.id} study={study} />
+        <SideBarStudyItem key={study.id} study={study} />
       ))}
     </>
   );

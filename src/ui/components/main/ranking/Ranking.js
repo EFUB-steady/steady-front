@@ -1,7 +1,5 @@
-import LowerRankItem from "./LowerRank";
-import UpperRankItem from "./UpperRank";
 import styled from "styled-components";
-import RankItemBox from "./RankItemBox";
+import RankingList from "./RankingList";
 import { Subtitle1 } from "../../../../core/texts";
 
 export default function Ranking() {
@@ -12,9 +10,7 @@ export default function Ranking() {
         <Subtitle1>0월 0주차 랭킹</Subtitle1>
       </RankTitle>
 
-      <RankItemBox />
-      {/* 
-      <LowerRankItem /> */}
+      <RankingList />
     </Wrapper>
   );
 }

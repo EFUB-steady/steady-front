@@ -4,7 +4,7 @@ import { Body2, Subtitle2 } from "../../../core/texts";
 import logo from "../../../assets/logo_vertical.png";
 import coin from "../../../assets/icon_coin.png";
 import MoreStudy from "./MoreStudyBtn";
-import SideBarStudy from "./SideBarStudy";
+import SideBarStudyList from "./SideBarStudyList";
 
 export default function SideBar() {
   return (
@@ -13,7 +13,7 @@ export default function SideBar() {
       <div style={{ marginTop: "40px", marginBottom: "25px" }}>
         <Subtitle2>MY STUDY</Subtitle2>
       </div>
-      <SideBarStudy />
+      <SideBarStudyList />
       <Bar />
       <div
         style={{
