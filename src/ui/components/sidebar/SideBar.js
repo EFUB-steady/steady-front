@@ -3,15 +3,17 @@ import { BLACK100, gray100 } from "../../../core/colors";
 import { Body2, Subtitle2 } from "../../../core/texts";
 import logo from "./SideBarLogo.png";
 import coin from "./icon_coin.png";
-import MoreStudy from "./MoreStudy";
+import MoreStudy from "./MoreStudyBtn";
+import SideBarStudy from "./SideBarStudy";
 
 export default function SideBar() {
   return (
     <SideBarBox>
       <Logo src={logo} />
-      <div style={{ marginTop: "40px" }}>
+      <div style={{ marginTop: "40px", marginBottom: "25px" }}>
         <Subtitle2>MY STUDY</Subtitle2>
       </div>
+      <SideBarStudy />
       <Bar />
       <div
         style={{
@@ -38,7 +40,7 @@ export default function SideBar() {
           <Subtitle2>원</Subtitle2>
         </span>
       </div>
-      <MoreStudy/>
+      <MoreStudy />
     </SideBarBox>
   );
 }
@@ -71,4 +73,3 @@ const Coin = styled.img`
   width: 15px;
   height: 18px;
 `;
-
