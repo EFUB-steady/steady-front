@@ -26,6 +26,7 @@ const Content = styled.div`
   background: #f5f5f5;
   border: 3px solid #000000;
   border-radius: 5px;
+  line-height: 36px;
 
   /*텍스트 패딩*/
   padding-top: 15.29px;
