@@ -7,8 +7,10 @@ import IndexMyPage from "./../buttons/common/IndexMyPage";
 export default function Header() {
   return (
     <HeaderBox>
-      <IndexMainPage />
-      <IndexMyPage />
+      <div>
+        <IndexMainPage />
+        <IndexMyPage />
+      </div>
       <LogoutBtn />
     </HeaderBox>
   );
@@ -16,8 +18,8 @@ export default function Header() {
 
 const HeaderBox = styled.div`
   display: flex;
-  flex-direction: justify content;
   height: auto;
+  justify-content: space-between;
   border-bottom: 3px solid black;
   margin-top: 64px;
   //margin: 0;

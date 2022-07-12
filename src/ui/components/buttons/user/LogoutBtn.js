@@ -16,7 +16,6 @@ const Button = styled.button`
   font-weight: 700;
   font-size: 14px;
 
-  margin-left: 479px;
   &:hover {
     background: black;
     color: white;
