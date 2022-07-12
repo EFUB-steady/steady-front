@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BLACK100, gray100 } from "../../../core/colors";
+import { gray100 } from "../../../core/colors";
 import { Body2, Subtitle2 } from "../../../core/texts";
 import logo from "./SideBarLogo.png";
 import coin from "./icon_coin.png";
@@ -68,7 +68,7 @@ const Bar = styled.div`
   height: 3px;
   border-radius: 5px;
   margin-top: 23px;
-  background-color: ${BLACK100};
+  background-color: black;
 `;
 
 const Coin = styled.img`

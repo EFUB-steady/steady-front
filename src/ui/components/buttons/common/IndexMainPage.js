@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TEXTBOX, BLACK100 } from "../../../../core/colors";
+import { textboxColor } from "../../../../core/colors";
 
 export default function IndexMainPage() {
   return <Button>MAIN PAGE</Button>;
@@ -7,8 +7,8 @@ export default function IndexMainPage() {
 
 const Button = styled.button`
   /*박스*/
-  background-color: ${TEXTBOX};
-  color: ${BLACK100};
+  background-color: ${textboxColor};
+  color: black;
   height: 48px;
   margin-right: 5px;
   width: 200px;
@@ -16,7 +16,7 @@ const Button = styled.button`
   /*테두리*/
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  border: 3px solid ${BLACK100};
+  border: 3px solid black;
   border-bottom: none;
 
   /*텍스트*/

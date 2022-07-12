@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { BLACK100 } from "../../../core/colors";
 
 export default function MoreStudy() {
   return (
@@ -14,7 +13,7 @@ export default function MoreStudy() {
 const MoreBtn = styled.div`
   width: 152px;
   height: 48px;
-  background-color: ${BLACK100};
+  background-color: black;
   border-radius: 5px;
 `;
 

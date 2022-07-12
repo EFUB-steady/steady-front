@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PINK500 } from "../../../../core/colors";
+import { pink500 } from "../../../../core/colors";
 import { Subtitle1 } from "../../../../core/texts";
 export default function UpperRankItem() {
   return (
@@ -24,7 +24,7 @@ const Wrapper = styled.div`
 const Rank = styled.div``;
 
 const UserColor = styled.div`
-  background-color: ${PINK500};
+  background-color: ${pink500};
   width: 20px;
   height: 20px;
   border-radius: 50%;
