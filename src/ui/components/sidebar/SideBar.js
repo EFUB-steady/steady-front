@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { gray100 } from "../../../core/colors";
 import { Body2, Subtitle2 } from "../../../core/texts";
-import logo from "./SideBarLogo.png";
-import coin from "./icon_coin.png";
+import logo from "../../../assets/logo_vertical.png";
+import coin from "../../../assets/icon_coin.png";
 import MoreStudy from "./MoreStudyBtn";
 import SideBarStudy from "./SideBarStudy";
 
