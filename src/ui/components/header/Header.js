@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import HeaderItem from "./HeaderItem";
-import LogoutBtn from "../buttons/LogoutBtn";
+import LogoutBtn from "../buttons/user/LogoutBtn";
 
 export default function Header() {
   return (
