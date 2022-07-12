@@ -1,12 +1,15 @@
 import styled from "styled-components";
-import HeaderItem from "./HeaderItem";
-import LogoutBtn from "../buttons/LogoutBtn";
+import LogoutBtn from "./../buttons/user/LogoutBtn";
+import IndexMainPage from "../buttons/common/IndexMainPage";
+import IndexMyPage from "./../buttons/common/IndexMyPage";
 
 export default function Header() {
   return (
     <HeaderBox>
-      <HeaderItem>Main Page</HeaderItem>
-      <HeaderItem>My Page</HeaderItem>
+      <div>
+        <IndexMainPage />
+        <IndexMyPage />
+      </div>
       <LogoutBtn />
     </HeaderBox>
   );
@@ -14,7 +17,9 @@ export default function Header() {
 
 const HeaderBox = styled.div`
   display: flex;
-  flex-direction: row;
   height: auto;
-  border: 1px solid black;
+  justify-content: space-between;
+  border-bottom: 3px solid black;
+  margin-top: 64px;
+  //margin: 0;
 `;

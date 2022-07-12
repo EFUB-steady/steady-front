@@ -5,3 +5,7 @@
     "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
     "Malgun Gothic", sans-serif;
 }
+@font-face {
+  font-family: "Bauhaus93";
+  src: url("../src/core/font/BAUHS93.ttf") format("truetype");
+}
