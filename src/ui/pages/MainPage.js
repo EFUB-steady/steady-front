@@ -32,4 +32,5 @@ const Wrapper = styled.div`
 const MainContext = styled.div`
   flex-direction: column;
   margin: 58px 90px;
+  padding-left: 198px;
 `;

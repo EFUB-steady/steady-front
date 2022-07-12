@@ -47,10 +47,12 @@ export default function SideBar() {
 
 const SideBarBox = styled.div`
   background-color: ${gray100};
+  position: fixed;
   width: 198px;
-  height: 100vh;
+  left: 0;
+  top: 0;
+  bottom: 0;
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
   align-items: center;
 `;
