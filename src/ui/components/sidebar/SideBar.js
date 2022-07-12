@@ -3,7 +3,7 @@ import { gray100 } from "../../../core/colors";
 import { Body2, Subtitle2 } from "../../../core/texts";
 import logo from "../../../assets/logo_vertical.png";
 import coin from "../../../assets/icon_coin.png";
-import MoreStudy from "./MoreStudyBtn";
+import MakeNewStudyBtn from "../buttons/study/MakeNewStudyBtn";
 import SideBarStudyList from "./SideBarStudyList";
 
 export default function SideBar() {
@@ -40,7 +40,7 @@ export default function SideBar() {
           <Subtitle2>원</Subtitle2>
         </span>
       </div>
-      <MoreStudy />
+      <MakeNewStudyBtn />
     </SideBarBox>
   );
 }

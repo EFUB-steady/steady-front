@@ -1,23 +1,22 @@
 import styled from "styled-components";
 
-export default function MoreStudy() {
+export default function MakeNewStudyBtn() {
   return (
-    <div style={{ marginTop: "58.58px" }}>
-      <MoreBtn>
-        <MoreStudyBtn>스터디 개설하기</MoreStudyBtn>
-      </MoreBtn>
-    </div>
+    <Button>
+      <Text>스터디 개설하기</Text>
+    </Button>
   );
 }
 
-const MoreBtn = styled.div`
+const Button = styled.div`
   width: 152px;
   height: 48px;
   background-color: black;
   border-radius: 5px;
+  margin-top: 58px;
 `;
 
-const MoreStudyBtn = styled.div`
+const Text = styled.div`
   display: flex;
   height: 100%;
   font-weight: 700;
