@@ -13,4 +13,8 @@ export default function StudyInfoTitle() {
   );
 }
 
-const InfoTitleBox = styled.div``;
+const InfoTitleBox = styled.div`
+  border-bottom: 3px solid black;
+  padding-bottom: 13px;
+  padding-top: 78.2px;
+`;

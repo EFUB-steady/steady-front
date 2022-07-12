@@ -16,8 +16,9 @@ export default function Header() {
 
 const HeaderBox = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: justify content;
   height: auto;
   border-bottom: 3px solid black;
+  margin-top: 64px;
   //margin: 0;
 `;
