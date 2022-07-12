@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export default function LogoutBtn() {
-  return <Logout>LOGOUT</Logout>;
+  return <Button>LOGOUT</Button>;
 }
 
-const Logout = styled.div`
+const Button = styled.button`
   width: 108px;
   height: 40px;
   border-radius: 5px;
