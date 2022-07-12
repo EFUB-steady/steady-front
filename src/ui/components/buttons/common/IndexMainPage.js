@@ -21,7 +21,7 @@ const Button = styled.button`
 
   /*텍스트*/
   text-align: center;
-  font-family: "Bauhaus 93";
+  font-family: "Bauhaus93";
   font-style: normal;
   font-weight: 400;
   font-size: 21px;

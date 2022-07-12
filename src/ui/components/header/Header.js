@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import HeaderItem from "./HeaderItem";
 import LogoutBtn from "./../buttons/user/LogoutBtn";
 import IndexMainPage from "../buttons/common/IndexMainPage";
 import IndexMyPage from "./../buttons/common/IndexMyPage";
