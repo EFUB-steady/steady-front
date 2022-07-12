@@ -6,6 +6,7 @@ import Rule from "../components/main/rule/Rule";
 import StudyInfo from "../components/main/study-info/StudyInfo";
 import SideBar from "../components/sidebar/SideBar";
 
+//TODO: HomePage -> MainPage 파일 이름 및 컴포넌트 이름 변경
 export default function HomePage() {
   return (
     <div style={{ display: "flex" }}>
