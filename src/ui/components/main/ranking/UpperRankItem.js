@@ -1,36 +1,48 @@
 import styled from "styled-components";
-import { pink500 } from "../../../../core/colors";
 import { Subtitle1 } from "../../../../core/texts";
-export default function UpperRankItem() {
+
+export default function UpperRankItem({ rank }) {
   return (
     <Wrapper>
-      <Rank>● 1위</Rank>
+      <Rank>
+        <Subtitle1>● {rank.rank}위</Subtitle1>
+      </Rank>
       <User>
-        <UserColor />
-        <Subtitle1> xxxxxx</Subtitle1>
+        <UserColor color={rank.color} />
+        <Subtitle1>{rank.name}</Subtitle1>
       </User>
-      <Score>0000000점</Score>
+      <Score>{rank.score}점</Score>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.div`
   display: flex;
-  padding: 20px 0;
-  border: 3px solid black;
+  height: 65px;
   justify-content: space-around;
+  align-items: center;
 `;
 
-const Rank = styled.div``;
+const Rank = styled.div`
+  width: 20%;
+`;
+
+const User = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 23%;
+`;
 
 const UserColor = styled.div`
-  background-color: ${pink500};
+  background-color: ${(props) => props.color};
   width: 20px;
   height: 20px;
   border-radius: 50%;
   border: 1px solid black;
 `;
-const User = styled.div`
+
+const Score = styled.div`
   display: flex;
+  justify-content: end;
+  width: 20%;
 `;
-const Score = styled.div``;
