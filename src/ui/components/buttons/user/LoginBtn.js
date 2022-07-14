@@ -10,4 +10,5 @@ const Button = styled.button`
   background: black;
   border-radius: 5px;
   color: white;
+  margin: 4px;
 `;

@@ -1,3 +1,19 @@
+import styled from "styled-components";
+import Login from "../components/login/Login";
+import ExplanationPic from "../components/login/ExplanationPic";
+
 export default function LoginPage() {
-  return <div>Login Page</div>;
+  return (
+    <div>
+      <LoginAndPic>
+        <Login />
+
+        <ExplanationPic />
+      </LoginAndPic>
+    </div>
+  );
 }
+
+const LoginAndPic = styled.div`
+  display: inline-flex;
+`;
