@@ -1,33 +1,12 @@
-import styled from "styled-components";
-import { Subtitle1 } from "../../../../core/texts";
 import noticeicon from "../../../../assets/icon_megaphone.png";
 import NoticeList from "./NoticeList";
-
+import MainSubTitle from "../MainSubTitle";
 
 export default function Notice() {
   return (
     <>
-    <Wrapper>
-      <NoticeIcon src={noticeicon} />
-      <Subtitle1>공지사항</Subtitle1>
-      </Wrapper>
-      <NoticeBox>
+      <MainSubTitle iconSrc={noticeicon} title={"공지사항"} />
       <NoticeList />
-      </NoticeBox>
-      </>
+    </>
   );
 }
-
-const Wrapper = styled.div`
-  display: flex;
-`;
-
-const NoticeIcon = styled.img`
-  height: 20px;
-  width: 20px;
-  margin-right: 10px;
-`;
-
-const NoticeBox = styled.div`
-margin-top: 16px;
-`
