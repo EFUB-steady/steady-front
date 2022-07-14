@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginPage from "../src/ui/pages/LoginPage";
 import JoinPage from "../src/ui/pages/JoinPage";
-import HomePage from "../src/ui/pages/HomePage";
+import MainPage from "../src/ui/pages/MainPage";
 import MakeNewPage from "../src/ui/pages/MakeNewPage";
 import MyPagePage from "../src/ui/pages/MyPagePage";
 import FindIdPage from "../src/ui/pages/FindIdPage";
@@ -14,7 +14,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path={routes.LOGIN} element={<LoginPage />} />
-        <Route path={routes.HOME} element={<HomePage />} />
+        <Route path={routes.MAIN} element={<MainPage />} />
         <Route path={routes.JOIN} element={<JoinPage />} />
         <Route path={routes.MAKENEW} element={<MakeNewPage />} />
         <Route path={routes.MYPAGE} element={<MyPagePage />} />

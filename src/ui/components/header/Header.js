@@ -21,6 +21,4 @@ const HeaderBox = styled.div`
   height: auto;
   justify-content: space-between;
   border-bottom: 3px solid black;
-  margin-top: 64px;
-  //margin: 0;
 `;

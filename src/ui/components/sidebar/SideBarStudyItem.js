@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { gray300 } from "../../../core/colors";
 import { Subtitle4, Title5 } from "../../../core/texts";
-import homewhite from "./btn_home_default.png";
+import homewhite from "../../../assets/btn_home_default.png";
 
-export default function SideBarStudyBox({ study }) {
+export default function SideBarStudy({ study }) {
   return (
     <Wrapper>
       <ImageContainer>
@@ -42,7 +42,7 @@ const StudyContainer = styled.div`
 
 const Homeimage = styled.img`
   width: 20px;
-  height: 23px;
+  height: 19px;
   justify-content: center;
   align-items: center;
   display: flex;

@@ -1,48 +1,31 @@
 import styled from "styled-components";
 import { Subtitle5 } from "../../../../core/texts";
 
-export default function LowerRankItem() {
+export default function LowerRankItem({ rank }) {
   return (
     <Wrapper>
-      <Middle>
-        <MiddleRank>
-          <Subtitle5>ㆍ 4위</Subtitle5>
-        </MiddleRank>
-        <MiddleUser>
-          <Subtitle5>xxxxxx</Subtitle5>
-        </MiddleUser>
-      </Middle>
-      <Middle>
-        <MiddleRank>
-          <Subtitle5>ㆍ 4위</Subtitle5>
-        </MiddleRank>
-        <MiddleUser>
-          <Subtitle5>xxxxxx</Subtitle5>
-        </MiddleUser>
-      </Middle>
-      <Middle>
-        <MiddleRank>
-          <Subtitle5>ㆍ 4위</Subtitle5>
-        </MiddleRank>
-        <MiddleUser>
-          <Subtitle5>xxxxxx</Subtitle5>
-        </MiddleUser>
-      </Middle>
+      <Rank>
+        <Subtitle5> ㆍ {rank.rank}위</Subtitle5>
+      </Rank>
+      <User>
+        <Subtitle5>{rank.name}</Subtitle5>
+      </User>
     </Wrapper>
   );
 }
 const Wrapper = styled.div`
   display: flex;
-  width: 30%;
-  flex-direction: column;
-`;
-
-const Middle = styled.div`
-  display: flex;
+  height: 65px;
   justify-content: space-around;
-  border: 3px solid black;
-  padding: 22px 0;
+  align-items: center;
 `;
 
-const MiddleRank = styled.div``;
-const MiddleUser = styled.div``;
+const Rank = styled.div`
+  width: 20%;
+`;
+
+const User = styled.div`
+  display: flex;
+  justify-content: end;
+  width: 30%;
+`;

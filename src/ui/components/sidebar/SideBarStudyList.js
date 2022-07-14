@@ -1,9 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { gray300 } from "../../../core/colors";
-import homeblack from "./btn_home_click.png";
-import homewhite from "./btn_home_default.png";
-import SideBarStudyBox from "./SideBarStudy2";
+import SideBarStudyItem from "./SideBarStudyItem";
 
 const STUDY_DATA = [
   {
@@ -23,11 +21,11 @@ const STUDY_DATA = [
   },
 ];
 
-export default function SideBarStudy() {
+export default function SideBarStudyList() {
   return (
     <>
       {STUDY_DATA.map((study) => (
-        <SideBarStudyBox key={study.id} study={study} />
+        <SideBarStudyItem key={study.id} study={study} />
       ))}
     </>
   );
@@ -39,12 +37,4 @@ const Wrapper = styled.button`
   border-radius: 5px;
   margin-top: 4px;
   margin-bottom: 4px;
-`;
-const Homeimage1 = styled.img`
-  width: 23px;
-  height: 20px;
-`;
-const Homeimage2 = styled.img`
-  width: 20px;
-  height: 19.09px;
 `;
