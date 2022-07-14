@@ -30,11 +30,3 @@ export default function SideBarStudyList() {
     </>
   );
 }
-
-const Wrapper = styled.button`
-  background-color: ${gray300};
-  border: 3px solid #000000;
-  border-radius: 5px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-`;
