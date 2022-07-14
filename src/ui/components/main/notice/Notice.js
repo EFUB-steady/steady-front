@@ -1,7 +1,7 @@
-import NoticeItem from "./NoticeItem";
 import styled from "styled-components";
 import { Subtitle1 } from "../../../../core/texts";
 import noticeicon from "../../../../assets/icon_megaphone.png";
+import NoticeList from "./NoticeList";
 
 
 export default function Notice() {
@@ -12,7 +12,7 @@ export default function Notice() {
       <Subtitle1>공지사항</Subtitle1>
       </Wrapper>
       <NoticeBox>
-      <NoticeItem />
+      <NoticeList />
       </NoticeBox>
       </>
   );
