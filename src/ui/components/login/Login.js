@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import LoginBtn from "./../buttons/user/LoginBtn";
-import InputArea from "./InputArea";
+import TextField from "@mui/material/TextField";
 import logo from "../../../assets/logo_horizontal.png";
 
 export default function Login() {
@@ -9,8 +9,8 @@ export default function Login() {
       <LogoImg src={logo} />
       <IdPwBox>
         <div>
-          <InputArea>이메일 아이디</InputArea>
-          <InputArea>비밀번호</InputArea>
+          <TextField sx={{ mb: 6 }} label="이메일 아이디" />
+          <TextField margin="20px" label="비밀번호" />
         </div>
         <LoginBtn />
       </IdPwBox>
