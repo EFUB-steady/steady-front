@@ -16,7 +16,7 @@ const Input = styled.div`
   height: 42px;
   background: #eeeeee;
   border-radius: 5px;
-  margin: 4px;
+  margin-bottom: 8px;
   /*글씨*/
   color: ${hintColor};
   font-family: "Pretendard";
