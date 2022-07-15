@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 /*Title*/
 
@@ -15,14 +15,14 @@ export const Title2 = styled.div`
   line-height: 100%;
 `;
 
-export const Title3 = styled.div `
+export const Title3 = styled.div`
   font-weight: 700;
   font-size: 18px;
   line-height: 100%;
 `;
 
 export const Title5 = styled.div`
-font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-weight: 700;
   font-size: 10px;
   line-height: 160%;
@@ -99,5 +99,16 @@ export const Button = styled.button`
 export const CalDay = styled.div`
   font-weight: 500;
   font-size: 12px;
+  line-height: 100%;
+`;
+
+/*로그인 안내 글씨*/
+export const LoginHelpText = styled.div`
+  margin: 20px;
+  display: inline-flex;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
   line-height: 100%;
 `;
