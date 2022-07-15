@@ -14,16 +14,28 @@ export default function ExplanationPic() {
       <Title3>내가 속한 스터디를 쉽게 관리해 보세요!</Title3>
       <PicTextBox>
         <LinkPic src={link} />
-        <p>초대를 통한 신뢰감 있는 스터디</p>
+
+        <ExplainPic>
+          초대를 통한 <br />
+          신뢰감 있는 스터디
+        </ExplainPic>
       </PicTextBox>
       <PicTextBox>
-        <p>벌금 정산을 간편하게,</p>
+        <ExplainPic>
+          벌금정산을 <br />
+          간편하게,
+        </ExplainPic>
         <CoinPic src={coin} />
       </PicTextBox>
 
       <PicTextBox>
         <ChartPic src={chart} />
         <CalenderPic src={calender} />
+        <ExplainPic>
+          <div style={{ textAlign: "right" }}>
+            순위 경쟁을 통해 <br /> 스터디 캘린더를 나의 컬러로
+          </div>
+        </ExplainPic>
       </PicTextBox>
     </div>
   );
@@ -32,6 +44,7 @@ export default function ExplanationPic() {
 const Logo = styled.img`
   width: 329px;
   height: 64px;
+  padding-bottom: 8px;
 `;
 const LinkPic = styled.img`
   width: 196.23px;
@@ -63,4 +76,25 @@ const CalenderPic = styled.img`
 `;
 const PicTextBox = styled.div`
   display: flex;
+  justify-content: space-around;
+`;
+
+/*로그인 페이지 설명 글씨*/
+export const ExplainPic = styled.div`
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 100%;
+  white-space: normal;
+  line-height: 40px;
+`;
+
+export const ExplainPicBold = styled.div`
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  white-space: normal;
 `;

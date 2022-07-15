@@ -15,5 +15,8 @@ export default function LoginPage() {
 }
 
 const LoginAndPic = styled.div`
-  display: inline-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px;
 `;
