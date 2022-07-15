@@ -5,18 +5,26 @@ import ExplanationPic from "../components/login/ExplanationPic";
 export default function LoginPage() {
   return (
     <div>
-      <LoginAndPic>
-        <Login />
-
-        <ExplanationPic />
-      </LoginAndPic>
+      <Wrapper>
+        <LeftContent>
+          <Login />
+        </LeftContent>
+        <RightContent>
+          <ExplanationPic />
+        </RightContent>
+      </Wrapper>
     </div>
   );
 }
 
-const LoginAndPic = styled.div`
+const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 100px;
+
+  width: 200vw;
+  height: 100vh;
+`;
+const LeftContent = styled.div``;
+
+const RightContent = styled.div`
+  flex-direction: column;
 `;
