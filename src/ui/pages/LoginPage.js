@@ -23,7 +23,6 @@ const Wrapper = styled.div`
   height: 100vh;
   margin: 40px 90px;
   padding-left: 0px;
-  background-color: gray;
 `;
 const LeftContent = styled.div`
   margin: 300px;
