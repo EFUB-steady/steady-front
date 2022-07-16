@@ -20,11 +20,12 @@ export default function LoginPage() {
 const Wrapper = styled.div`
   display: flex;
   width: 90vw;
-  height: 100vh;
-  margin: 40px 90px;
-  padding-left: 0px;
+  margin: 0px 90px;
+  padding: 10px;
 `;
 const LeftContent = styled.div`
+  width: 50;
+  height: 50;
   margin: 300px;
   padding-left: 0px;
 `;
