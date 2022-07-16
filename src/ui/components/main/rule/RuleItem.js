@@ -1,22 +1,21 @@
 import styled from "styled-components";
 import { gray100 } from "../../../../core/colors";
-import { Subtitle2 } from "../../../../core/texts";
+import Account from "./Account";
 import RuleAuthDay from "./RuleAuthDay";
-import RuleAuthTime from "./RuleAuthTime";
-import RuleMoney from "./RuleMoney";
+import PaneltyMoney from "./PaneltyMoney";
 
 export default function RuleItem() {
   return (
     <Wrapper>
-      <RuleAuthBox>
-        <Subtitle2>지정 인증일</Subtitle2>
+      <RuleAuthWrapper>
         <RuleAuthDay />
-        <RuleAuthTime />
-      </RuleAuthBox>
-      <RuleMoneyBox>
-        <Subtitle2>결석 시</Subtitle2>
-        <RuleMoney />
-      </RuleMoneyBox>
+        <Account />
+      </RuleAuthWrapper>
+      <RuleMoneyWrapper>
+        <PaneltyMoney title="지각 시" money={1000} />
+        <div style={{ height: 30 }} />
+        <PaneltyMoney title="결석 시" money={2000} />
+      </RuleMoneyWrapper>
     </Wrapper>
   );
 }
@@ -24,25 +23,24 @@ export default function RuleItem() {
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  height: auto;
   background-color: ${gray100};
   border: 3px solid black;
   border-radius: 5px;
 `;
 
-const RuleAuthBox = styled.div`
+const RuleAuthWrapper = styled.div`
   display: flex;
-  padding: 40px;
-  width: 74%;
+  flex-direction: column;
+  width: 70%;
   border-right: 3px solid black;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  padding: 30px;
 `;
 
-const RuleMoneyBox = styled.div`
+const RuleMoneyWrapper = styled.div`
   display: flex;
-  padding: 40px;
-  width: 26%;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  justify-content: center;
+  padding: 30px;
 `;
