@@ -16,16 +16,18 @@ export default function LowerRankItem({ rank }) {
 const Wrapper = styled.div`
   display: flex;
   height: 65px;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 `;
 
 const Rank = styled.div`
-  width: 20%;
+  display: flex;
+  width: 50%;
+  justify-content: center;
 `;
 
 const User = styled.div`
   display: flex;
-  justify-content: end;
-  width: 30%;
+  justify-content: center;
+  width: 50%;
 `;
