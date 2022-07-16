@@ -1,6 +1,4 @@
 import React from "react";
-import styled from "styled-components";
-import { gray300 } from "../../../core/colors";
 import SideBarStudyItem from "./SideBarStudyItem";
 
 const STUDY_DATA = [

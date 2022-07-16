@@ -37,7 +37,6 @@ const StudyContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
   height: 100%;
-  margin-left: 12px;
 `;
 
 const Homeimage = styled.img`
