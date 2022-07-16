@@ -19,7 +19,7 @@ const Content = styled.div`
   /* 스터디 설명 영역 */
   box-sizing: border-box;
 
-  width: 993px;
+  width: 100%;
   height: 149px;
   left: 282px;
   top: 269px;
