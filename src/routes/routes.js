@@ -1,13 +1,10 @@
 const routes = {
   MAIN: "/",
-
-  // LOGIN: "/",
+  LOGIN: "login/",
   JOIN: "join/",
   FINDID: "findid/",
   FINDPW: "findpw/",
-
   MAKENEW: "makenew/",
-
   MYPAGE: "mypage/",
 };
 

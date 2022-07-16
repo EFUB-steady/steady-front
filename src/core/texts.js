@@ -102,13 +102,13 @@ export const CalDay = styled.div`
   line-height: 100%;
 `;
 
-/*로그인 안내 글씨*/
-export const LoginHelpText = styled.div`
-  margin: 20px;
-  display: inline-flex;
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 100%;
-`;
+// /*로그인 안내 글씨*/
+// export const LoginHelpText = styled.div`
+//   margin: 20px;
+//   //display: inline-flex;
+//   font-family: "Pretendard";
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 14px;
+//   line-height: 100%;
+// `;
