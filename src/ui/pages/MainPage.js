@@ -7,6 +7,8 @@ import Rule from "../components/main/rule/Rule";
 import StudyInfo from "../components/main/study-info/StudyInfo";
 import SideBar from "../components/sidebar/SideBar";
 
+const innerw = window.innerWidth - 198;
+
 export default function MainPage() {
   return (
     <Wrapper>
@@ -30,7 +32,8 @@ const Wrapper = styled.div`
 `;
 
 const MainContext = styled.div`
+  display: flex;
+  width: 100%;
   flex-direction: column;
-  margin: 58px 90px;
-  padding-left: 198px;
+  margin: 58px 90px 58px 288px;
 `;

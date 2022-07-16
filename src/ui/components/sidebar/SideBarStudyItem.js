@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { gray300 } from "../../../core/colors";
+import { gray100, gray300 } from "../../../core/colors";
 import { Subtitle4, Title5 } from "../../../core/texts";
 import homewhite from "../../../assets/btn_home_default.png";
 
@@ -22,13 +22,17 @@ export default function SideBarStudy({ study }) {
 
 const Wrapper = styled.button`
   display: flex;
-  background-color: ${gray300};
+  background-color: ${gray100};
   border: 3px solid #000000;
   border-radius: 5px;
   margin-top: 4px;
   margin-bottom: 4px;
   width: 157px;
   height: 72px;
+
+  &:hover {
+    background: ${gray300};
+  }
 `;
 
 const StudyContainer = styled.div`
@@ -37,7 +41,6 @@ const StudyContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
   height: 100%;
-  margin-left: 12px;
 `;
 
 const Homeimage = styled.img`

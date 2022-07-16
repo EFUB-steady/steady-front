@@ -66,7 +66,7 @@ export default function RankingList() {
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 988px;
+  width: 100%;
   height: auto;
   background-color: ${gray100};
   border: 3px solid black;
