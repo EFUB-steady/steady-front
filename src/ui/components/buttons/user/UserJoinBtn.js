@@ -4,4 +4,11 @@ export default function UserJoinBtn() {
   return <Button>회원 가입</Button>;
 }
 
-const Button = styled.button``;
+const Button = styled.button`
+  width: 300px;
+  height: 50px;
+  background: black;
+  border-radius: 5px;
+  color: white;
+  margin: 4px;
+`;

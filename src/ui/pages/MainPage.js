@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Header from "../components/header/Header";
-import Calendar from "../components/main/calendar/Calendar";
+import Mcalendar from "../components/main/calendar/Mcalendar";
 import Notice from "../components/main/notice/Notice";
 import Ranking from "../components/main/ranking/Ranking";
 import Rule from "../components/main/rule/Rule";
@@ -14,7 +14,7 @@ export default function MainPage() {
       <MainContext>
         <Header />
         <StudyInfo />
-        <Calendar />
+        <Mcalendar />
         <Ranking />
         <Rule />
         <Notice />
