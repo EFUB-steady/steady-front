@@ -1,16 +1,10 @@
 import React from 'react'
 
-import {
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  Button,
-} from '@mui/material'
-
+import { Dialog, DialogContent } from '@mui/material'
 import useModals from './recoil/hooks/useModals'
+import StudyModalTitle from './recoil/components/StudyModalTitle'
 
-export default function UploadStudyModal({ date, handleClose, handleSave }) {
+export default function UploadStudyModal({ date, handleSave }) {
   const { closeModal } = useModals()
   const onClose = () => {
     closeModal()
@@ -33,15 +27,13 @@ export default function UploadStudyModal({ date, handleClose, handleSave }) {
       sx={{ whiteSpace: 'break-spaces' }}
     >
       <DialogContent>
-        <DialogContentText>
-          <div>{date} 스터디 인증하기</div>
-        </DialogContentText>
+        <StudyModalTitle
+          date={date}
+          titleText={'스터디 인증하기'}
+          buttonText={'저장하기'}
+          onClick={onSave}
+        />
       </DialogContent>
-      <DialogActions>
-        <Button onClick={onSave} color="primary" autoFocus>
-          저장하기
-        </Button>
-      </DialogActions>
     </Dialog>
   )
 }
