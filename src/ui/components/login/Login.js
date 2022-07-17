@@ -43,7 +43,12 @@ export const LoginHelpText = styled.div`
   font-size: 14px;
   line-height: 100%;
 `;
-const LoginBox = styled.div``;
+const LoginBox = styled.div`
+  width: 500px;
+  height: 100px;
+  left: 200px;
+  top: 415px;
+`;
 
 const IdPwBox = styled.div`
   display: inline-flex;

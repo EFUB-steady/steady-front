@@ -26,6 +26,11 @@ const LeftContent = styled.div`
   width: 50%;
   float: left;
   box-sizing: border-box;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 30%;
+  bottom: 30%;
 `;
 
 const RightContent = styled.div`
