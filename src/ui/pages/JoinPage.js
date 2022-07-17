@@ -19,7 +19,9 @@ export default function JoinPage() {
     </div>
   );
 }
-const LogoImg = styled.img``;
+const LogoImg = styled.img`
+  margin-bottom: 40.31px;
+`;
 
 const Wrapper = styled.div`
   display: flex;
