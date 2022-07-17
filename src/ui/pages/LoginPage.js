@@ -23,14 +23,17 @@ const Wrapper = styled.div`
   height: 100%;
 `;
 const LeftContent = styled.div`
-  width: 70%;
+  width: 50%;
   float: left;
   box-sizing: border-box;
 `;
 
 const RightContent = styled.div`
-  width: 30%;
-  float: right;
-  box-sizing: border-box;
+  position: absolute;
+  width: 640px;
+  height: 1024px;
+  left: 800px;
+  top: 0px;
+
   background: ${gray300};
 `;

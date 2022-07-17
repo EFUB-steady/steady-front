@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
 import "./reset.css";
-
 import Calendar from "react-calendar";
 
 // 제목
@@ -28,7 +27,7 @@ function Mcalendar() {
         showNeighboringMonth
         navigationLabel={({ date }) =>
           NavigationLabel(
-            date.toLocaleDateString("ko-KR", { month: "2-digit" })
+            date.toLocaleDateString("ko-KR", { month: "2-digit" }),
           )
         }
         prev2Label={null}
@@ -37,7 +36,7 @@ function Mcalendar() {
           const lastDate = new Date(
             date.getFullYear(),
             date.getMonth() + 1,
-            0
+            0,
           ).getDate();
 
           {
