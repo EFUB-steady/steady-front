@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import ExplanationPic from "../components/login/ExplanationPic";
 import logo from "../../assets/logo_horizontal.png";
-
 import SignInfo from "./../components/login/SignInfo";
+import { gray300 } from "../../core/colors";
+
 export default function JoinPage() {
   return (
     <div>
@@ -19,10 +20,24 @@ export default function JoinPage() {
   );
 }
 const LogoImg = styled.img``;
-const RightContent = styled.div``;
+
+const RightContent = styled.div`
+  position: absolute;
+  width: 640px;
+  height: 1024px;
+  left: 800px;
+  top: 0px;
+  background: ${gray300};
+`;
 const LeftContent = styled.div`
-  margin: 300px;
-  padding-left: 0px;
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 30%;
+  bottom: 30%;
 `;
 const Wrapper = styled.div`
   display: flex;
