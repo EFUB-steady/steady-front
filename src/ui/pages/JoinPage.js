@@ -21,14 +21,14 @@ export default function JoinPage() {
 }
 const LogoImg = styled.img``;
 
-const RightContent = styled.div`
-  position: absolute;
-  width: 640px;
-  height: 1024px;
-  left: 800px;
-  top: 0px;
-  background: ${gray300};
+const Wrapper = styled.div`
+  display: flex;
+  width: 90vw;
+  height: 100vh;
+  margin: 40px 90px;
+  padding-left: 0px;
 `;
+
 const LeftContent = styled.div`
   width: 50%;
   float: left;
@@ -39,10 +39,12 @@ const LeftContent = styled.div`
   top: 30%;
   bottom: 30%;
 `;
-const Wrapper = styled.div`
-  display: flex;
-  width: 90vw;
-  height: 100vh;
-  margin: 40px 90px;
-  padding-left: 0px;
+
+const RightContent = styled.div`
+  position: absolute;
+  width: 640px;
+  height: 1024px;
+  left: 800px;
+  top: 0px;
+  background: ${gray300};
 `;
