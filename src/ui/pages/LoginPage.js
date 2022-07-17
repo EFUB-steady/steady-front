@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Login from "../components/login/Login";
 import ExplanationPic from "../components/login/ExplanationPic";
+import { gray300 } from "../../core/colors";
 
 export default function LoginPage() {
   return (
@@ -18,16 +19,18 @@ export default function LoginPage() {
 }
 
 const Wrapper = styled.div`
-  display: flex;
-  width: 90vw;
-  margin: 0px 90px;
-  padding: 10px;
+  width: 100%;
+  height: 100%;
 `;
 const LeftContent = styled.div`
-  width: 50;
-  height: 50;
-  margin: 300px;
-  padding-left: 0px;
+  width: 70%;
+  float: left;
+  box-sizing: border-box;
 `;
 
-const RightContent = styled.div``;
+const RightContent = styled.div`
+  width: 30%;
+  float: right;
+  box-sizing: border-box;
+  background: ${gray300};
+`;
