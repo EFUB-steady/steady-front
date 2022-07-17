@@ -3,6 +3,7 @@ import LoginBtn from "./../buttons/user/LoginBtn";
 import TextField from "@mui/material/TextField";
 import logo from "../../../assets/logo_horizontal.png";
 
+// 로그인 배치
 export default function Login() {
   return (
     <LoginBox>
