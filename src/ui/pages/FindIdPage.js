@@ -4,10 +4,17 @@ import FindBox from "../components/login/FindBox";
 
 export default function FindIdPage() {
   return (
-    <div>
+    <Wrapper>
       <LogoImg src={logo} />
       <FindBox />
-    </div>
+    </Wrapper>
   );
 }
 const LogoImg = styled.img``;
+
+const Wrapper = styled.div`
+  place-items: center;
+  display: grid;
+  padding: 5rem;
+  border-radius: 1rem;
+`;
