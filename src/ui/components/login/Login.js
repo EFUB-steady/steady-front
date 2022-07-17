@@ -9,8 +9,19 @@ export default function Login() {
       <LogoImg src={logo} />
       <IdPwBox>
         <div>
-          <TextField sx={{ mb: 6 }} label="이메일 아이디" />
-          <TextField margin="20px" label="비밀번호" />
+          <TextField
+            sx={{ mb: 2, mt: 4 }}
+            label="이메일 아이디"
+            name="id"
+            fullWidth
+          />
+          <TextField
+            margin="20px"
+            label="비밀번호"
+            name="pw"
+            type="password"
+            fullWidth
+          />
         </div>
         <LoginBtn />
       </IdPwBox>
@@ -35,7 +46,7 @@ export const LoginHelpText = styled.div`
 const LoginBox = styled.div``;
 
 const IdPwBox = styled.div`
-  display: flex;
+  display: inline-flex;
 `;
 
 const LogoImg = styled.img``;
