@@ -6,7 +6,7 @@ export default function LoginBtn() {
 
 const Button = styled.button`
   width: 77px;
-  height: 94px;
+  height: 130px;
   background: black;
   border-radius: 5px;
   color: white;

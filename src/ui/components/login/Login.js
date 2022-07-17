@@ -8,7 +8,7 @@ export default function Login() {
     <LoginBox>
       <LogoImg src={logo} />
       <IdPwBox>
-        <div>
+        <IdPwBoxLeft>
           <TextField
             sx={{ mb: 2, mt: 4 }}
             label="이메일 아이디"
@@ -22,8 +22,10 @@ export default function Login() {
             type="password"
             fullWidth
           />
-        </div>
-        <LoginBtn />
+        </IdPwBoxLeft>
+        <IdPwBoxRight>
+          <LoginBtn sx={{ mb: 2, mt: 4 }} />
+        </IdPwBoxRight>
       </IdPwBox>
       <div style={{ display: "flex" }}>
         <LoginHelpText> 아이디/비밀번호 찾기</LoginHelpText>
@@ -45,13 +47,25 @@ export const LoginHelpText = styled.div`
 `;
 const LoginBox = styled.div`
   width: 500px;
-  height: 100px;
   left: 200px;
   top: 415px;
 `;
 
 const IdPwBox = styled.div`
   display: inline-flex;
+  width: 100%;
+  height: 100%;
+`;
+
+const IdPwBoxLeft = styled.div`
+  order: 1;
+  width: 70%;
+`;
+
+const IdPwBoxRight = styled.div`
+  order: 2;
+  width: 30%;
+  padding: 1.6em;
 `;
 
 const LogoImg = styled.img``;
