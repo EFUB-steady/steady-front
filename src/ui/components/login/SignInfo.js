@@ -1,36 +1,31 @@
 import styled from "styled-components";
 import UserJoinBtn from "../buttons/user/UserJoinBtn";
-
 import InputArea from "./InputArea";
 export default function SignInfo() {
   return (
     <>
       <SignBox>
-        <SignText>
-          <LoginHelpText>이름 (실명)</LoginHelpText>
-          <LoginHelpText>닉네임</LoginHelpText>
-          <LoginHelpText>휴대폰 번호</LoginHelpText>
-          <LoginHelpText>비밀번호</LoginHelpText>
-          <LoginHelpText>비밀번호 확인</LoginHelpText>
-        </SignText>
-        <SignInput>
-          <InputArea></InputArea>
-          <InputArea></InputArea>
-          <InputArea></InputArea>
-          <InputArea></InputArea>
-          <InputArea></InputArea>
-          <InputArea></InputArea>
-        </SignInput>
+        <LoginHelpText>이름 (실명)</LoginHelpText>
+        <InputArea></InputArea>
+        <LoginHelpText>닉네임</LoginHelpText>
+        <InputArea></InputArea>
+        <LoginHelpText>휴대폰 번호</LoginHelpText>
+        <InputArea></InputArea>
+        <LoginHelpText>이메일 아이디</LoginHelpText>
+        <InputArea></InputArea>
+        <LoginHelpText>비밀번호</LoginHelpText>
+        <InputArea></InputArea>
+        <LoginHelpText>비밀번호 확인</LoginHelpText>
+        <InputArea></InputArea>
       </SignBox>
       <UserJoinBtn />
     </>
   );
 }
 
-const SignText = styled.div``;
-const SignInput = styled.div``;
 const SignBox = styled.div`
   display: flex;
+  flex-direction: column;
   margin-top: 40.31px;
 `;
 /*로그인 안내 글씨*/
