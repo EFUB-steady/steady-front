@@ -4,6 +4,7 @@ import FindBox from "../components/login/FindBox";
 import { hintColor } from "../../core/colors";
 import { Subtitle3 } from "../../core/texts";
 import GoBackBtn from "../components/buttons/common/GoBackBtn";
+import UserCheckBtn from "../components/buttons/user/UserCheckBtn";
 export default function FindIdPage() {
   return (
     <>
@@ -23,6 +24,7 @@ export default function FindIdPage() {
           </Text>
           <InputBox>010-0000-0000</InputBox>
         </SignBox>
+        <UserCheckBtn />
       </Wrapper>
     </>
   );
@@ -50,7 +52,7 @@ const SignBox = styled.div`
 
 const InputBox = styled.div`
   /*박스*/
-  width: 300px;
+  width: 240px;
   height: 42px;
   background: #eeeeee;
   border-radius: 5px;
