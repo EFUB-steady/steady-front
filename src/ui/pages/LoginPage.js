@@ -1,17 +1,19 @@
 import styled from "styled-components";
 import Login from "../components/login/Login";
-import ExplanationPic from "../components/login/ExplanationPic";
+import pic from "../../assets/web_explanation_pic.png";
 import { gray300 } from "../../core/colors";
+import GoBackBtn from "./../components/buttons/common/GoBackBtn";
 
 export default function LoginPage() {
   return (
     <div>
       <Wrapper>
+        <GoBackBtn />
         <LeftContent>
           <Login />
         </LeftContent>
         <RightContent>
-          <ExplanationPic />
+          <Pic src={pic} />
         </RightContent>
       </Wrapper>
     </div>
@@ -41,4 +43,11 @@ const RightContent = styled.div`
   top: 0px;
 
   background: ${gray300};
+`;
+
+const Pic = styled.img`
+  width: 640px;
+  height: 1024px;
+  left: 800px;
+  top: 0px;
 `;

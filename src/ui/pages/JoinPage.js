@@ -1,19 +1,22 @@
 import styled from "styled-components";
-import ExplanationPic from "../components/login/ExplanationPic";
+
 import logo from "../../assets/logo_horizontal.png";
+import pic from "../../assets/web_explanation_pic.png";
 import SignInfo from "./../components/login/SignInfo";
 import { gray300 } from "../../core/colors";
+import GoBackBtn from "../components/buttons/common/GoBackBtn";
 
 export default function JoinPage() {
   return (
     <div>
       <Wrapper>
+        <GoBackBtn />
         <LeftContent>
           <LogoImg src={logo} />
           <SignInfo />
         </LeftContent>
         <RightContent>
-          <ExplanationPic />
+          <Pic src={pic} />
         </RightContent>
       </Wrapper>
     </div>
@@ -21,6 +24,13 @@ export default function JoinPage() {
 }
 const LogoImg = styled.img`
   margin-bottom: 40.31px;
+`;
+
+const Pic = styled.img`
+  width: 640px;
+  height: 1024px;
+  left: 800px;
+  top: 0px;
 `;
 
 const Wrapper = styled.div`

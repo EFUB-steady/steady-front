@@ -3,24 +3,28 @@ import logo from "../../assets/logo_horizontal.png";
 import FindBox from "../components/login/FindBox";
 import { hintColor } from "../../core/colors";
 import { Subtitle3 } from "../../core/texts";
+import GoBackBtn from "../components/buttons/common/GoBackBtn";
 export default function FindIdPage() {
   return (
-    <Wrapper>
-      <LogoImg src={logo} />
-      <FindBox />
-      <SignBox>
-        <Text>
-          <Subtitle3>이름 (실명)</Subtitle3>
-        </Text>
-        <InputBox>김이화</InputBox>
-      </SignBox>
-      <SignBox>
-        <Text>
-          <Subtitle3>휴대폰 번호</Subtitle3>
-        </Text>
-        <InputBox>010-0000-0000</InputBox>
-      </SignBox>
-    </Wrapper>
+    <>
+      <GoBackBtn />
+      <Wrapper>
+        <LogoImg src={logo} />
+        <FindBox />
+        <SignBox>
+          <Text>
+            <Subtitle3>이름 (실명)</Subtitle3>
+          </Text>
+          <InputBox>김이화</InputBox>
+        </SignBox>
+        <SignBox>
+          <Text>
+            <Subtitle3>휴대폰 번호</Subtitle3>
+          </Text>
+          <InputBox>010-0000-0000</InputBox>
+        </SignBox>
+      </Wrapper>
+    </>
   );
 }
 const LogoImg = styled.img``;
