@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import "./reset.css";
+import "../../../../core/reset.css";
 import Calendar from "react-calendar";
 
 // 제목
