@@ -42,11 +42,11 @@ const Wrapper = styled.div`
 `;
 
 const LeftContent = styled.div`
-  width: 50%;
+  width: 60%;
   float: left;
   box-sizing: border-box;
   position: absolute;
-  left: 10%;
+  left: 20%;
   right: 10%;
   top: 30%;
   bottom: 30%;
@@ -56,7 +56,8 @@ const RightContent = styled.div`
   position: absolute;
   width: 640px;
   height: 1024px;
-  left: 800px;
+  left: 1250px;
   top: 0px;
+
   background: ${gray300};
 `;
