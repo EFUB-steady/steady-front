@@ -16,7 +16,7 @@ export default function FindBox() {
 }
 const Box = styled.div`
   width: 400px;
-  height: 150px;
+  height: 60px;
   display: flex;
   flex-direction: column;
 `;

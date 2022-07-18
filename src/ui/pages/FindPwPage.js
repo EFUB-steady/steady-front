@@ -18,7 +18,6 @@ export default function FindPwPage() {
             </Text>
             <InputBox>ewhakim@mail.com</InputBox>
           </SignBox>
-
           <Body>
             등록된 이메일 아이디로 비밀번호를 재설정할 수 있는 링크가
             전송됩니다. <br />
@@ -33,7 +32,9 @@ export default function FindPwPage() {
     </>
   );
 }
-const LogoImg = styled.img``;
+const LogoImg = styled.img`
+  padding: 2rem;
+`;
 
 const Wrapper = styled.div`
   place-items: center;
@@ -53,6 +54,7 @@ const SignBox = styled.div`
   display: flex;
   flex-direction: row;
   padding-bottom: 8px;
+  padding: 2rem;
 `;
 
 const InputBox = styled.div`

@@ -29,7 +29,9 @@ export default function FindIdPage() {
     </>
   );
 }
-const LogoImg = styled.img``;
+const LogoImg = styled.img`
+  padding: 2rem;
+`;
 
 const Wrapper = styled.div`
   place-items: center;
@@ -48,6 +50,7 @@ const SignBox = styled.div`
   display: flex;
   flex-direction: row;
   padding-bottom: 8px;
+  padding: 1.5rem;
 `;
 
 const InputBox = styled.div`
