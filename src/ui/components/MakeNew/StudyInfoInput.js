@@ -57,7 +57,7 @@ export default function StudyInfoInput() {
 }
 
 const Wrapper = styled.div`
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 `;
 
 const Content = styled.div`

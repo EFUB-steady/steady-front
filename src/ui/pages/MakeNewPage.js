@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import GoBackBtn from "../components/buttons/common/GoBackBtn";
+import DaysSelect from "../components/MakeNew/DaysSelect";
 import StudyInfoInput from "../components/MakeNew/StudyInfoInput";
 import SideBar from "../components/sidebar/SideBar";
 
@@ -10,6 +11,7 @@ export default function MakeNewPage() {
       <MainContext>
         <GoBackBtn />
         <StudyInfoInput />
+        <DaysSelect />
       </MainContext>
     </Wrapper>
   );
