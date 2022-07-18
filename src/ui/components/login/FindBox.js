@@ -11,6 +11,7 @@ export default function FindBox() {
           <IndexFindId />
           <IndexFindPw />
         </div>
+
         <UserCheckBtn />
       </Box>
     </div>
@@ -18,9 +19,9 @@ export default function FindBox() {
 }
 const Box = styled.div`
   width: 400px;
-  height: 244px;
-  border-color: red;
+  height: 250px;
+
   display: flex;
   flex-direction: column;
-  align-content: space-between;
+  align-content: space-between; //이거 왜 안돼!!?
 `;
