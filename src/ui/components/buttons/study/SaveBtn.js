@@ -11,5 +11,7 @@ const Button = styled.button`
   height: 36px;
   border-radius: 5px;
   font-size: 14px;
+  font-weight: 700;
   margin-left: 105px;
+  font-family: "Pretendard-regular";
 `;
