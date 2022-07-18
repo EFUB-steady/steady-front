@@ -5,11 +5,7 @@ import Calendar from "react-calendar";
 
 // 제목
 function NavigationLabel(month: string) {
-  return (
-    <>
-      <Bold>{month}</Bold>
-    </>
-  );
+  return <Bold>{month}</Bold>;
 }
 
 // 캘린더
