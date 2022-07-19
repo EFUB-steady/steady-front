@@ -1,10 +1,13 @@
 import styled from "styled-components";
+import CustomLink from "../../commons/CustomLink";
 
 export default function MakeNewStudyBtn() {
   return (
-    <Button>
-      <Text>스터디 개설하기</Text>
-    </Button>
+    <CustomLink to="/makenew" textColor="white">
+      <Button>
+        <Text>스터디 개설하기</Text>
+      </Button>
+    </CustomLink>
   );
 }
 
@@ -25,4 +28,5 @@ const Text = styled.div`
   color: white;
   justify-content: center;
   align-items: center;
+  font-family: "pretendard-regular";
 `;
