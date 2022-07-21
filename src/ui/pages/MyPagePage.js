@@ -13,8 +13,10 @@ export default function MyPagePage() {
         <Header />
         <div>My Page</div>
         <Listbar />
-        <ToDo />
-        <Info />
+        <LeftContent>
+          <ToDo />
+          <Info />
+        </LeftContent>
       </MainContext>
     </Wrapper>
   );
@@ -31,4 +33,10 @@ const MainContext = styled.div`
   width: 100%;
   flex-direction: column;
   margin: 58px 90px 58px 288px;
+`;
+
+const LeftContent = styled.div`
+  display: flex;
+  width: 320px;
+  height: 172px;
 `;
