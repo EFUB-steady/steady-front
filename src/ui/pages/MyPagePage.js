@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Header from "../components/header/Header";
 import SideBar from "../components/sidebar/SideBar";
+import Listbar from "../components/mypage/Listbar";
 
 export default function MyPagePage() {
   return (
@@ -9,6 +10,7 @@ export default function MyPagePage() {
       <MainContext>
         <Header />
         <div>My Page</div>
+        <Listbar />
       </MainContext>
     </Wrapper>
   );
