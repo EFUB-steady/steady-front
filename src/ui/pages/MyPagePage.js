@@ -2,6 +2,8 @@ import styled from "styled-components";
 import Header from "../components/header/Header";
 import SideBar from "../components/sidebar/SideBar";
 import Listbar from "../components/mypage/Listbar";
+import ToDo from "../components/mypage/ToDo";
+import Info from "../components/mypage/Info";
 
 export default function MyPagePage() {
   return (
@@ -11,6 +13,8 @@ export default function MyPagePage() {
         <Header />
         <div>My Page</div>
         <Listbar />
+        <ToDo />
+        <Info />
       </MainContext>
     </Wrapper>
   );
