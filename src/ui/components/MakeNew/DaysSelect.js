@@ -68,6 +68,7 @@ const Wrapper = styled.div`
 const Content = styled.div`
   display: flex;
   height: 145px;
+  min-width: 987px;
   border-right: 3px solid black;
   border-radius: 10px 10px 0 0;
 `;

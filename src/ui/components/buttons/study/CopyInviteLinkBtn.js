@@ -5,7 +5,7 @@ export default function CopyInviteLinkBtn() {
   return (
     <Wrapper>
       <Body2>링크를 가진 회원만 참여 가능합니다!</Body2>
-      <Button>초대 링크 복사하기</Button>;
+      <Button>초대 링크 복사하기</Button>
     </Wrapper>
   );
 }
