@@ -5,7 +5,7 @@ import CopyInviteLinkBtn from "../buttons/study/CopyInviteLinkBtn";
 import MainSubTitle from "../main/MainSubTitle";
 export default function MembersInput() {
   return (
-    <Wrapper>
+    <>
       <TitleWrapper>
         <MainSubTitle iconSrc={peopleIcon} title={"스터디 구성원 관리"} />
         <CopyInviteLinkBtn />
@@ -21,13 +21,9 @@ export default function MembersInput() {
         <Li>회원을 추가할 수 있습니다!</Li>
         <Li>회원을 추가할 수 있습니다!</Li>
       </Content>
-    </Wrapper>
+    </>
   );
 }
-
-const Wrapper = styled.div`
-  margin-bottom: 40px;
-`;
 
 const TitleWrapper = styled.div`
   display: flex;

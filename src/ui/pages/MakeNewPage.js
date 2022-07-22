@@ -1,3 +1,4 @@
+import { Divider } from "@mui/material";
 import styled from "styled-components";
 import GoBackBtn from "../components/buttons/common/GoBackBtn";
 import DaysSelect from "../components/MakeNew/DaysSelect";
@@ -14,9 +15,18 @@ export default function MakeNewPage() {
       <MainContext>
         <GoBackBtn />
         <StudyInfoInput />
+        <Divider
+          style={{ marginTop: 15, marginBottom: 40, backgroundColor: "black" }}
+        />
         <DaysSelect />
         <RuleInput />
+        <Divider
+          style={{ marginTop: 15, marginBottom: 40, backgroundColor: "black" }}
+        />
         <MembersInput />
+        <Divider
+          style={{ marginTop: 15, marginBottom: 40, backgroundColor: "black" }}
+        />
         <NoticeInput />
       </MainContext>
     </Wrapper>

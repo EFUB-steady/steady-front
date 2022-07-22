@@ -11,9 +11,8 @@ export default function NoticeInput() {
   const [noticeInput3rd, setNoticeInput3rd] = useState("");
 
   return (
-    <Wrapper>
+    <>
       <MainSubTitle iconSrc={iconMegaphone} title={"공지 텍스트 입력"} />
-
       <Content>
         <Input
           placeholder="· 스터디는 ___개월 간 진행합니다."
@@ -55,13 +54,9 @@ export default function NoticeInput() {
           }}
         />
       </Content>
-    </Wrapper>
+    </>
   );
 }
-
-const Wrapper = styled.div`
-  margin-bottom: 40px;
-`;
 
 const Content = styled.div`
   box-sizing: border-box;
@@ -71,5 +66,4 @@ const Content = styled.div`
   border-radius: 5px;
   line-height: 36px;
   padding: 24px 30px;
-  margin-top: 24px;
 `;
