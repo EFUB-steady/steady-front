@@ -17,4 +17,8 @@ const Box = styled.div`
   font-family: "Bauhaus93";
   font-size: 24px;
   color: ${gray400};
+  &:hover {
+    background-color: black;
+    color: white;
+  }
 `;
