@@ -23,6 +23,7 @@ export default function RuleItem() {
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
+  min-width: 987px;
   background-color: ${gray100};
   border: 3px solid black;
   border-radius: 5px;
