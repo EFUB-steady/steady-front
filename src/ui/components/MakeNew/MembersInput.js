@@ -3,7 +3,7 @@ import peopleIcon from "../../../assets/icon_people.png";
 import { gray400 } from "../../../core/colors";
 import CopyInviteLinkBtn from "../buttons/study/CopyInviteLinkBtn";
 import MainSubTitle from "../main/MainSubTitle";
-export default function Members() {
+export default function MembersInput() {
   return (
     <Wrapper>
       <TitleWrapper>
@@ -31,11 +31,13 @@ const Wrapper = styled.div`
 
 const TitleWrapper = styled.div`
   display: flex;
+  min-width: 987px;
   justify-content: space-between;
   align-items: center;
 `;
 
 const Content = styled.ul`
+  min-width: 987px;
   border-left: 3px solid black;
   border-bottom: 3px solid black;
 `;

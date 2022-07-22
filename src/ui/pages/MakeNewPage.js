@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import GoBackBtn from "../components/buttons/common/GoBackBtn";
 import DaysSelect from "../components/MakeNew/DaysSelect";
-import Members from "../components/MakeNew/Members";
+import MembersInput from "../components/MakeNew/MembersInput";
 import NoticeInput from "../components/MakeNew/NoticeInput";
+import RuleInput from "../components/MakeNew/ruleInput/RuleInput";
 import StudyInfoInput from "../components/MakeNew/StudyInfoInput";
 import SideBar from "../components/sidebar/SideBar";
 
@@ -14,7 +15,8 @@ export default function MakeNewPage() {
         <GoBackBtn />
         <StudyInfoInput />
         <DaysSelect />
-        <Members />
+        <RuleInput />
+        <MembersInput />
         <NoticeInput />
       </MainContext>
     </Wrapper>
