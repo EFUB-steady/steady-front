@@ -11,6 +11,7 @@ export default function MyPagePage() {
       <SideBar />
       <MainContext>
         <Header />
+
         <div>My Page</div>
         <LeftContent>
           <ToDo />
