@@ -3,7 +3,8 @@ import Header from "../components/header/Header";
 import SideBar from "../components/sidebar/SideBar";
 import Listbar from "../components/mypage/Listbar";
 import ToDo from "../components/mypage/ToDo";
-import Info from "../components/mypage/Info";
+import MyInfo from "../components/mypage/MyInfo";
+import MyAuthList from "../components/mypage/MyAuthList";
 
 export default function MyPagePage() {
   return (
@@ -11,12 +12,14 @@ export default function MyPagePage() {
       <SideBar />
       <MainContext>
         <Header />
-
-        <div>My Page</div>
-        <LeftContent>
-          <ToDo />
-          <Info />
-        </LeftContent>
+        <MidContent>
+          <LeftContent>
+            <ToDo />
+          </LeftContent>
+          <RightContent>
+            <div>오른쪽</div>
+          </RightContent>
+        </MidContent>
         <FooterContent>
           <Listbar />
         </FooterContent>
@@ -25,27 +28,26 @@ export default function MyPagePage() {
   );
 }
 
-const Wrapper = styled.div`
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-`;
+const Wrapper = styled.div``;
 
 const MainContext = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: column;
   margin: 58px 90px 58px 288px;
 `;
-
+const MidContent = styled.div`
+  display: flex;
+  display: row;
+`;
 const LeftContent = styled.div`
   display: flex;
-  width: 100%;
-  height: 150%;
+  display: column;
 `;
-// LeftContent 대략 이 정도 비율이면 될까?
 
-const FooterContent = styled.div`
-  height: 200px;
-  border-top: 3px solid black;
+const RightContent = styled.div`
+  display: flex;
+  display: column;
 `;
+const FooterContent = styled.div`
+  position: absolute;
+  bottom: 0;
+`;
+//이렇게 내리니깐 스크롤바가 생기네..ㅠ

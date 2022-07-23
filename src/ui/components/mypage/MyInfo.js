@@ -112,8 +112,6 @@ const TitleText = styled.div`
   position: absolute;
   width: 60px;
   height: 21px;
-  left: 288px;
-  top: 447px;
 
   font-family: "Pretendard";
   font-style: normal;
