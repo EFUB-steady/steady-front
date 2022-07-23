@@ -1,20 +1,12 @@
-import { style } from "@mui/system";
 import styled from "styled-components";
 import { gray300 } from "../../../../core/colors";
 
-export default function StudyModalTitle({
-  date,
-  titleText,
-  buttonText,
-  onClick,
-}) {
+export default function StudyModalTitle({ titleText, buttonText }) {
   return (
     <>
       <Wrapper>
-        <Title>
-          {date} {titleText}
-        </Title>
-        <Button onClick={onClick}>
+        <Title>{titleText}</Title>
+        <Button onClick={() => {}}>
           <ButtonText>{buttonText}</ButtonText>
         </Button>
       </Wrapper>
@@ -34,12 +26,14 @@ const Title = styled.div`
   color: black;
   line-height: 100%;
 `;
+
 const Button = styled.button`
   background-color: ${gray300};
   border-radius: 5px;
   width: 81px;
   height: 40px;
 `;
+
 const ButtonText = styled.div`
   font-weight: 700;
   font-size: 14px;
