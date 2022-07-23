@@ -12,11 +12,13 @@ export default function MyPagePage() {
       <MainContext>
         <Header />
         <div>My Page</div>
-        <Listbar />
         <LeftContent>
           <ToDo />
           <Info />
         </LeftContent>
+        <FooterContent>
+          <Listbar />
+        </FooterContent>
       </MainContext>
     </Wrapper>
   );
@@ -37,6 +39,12 @@ const MainContext = styled.div`
 
 const LeftContent = styled.div`
   display: flex;
-  width: 320px;
-  height: 172px;
+  width: 100%;
+  height: 150%;
+`;
+// LeftContent 대략 이 정도 비율이면 될까?
+
+const FooterContent = styled.div`
+  height: 200px;
+  border-top: 3px solid black;
 `;
