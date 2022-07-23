@@ -8,13 +8,10 @@ export default function LoginPage() {
   return (
     <div>
       <Wrapper>
-        <GoBackBtn />
         <LeftContent>
           <Login />
         </LeftContent>
-        <RightContent>
-          <Pic src={pic} />
-        </RightContent>
+        <Pic src={pic} />
       </Wrapper>
     </div>
   );
@@ -23,6 +20,9 @@ export default function LoginPage() {
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 `;
 const LeftContent = styled.div`
   width: 60%;
@@ -33,6 +33,7 @@ const LeftContent = styled.div`
   right: 10%;
   top: 30%;
   bottom: 30%;
+  padding-right: 215px;
 `;
 
 const RightContent = styled.div`
@@ -46,8 +47,8 @@ const RightContent = styled.div`
 `;
 
 const Pic = styled.img`
-  width: 640px;
-  height: 1024px;
+  width: 500px;
+  height: 750px;
   left: 800px;
   top: 0px;
 `;
