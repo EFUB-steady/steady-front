@@ -6,6 +6,8 @@ import useModals from "./recoil/hooks/useModals";
 import StudyModalTitle from "./recoil/components/StudyModalTitle";
 import { StudyModalPic } from "./recoil/components/StudyModalPic";
 import { StudyModalUrl } from "./recoil/components/StudyModalUrl";
+import { OtherStudyModalPic } from "./recoil/components/OtherStudyMdalPicOther";
+import { OtherStudyModalUrl } from "./recoil/components/OtherStudyModalUrl";
 
 export default function UploadStudyModal({ date, handleSave }) {
   const { closeModal } = useModals();
@@ -33,12 +35,12 @@ export default function UploadStudyModal({ date, handleSave }) {
         <DialogContent>
           <StudyModalTitle
             date={date}
-            titleText={"스터디 인증하기"}
+            titleText={"스터디 인증 목록"}
             buttonText={"저장하기"}
             onClick={onSave}
           />
-          <StudyModalPic />
-          <StudyModalUrl />
+          <OtherStudyModalPic />
+          <OtherStudyModalUrl />
         </DialogContent>
       </ContentWrapper>
     </Dialog>
