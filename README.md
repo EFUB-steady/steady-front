@@ -120,9 +120,14 @@
  ---
 ## 🛠Tech Stack
 + React
-+ Styled-components
-+ Recoil
-+ Prettier
+<img alt="React" src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white">
 
-<img src="https://img.shields.io/badge/React-#61DAFB?style=for-the-badge&logo=React&logoColor=white">
++ Styled-components
+ <img alt="Styled-components" src="https://img.shields.io/badge/Styled-components-DB7093?style=for-the-badge&logo=Styled-components&logoColor=white">
+
++ Prettier
+<img alt="Prettier" src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=Prettier&logoColor=white">
+
+
++ Recoil
 
