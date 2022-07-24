@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export default function ToDo() {
   return (
-    <>
+    <ToDoBox>
       <Text>TO DO LIST</Text>
       <Box />
-    </>
+    </ToDoBox>
   );
 }
 
@@ -23,10 +23,16 @@ const Box = styled.div`
 const Text = styled.div`
   width: 200px;
   height: 50px;
-
+  margin-top: 40px;
   font-family: "Pretendard";
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 100%;
+`;
+
+const ToDoBox = styled.div`
+  width: 150px;
+  display: flex;
+  flex-direction: column;
 `;

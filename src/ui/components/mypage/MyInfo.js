@@ -12,8 +12,10 @@ export default function Info() {
   const [phoneNumInput, setPhoneNumInput] = useState("");
   return (
     <>
-      <TitleText>내 정보</TitleText>
-      <ModifyInfoBtn />
+      <InfoHeader>
+        <TitleText>내 정보</TitleText>
+        <ModifyInfoBtn />
+      </InfoHeader>
       <Text>닉네임</Text>
       <Input
         placeholder="이화연22"
@@ -109,8 +111,7 @@ export default function Info() {
 }
 
 const TitleText = styled.div`
-  position: absolute;
-  width: 60px;
+  width: 200px;
   height: 21px;
 
   font-family: "Pretendard";
@@ -125,4 +126,11 @@ const Text = styled.div`
   font-weight: 700;
   font-size: 14px;
   line-height: 100%;
+`;
+
+const InfoHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  margin-right: 20px;
 `;

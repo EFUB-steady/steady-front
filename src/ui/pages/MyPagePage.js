@@ -15,9 +15,10 @@ export default function MyPagePage() {
         <MidContent>
           <LeftContent>
             <ToDo />
+            <MyInfo />
           </LeftContent>
           <RightContent>
-            <div>오른쪽</div>
+            <MyAuthList />
           </RightContent>
         </MidContent>
         <FooterContent>
@@ -34,17 +35,21 @@ const MainContext = styled.div`
   margin: 58px 90px 58px 288px;
 `;
 const MidContent = styled.div`
+  width: 1000px;
   display: flex;
-  display: row;
+  flex-direction: row;
 `;
 const LeftContent = styled.div`
+  width: 50%;
   display: flex;
-  display: column;
+  flex-direction: column;
+  border-right: 3px solid black;
 `;
 
 const RightContent = styled.div`
+  width: 50%;
   display: flex;
-  display: column;
+  flex-direction: column;
 `;
 const FooterContent = styled.div`
   position: absolute;

@@ -9,13 +9,13 @@ export default function MyAuthList() {
 }
 
 const Text = styled.div`
-  position: absolute;
-  width: 113px;
+  width: 200px;
   height: 21px;
-
+  margin-top: 40px;
   font-family: "Pretendard";
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 100%;
+  margin-left: 40px;
 `;

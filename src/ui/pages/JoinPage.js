@@ -27,29 +27,31 @@ const LogoImg = styled.img`
 `;
 
 const Pic = styled.img`
-  width: 640px;
-  height: 1024px;
-  left: 800px;
-  top: 0px;
+  width: 500px;
+  height: 750px;
 `;
 
 const Wrapper = styled.div`
-  display: flex;
+  /* display: flex;
   width: 90vw;
   height: 100vh;
   margin: 40px 90px;
-  padding-left: 0px;
+  padding-left: 0px; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
 const LeftContent = styled.div`
-  width: 60%;
+  width: 400rem;
   float: left;
   box-sizing: border-box;
-  position: absolute;
-  left: 20%;
-  right: 10%;
-  top: 30%;
-  bottom: 30%;
+  margin-top: 200px;
+  margin-left: 350px;
+
+  padding-right: 215px;
 `;
 
 const RightContent = styled.div`
