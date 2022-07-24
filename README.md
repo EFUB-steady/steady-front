@@ -144,3 +144,4 @@
 +React
 +Styled-components
 +Recoil
++Prettier
