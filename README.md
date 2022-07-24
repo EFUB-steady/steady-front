@@ -22,7 +22,7 @@
  
  ┃ ┗ 📜texts.js
  
- 
+ ```
  ┣ 📂routes
  ┃ ┗ 📜routes.js
  ┣ 📂ui
@@ -129,6 +129,7 @@
  ┣ 📜App.js
  ┣ 📜index.css
  ┗ 📜index.js
+ ```
  
  ---
 # Tech Stack
