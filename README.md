@@ -1,5 +1,5 @@
 # STEADY DAY
-## Directory Structure
+## 💾Directory Structure
 ```
 📦src
  ┣ 📂core
@@ -118,7 +118,7 @@
  ```
  
  ---
-## Tech Stack
+## 🛠Tech Stack
 + React
 + Styled-components
 + Recoil
