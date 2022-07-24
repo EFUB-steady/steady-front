@@ -16,96 +16,106 @@ export default function Info() {
         <TitleText>내 정보</TitleText>
         <ModifyInfoBtn />
       </InfoHeader>
-      <Text>닉네임</Text>
-      <Input
-        placeholder="이화연22"
-        value={nickInput}
-        onChange={(e) => {
-          setNickInput(e.target.value);
-        }}
-        fullWidth={true}
-        disableUnderline={true}
-        style={{
-          backgroundColor: gray100,
-          padding: "8px",
-          fontSize: 10,
-          fontWeight: 400,
-          width: 220,
-          height: 28,
-        }}
-      />
-      <Text>이름</Text>
-      <Input
-        placeholder="김이화"
-        value={nameInput}
-        onChange={(e) => {
-          setNameInput(e.target.value);
-        }}
-        fullWidth={true}
-        disableUnderline={true}
-        style={{
-          backgroundColor: gray100,
-          padding: "8px",
-          fontSize: 10,
-          fontWeight: 400,
-          width: 220,
-          height: 28,
-        }}
-      />
-      <Text>ID</Text>
-      <Input
-        placeholder="ewhakim22"
-        value={idInput}
-        onChange={(e) => {
-          setIdInput(e.target.value);
-        }}
-        fullWidth={true}
-        disableUnderline={true}
-        style={{
-          backgroundColor: gray100,
-          padding: "8px",
-          fontSize: 10,
-          fontWeight: 400,
-          width: 220,
-          height: 28,
-        }}
-      />
-      <Text>PW</Text>
-      <Input
-        placeholder="*******"
-        value={pwInput}
-        onChange={(e) => {
-          setPwInput(e.target.value);
-        }}
-        fullWidth={true}
-        disableUnderline={true}
-        style={{
-          backgroundColor: gray100,
-          padding: "8px",
-          fontSize: 10,
-          fontWeight: 400,
-          width: 220,
-          height: 28,
-        }}
-      />
-      <Text>연락처</Text>
-      <Input
-        placeholder="김이화"
-        value={phoneNumInput}
-        onChange={(e) => {
-          setPhoneNumInput(e.target.value);
-        }}
-        fullWidth={true}
-        disableUnderline={true}
-        style={{
-          backgroundColor: gray100,
-          padding: "8px",
-          fontSize: 10,
-          fontWeight: 400,
-          width: 220,
-          height: 28,
-        }}
-      />
+      <SignBox>
+        <Text>닉네임</Text>
+        <Input
+          placeholder="이화연22"
+          value={nickInput}
+          onChange={(e) => {
+            setNickInput(e.target.value);
+          }}
+          fullWidth={true}
+          disableUnderline={true}
+          style={{
+            backgroundColor: gray100,
+            padding: "8px",
+            fontSize: 10,
+            fontWeight: 400,
+            width: 220,
+            height: 28,
+          }}
+        />
+      </SignBox>
+      <SignBox>
+        <Text>이름</Text>
+        <Input
+          placeholder="김이화"
+          value={nameInput}
+          onChange={(e) => {
+            setNameInput(e.target.value);
+          }}
+          fullWidth={true}
+          disableUnderline={true}
+          style={{
+            backgroundColor: gray100,
+            padding: "8px",
+            fontSize: 10,
+            fontWeight: 400,
+            width: 220,
+            height: 28,
+          }}
+        />
+      </SignBox>
+      <SignBox>
+        <Text>ID</Text>
+        <Input
+          placeholder="ewhakim22"
+          value={idInput}
+          onChange={(e) => {
+            setIdInput(e.target.value);
+          }}
+          fullWidth={true}
+          disableUnderline={true}
+          style={{
+            backgroundColor: gray100,
+            padding: "8px",
+            fontSize: 10,
+            fontWeight: 400,
+            width: 220,
+            height: 28,
+          }}
+        />
+      </SignBox>
+      <SignBox>
+        <Text>PW</Text>
+        <Input
+          placeholder="*******"
+          value={pwInput}
+          onChange={(e) => {
+            setPwInput(e.target.value);
+          }}
+          fullWidth={true}
+          disableUnderline={true}
+          style={{
+            backgroundColor: gray100,
+            padding: "8px",
+            fontSize: 10,
+            fontWeight: 400,
+            width: 220,
+            height: 28,
+          }}
+        />
+      </SignBox>
+      <SignBox>
+        <Text>연락처</Text>
+        <Input
+          placeholder="김이화"
+          value={phoneNumInput}
+          onChange={(e) => {
+            setPhoneNumInput(e.target.value);
+          }}
+          fullWidth={true}
+          disableUnderline={true}
+          style={{
+            backgroundColor: gray100,
+            padding: "8px",
+            fontSize: 10,
+            fontWeight: 400,
+            width: 220,
+            height: 28,
+          }}
+        />
+      </SignBox>
     </>
   );
 }
@@ -119,6 +129,7 @@ const TitleText = styled.div`
   font-weight: 700;
   font-size: 21px;
   line-height: 100%;
+  margin-bottom: 45px;
 `;
 const Text = styled.div`
   font-family: "Pretendard";
@@ -126,11 +137,22 @@ const Text = styled.div`
   font-weight: 700;
   font-size: 14px;
   line-height: 100%;
+  width: 155px;
+  height: 42px;
+  display: flex;
+  align-items: center;
 `;
 
 const InfoHeader = styled.div`
   display: flex;
   justify-content: space-between;
+
   padding-top: 40px;
   margin-right: 20px;
+`;
+
+const SignBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 8px;
 `;

@@ -21,7 +21,7 @@ const Box = styled.div`
 `;
 
 const Text = styled.div`
-  width: 200px;
+  width: 150px;
   height: 50px;
   margin-top: 40px;
   font-family: "Pretendard";
