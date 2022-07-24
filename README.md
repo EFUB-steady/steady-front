@@ -1,70 +1,146 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+######Folders
+📦src
+ ┣ 📂assets
+ ┃ ┣ 📜btn_home_click.png
+ ┃ ┣ 📜btn_home_default.png
+ ┃ ┣ 📜calender.png
+ ┃ ┣ 📜chart.png
+ ┃ ┣ 📜coin.png
+ ┃ ┣ 📜icon_alert.png
+ ┃ ┣ 📜icon_calender.png
+ ┃ ┣ 📜icon_coin.png
+ ┃ ┣ 📜icon_email_success.png
+ ┃ ┣ 📜icon_link.png
+ ┃ ┣ 📜icon_link_card_mypage.png
+ ┃ ┣ 📜icon_megaphone.png
+ ┃ ┣ 📜icon_people.png
+ ┃ ┣ 📜icon_picture.png
+ ┃ ┣ 📜icon_picture_card_mypage.png
+ ┃ ┣ 📜icon_rank.png
+ ┃ ┣ 📜icon_setting.png
+ ┃ ┣ 📜icon_undo.png
+ ┃ ┣ 📜link.png
+ ┃ ┣ 📜logo_horizontal.png
+ ┃ ┣ 📜logo_vertical.png
+ ┃ ┣ 📜text_logo_compact.png
+ ┃ ┣ 📜text_logo_long.png
+ ┃ ┗ 📜web_explanation_pic.png
+ ┣ 📂core
+ ┃ ┣ 📂font
+ ┃ ┃ ┣ 📜BAUHS93.ttf
+ ┃ ┃ ┗ 📜Pretendard-Regular.ttf
+ ┃ ┣ 📜colors.js
+ ┃ ┣ 📜reset.css
+ ┃ ┗ 📜texts.js
+ ┣ 📂routes
+ ┃ ┗ 📜routes.js
+ ┣ 📂ui
+ ┃ ┣ 📂components
+ ┃ ┃ ┣ 📂buttons
+ ┃ ┃ ┃ ┣ 📂common
+ ┃ ┃ ┃ ┃ ┣ 📜GoBackBtn.js
+ ┃ ┃ ┃ ┃ ┣ 📜IndexFindId.js
+ ┃ ┃ ┃ ┃ ┣ 📜IndexFindPw.js
+ ┃ ┃ ┃ ┃ ┣ 📜IndexMainPage.js
+ ┃ ┃ ┃ ┃ ┗ 📜IndexMyPage.js
+ ┃ ┃ ┃ ┣ 📂study
+ ┃ ┃ ┃ ┃ ┣ 📜AuthAdditionalBtn.js
+ ┃ ┃ ┃ ┃ ┣ 📜AuthBtn.js
+ ┃ ┃ ┃ ┃ ┣ 📜AuthCancelBtn.js
+ ┃ ┃ ┃ ┃ ┣ 📜CopyInviteLinkBtn.js
+ ┃ ┃ ┃ ┃ ┣ 📜CopyLinkBtn.js
+ ┃ ┃ ┃ ┃ ┣ 📜GoToStudyBtn.js
+ ┃ ┃ ┃ ┃ ┣ 📜MakeNewStudyBtn.js
+ ┃ ┃ ┃ ┃ ┣ 📜ReportBtn.js
+ ┃ ┃ ┃ ┃ ┣ 📜SaveBtn.js
+ ┃ ┃ ┃ ┃ ┗ 📜UploadBtn.js
+ ┃ ┃ ┃ ┗ 📂user
+ ┃ ┃ ┃ ┃ ┣ 📜BackToLogin.js
+ ┃ ┃ ┃ ┃ ┣ 📜LoginBtn.js
+ ┃ ┃ ┃ ┃ ┣ 📜LogoutBtn.js
+ ┃ ┃ ┃ ┃ ┣ 📜ModifyInfoBtn.js
+ ┃ ┃ ┃ ┃ ┣ 📜UserCheckBtn.js
+ ┃ ┃ ┃ ┃ ┣ 📜UserJoinBtn.js
+ ┃ ┃ ┃ ┃ ┗ 📜UserLeaveBtn.js
+ ┃ ┃ ┣ 📂commons
+ ┃ ┃ ┃ ┣ 📜CustomLink.js
+ ┃ ┃ ┃ ┗ 📜Row.js
+ ┃ ┃ ┣ 📂header
+ ┃ ┃ ┃ ┗ 📜Header.js
+ ┃ ┃ ┣ 📂login
+ ┃ ┃ ┃ ┣ 📜ExplanationPic.js
+ ┃ ┃ ┃ ┣ 📜FindBox.js
+ ┃ ┃ ┃ ┣ 📜InputArea.js
+ ┃ ┃ ┃ ┣ 📜Login.js
+ ┃ ┃ ┃ ┗ 📜SignInfo.js
+ ┃ ┃ ┣ 📂main
+ ┃ ┃ ┃ ┣ 📂calendar
+ ┃ ┃ ┃ ┃ ┗ 📜Mcalendar.js
+ ┃ ┃ ┃ ┣ 📂notice
+ ┃ ┃ ┃ ┃ ┣ 📜Notice.js
+ ┃ ┃ ┃ ┃ ┣ 📜NoticeItem.js
+ ┃ ┃ ┃ ┃ ┣ 📜NoticeList.js
+ ┃ ┃ ┃ ┃ ┗ 📜NoticeView.js
+ ┃ ┃ ┃ ┣ 📂ranking
+ ┃ ┃ ┃ ┃ ┣ 📜LowerRank.js
+ ┃ ┃ ┃ ┃ ┣ 📜LowRankItem.js
+ ┃ ┃ ┃ ┃ ┣ 📜Ranking.js
+ ┃ ┃ ┃ ┃ ┣ 📜RankingList.js
+ ┃ ┃ ┃ ┃ ┣ 📜UpperRank.js
+ ┃ ┃ ┃ ┃ ┗ 📜UpperRankItem.js
+ ┃ ┃ ┃ ┣ 📂rule
+ ┃ ┃ ┃ ┃ ┣ 📜Account.js
+ ┃ ┃ ┃ ┃ ┣ 📜PaneltyMoney.js
+ ┃ ┃ ┃ ┃ ┣ 📜Rule.js
+ ┃ ┃ ┃ ┃ ┣ 📜RuleAuthDay.js
+ ┃ ┃ ┃ ┃ ┣ 📜RuleItem.js
+ ┃ ┃ ┃ ┃ ┗ 📜RuleMoney.js
+ ┃ ┃ ┃ ┣ 📂study-info
+ ┃ ┃ ┃ ┃ ┣ 📜StudyInfo.js
+ ┃ ┃ ┃ ┃ ┗ 📜StudyInfoTitle.js
+ ┃ ┃ ┃ ┗ 📜MainSubTitle.js
+ ┃ ┃ ┣ 📂MakeNew
+ ┃ ┃ ┃ ┣ 📜DaysSelect.js
+ ┃ ┃ ┃ ┣ 📜DaysSelectItem.js
+ ┃ ┃ ┃ ┣ 📜Members.js
+ ┃ ┃ ┃ ┣ 📜NoticeInput.js
+ ┃ ┃ ┃ ┗ 📜StudyInfoInput.js
+ ┃ ┃ ┣ 📂mypage
+ ┃ ┃ ┃ ┣ 📜Listbar.js
+ ┃ ┃ ┃ ┣ 📜MyAuthList.js
+ ┃ ┃ ┃ ┣ 📜MyInfo.js
+ ┃ ┃ ┃ ┗ 📜ToDo.js
+ ┃ ┃ ┗ 📂sidebar
+ ┃ ┃ ┃ ┣ 📜Penalty.js
+ ┃ ┃ ┃ ┣ 📜PenaltyAmount.js
+ ┃ ┃ ┃ ┣ 📜SideBar.js
+ ┃ ┃ ┃ ┣ 📜SideBarStudyItem.js
+ ┃ ┃ ┃ ┣ 📜SideBarStudyList.js
+ ┃ ┃ ┃ ┗ 📜SideLogoBox.js
+ ┃ ┣ 📂modal
+ ┃ ┃ ┣ 📂recoil
+ ┃ ┃ ┃ ┣ 📂components
+ ┃ ┃ ┃ ┃ ┗ 📜StudyModalTitle.js
+ ┃ ┃ ┃ ┣ 📂hooks
+ ┃ ┃ ┃ ┃ ┗ 📜useModals.js
+ ┃ ┃ ┃ ┣ 📂states
+ ┃ ┃ ┃ ┃ ┗ 📜modalStates.js
+ ┃ ┃ ┃ ┗ 📜ModalWrapper.js
+ ┃ ┃ ┗ 📜UploadStudyModal.js
+ ┃ ┗ 📂pages
+ ┃ ┃ ┣ 📜FindIdPage.js
+ ┃ ┃ ┣ 📜FindPwPage.js
+ ┃ ┃ ┣ 📜JoinPage.js
+ ┃ ┃ ┣ 📜LoginPage.js
+ ┃ ┃ ┣ 📜MainPage.js
+ ┃ ┃ ┣ 📜MakeNewPage.js
+ ┃ ┃ ┗ 📜MyPagePage.js
+ ┣ 📜App.js
+ ┣ 📜index.css
+ ┗ 📜index.js
+ 
+ ---
+######Tech Stack
++React
++Styled-components
++Recoil
