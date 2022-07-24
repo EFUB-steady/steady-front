@@ -1,14 +1,21 @@
 import styled from "styled-components";
-import { OtherStudyModalPicUrl } from "./OtherStudyMdalPic";
+import { OtherStudyModalPic } from "./OtherStudyMdalPic";
+import { OtherStudyModalUrl } from "./OtherStudyUrl";
 
 export default function OtherStudyModal({memberList}) {
   return(
     <>
-    <OtherStudyModalPicUrl member={memberList[0]}/>
+    <OtherStudyModalPic member={memberList[0]}/>
     <Divider/>
-    <OtherStudyModalPicUrl member={memberList[1]}/>
+    <OtherStudyModalUrl member={memberList[1]}/>
     <Divider/>
-    <OtherStudyModalPicUrl member={memberList[2]}/>
+    <OtherStudyModalPic member={memberList[2]}/>
+    <Divider/>
+    <OtherStudyModalUrl member={memberList[3]}/>
+    <Divider/>
+    <OtherStudyModalUrl member={memberList[4]}/>
+    <Divider/>
+    <OtherStudyModalUrl member={memberList[5]}/>
     </>
   )
 }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { blue500, gray100, orange500, pink500 } from "../../../../core/colors";
+import { blue500, ygreen500, orange500, pink500, green500,purple500 } from "../../../../core/colors";
 import OtherStudyModal from "./OtherStudyModal";
 
 const MEMBER_DATA = [
@@ -18,6 +18,22 @@ const MEMBER_DATA = [
     name: "고래",
     color: blue500,
   },
+  {
+    index:4,
+    name: "고양이",
+    color: ygreen500,
+  },
+  {
+    index:5,
+    name: "토끼",
+    color: green500,
+  },
+  {
+    index:6,
+    name: "가재",
+    color: purple500,
+  },
+  
 
 ]
 

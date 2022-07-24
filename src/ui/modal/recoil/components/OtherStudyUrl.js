@@ -5,39 +5,42 @@ import alerticon from "../../../../assets/icon_alert_white.png";
 import { Subtitle2 } from "../../../../core/texts";
 import { style } from "@mui/system";
 
-export function OtherStudyModalPic({ member }) {
+export function OtherStudyModalUrl({ member }) {
   return (
-    <>
     <Wrapper>
       <TitleWrapper>
         <TItleContainer>
           <TitleIcon src={icon} />
-          <Subtitle2>사진 인증</Subtitle2>
+          <Subtitle2>URL 인증하기</Subtitle2>
         </TItleContainer>
         <IconWrapper>
           <AlertIcon src={alerticon} />
         </IconWrapper>
       </TitleWrapper>
-      <UserName>
-        <UserCircle color={member.color} /> {member.name}님
-      </UserName>
+
+      <div>
+        <InputUrl
+          type="url"
+          pattern="http://*"
+          placeholder="http://"
+        ></InputUrl>
+      </div>
+      <UrlUserName>
+        <UrlUserCircle color={member.color} /> {member.name}님{" "}
+      </UrlUserName>
     </Wrapper>
-
-
-    </>
   );
 }
 
 const Wrapper = styled.div`
   width: 920px;
-  height: 517.5px;
+  height: 167px;
   background-color: ${gray100};
   border: 3px solid #000000;
   margin-top: 40px;
   box-sizing: border-box;
   border-radius: 5px;
 `;
-
 const AlertIcon = styled.img`
   width: 17.66px;
   height: 20.81px;
@@ -78,20 +81,32 @@ const TitleIcon = styled.img`
   margin-right: 9px;
 `;
 
-const UserName = styled.div`
+const InputUrl = styled.input`
+  width: 839.5px;
+  height: 41.5px;
+  background-color: ${button2Color};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 30px;
+  border: none;
+  color: #9c9c9c;
+`;
+
+const UrlUserName = styled.div`
   background-color: black;
   width: 141px;
   height: 40px;
   border-radius: 5px;
-  margin-top: 432.4px;
+  margin-top: 10px;
   margin-left: 775px;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
-
-const UserCircle = styled.span`
+const UrlUserCircle = styled.span`
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -99,4 +114,3 @@ const UserCircle = styled.span`
   background-color: ${(props) => props.color};
   margin-right: 13px;
 `;
-
