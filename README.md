@@ -1,4 +1,4 @@
-#####Folders
+##### Folders
 📦src
  ┣ 📂assets
  ┃ ┣ 📜btn_home_click.png
@@ -140,8 +140,8 @@
  ┗ 📜index.js
  
  ---
-#####Tech Stack
-+React
-+Styled-components
-+Recoil
-+Prettier
+##### Tech Stack
++ React
++ Styled-components
++ Recoil
++ Prettier
