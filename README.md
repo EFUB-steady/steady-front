@@ -1,28 +1,14 @@
-# Folders
+# STEADY DAY
+## Directory Structure
+```
 📦src
-
-
  ┣ 📂core
- 
- 
  ┃ ┣ 📂font
- 
- 
  ┃ ┃ ┣ 📜BAUHS93.ttf
- 
- 
  ┃ ┃ ┗ 📜Pretendard-Regular.ttf
- 
- 
  ┃ ┣ 📜colors.js
- 
- 
- ┃ ┣ 📜reset.css
- 
- 
+ ┃ ┣ 📜reset.css 
  ┃ ┗ 📜texts.js
- 
- ```
  ┣ 📂routes
  ┃ ┗ 📜routes.js
  ┣ 📂ui
@@ -132,7 +118,7 @@
  ```
  
  ---
-# Tech Stack
+## Tech Stack
 + React
 + Styled-components
 + Recoil
