@@ -5,6 +5,7 @@ import Listbar from "../components/mypage/Listbar";
 import ToDo from "../components/mypage/ToDo";
 import MyInfo from "../components/mypage/MyInfo";
 import MyAuthList from "../components/mypage/MyAuthList";
+import DateAndBtn from "../components/mypage/DateAndBtn";
 
 export default function MyPagePage() {
   return (
@@ -12,6 +13,7 @@ export default function MyPagePage() {
       <SideBar />
       <MainContext>
         <Header />
+        <DateAndBtn />
         <MidContent>
           <LeftContent>
             <ToDo />
