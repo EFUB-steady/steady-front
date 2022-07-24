@@ -6,11 +6,23 @@
  
  
  ┃ ┣ 📂font
+ 
+ 
  ┃ ┃ ┣ 📜BAUHS93.ttf
+ 
+ 
  ┃ ┃ ┗ 📜Pretendard-Regular.ttf
+ 
+ 
  ┃ ┣ 📜colors.js
+ 
+ 
  ┃ ┣ 📜reset.css
+ 
+ 
  ┃ ┗ 📜texts.js
+ 
+ 
  ┣ 📂routes
  ┃ ┗ 📜routes.js
  ┣ 📂ui
