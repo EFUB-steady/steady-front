@@ -1,31 +1,10 @@
 # Folders
 📦src
- ┣ 📂assets
- ┃ ┣ 📜btn_home_click.png
- ┃ ┣ 📜btn_home_default.png
- ┃ ┣ 📜calender.png
- ┃ ┣ 📜chart.png
- ┃ ┣ 📜coin.png
- ┃ ┣ 📜icon_alert.png
- ┃ ┣ 📜icon_calender.png
- ┃ ┣ 📜icon_coin.png
- ┃ ┣ 📜icon_email_success.png
- ┃ ┣ 📜icon_link.png
- ┃ ┣ 📜icon_link_card_mypage.png
- ┃ ┣ 📜icon_megaphone.png
- ┃ ┣ 📜icon_people.png
- ┃ ┣ 📜icon_picture.png
- ┃ ┣ 📜icon_picture_card_mypage.png
- ┃ ┣ 📜icon_rank.png
- ┃ ┣ 📜icon_setting.png
- ┃ ┣ 📜icon_undo.png
- ┃ ┣ 📜link.png
- ┃ ┣ 📜logo_horizontal.png
- ┃ ┣ 📜logo_vertical.png
- ┃ ┣ 📜text_logo_compact.png
- ┃ ┣ 📜text_logo_long.png
- ┃ ┗ 📜web_explanation_pic.png
+
+
  ┣ 📂core
+ 
+ 
  ┃ ┣ 📂font
  ┃ ┃ ┣ 📜BAUHS93.ttf
  ┃ ┃ ┗ 📜Pretendard-Regular.ttf
