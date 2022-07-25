@@ -1,14 +1,23 @@
 import styled from "styled-components";
+import React, { useState, onClick } from "react";
 import { textboxColor } from "../../../../core/colors";
 import CustomLink from "../../commons/CustomLink";
 
-export default function IndexMainPage() {
-  return (
-    <CustomLink to="/">
-      <Button>MAIN PAGE</Button>
-    </CustomLink>
-  );
-}
+const IndexMainPage = () => {
+  const [color, setColor] = useState("black");
+
+  const Onclick = () => {
+    color == "black" ? setColor("white") : setColor("red");
+  };
+
+  <CustomLink to="/">
+    <Button color={color} onClick={onClick}>
+      MAIN PAGE
+    </Button>
+  </CustomLink>;
+};
+
+export default IndexMainPage;
 
 const Button = styled.button`
   /*박스*/
@@ -48,4 +57,5 @@ padding-right: 1rem; */
     background: black;
     color: white;
   }
+  background-color: ${(props) => props.color};
 `;

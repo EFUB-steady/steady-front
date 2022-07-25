@@ -1,5 +1,11 @@
 import styled from "styled-components";
+import { Title3 } from "../../../core/texts";
 
-export default function CheckLink() {
-  return <div>링크 인증하기<div>
+function CheckPic() {
+  return (
+    <>
+      <Title3>링크 인증하기</Title3>
+    </>
+  );
 }
+export default CheckPic;
