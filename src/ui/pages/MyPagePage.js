@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Header from "../components/header/Header";
 import SideBar from "../components/sidebar/SideBar";
-import Listbar from "../components/mypage/Listbar";
+import ListBar from "../components/mypage/ListBar";
 import ToDo from "../components/mypage/ToDo";
 import MyInfo from "../components/mypage/MyInfo";
 import MyAuthList from "../components/mypage/MyAuthList";
@@ -23,10 +23,8 @@ export default function MyPagePage() {
             <MyAuthList />
           </RightContent>
         </MidContent>
-        <FooterContent>
-          <Listbar />
-        </FooterContent>
       </MainContext>
+      <ListBar />
     </Wrapper>
   );
 }
