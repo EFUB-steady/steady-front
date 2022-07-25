@@ -6,6 +6,7 @@ import ToDo from "../components/mypage/ToDo";
 import MyInfo from "../components/mypage/MyInfo";
 import MyAuthList from "../components/mypage/MyAuthList";
 import DateAndBtn from "../components/mypage/DateAndBtn";
+import Search from "../components/mypage/Search";
 
 export default function AuthPage() {
   return (
@@ -15,8 +16,9 @@ export default function AuthPage() {
         <Header />
         <DateAndBtn />
         <MidContent>
-          <LeftContent></LeftContent>
-          <RightContent></RightContent>
+          <LeftContent>
+            <Search />
+          </LeftContent>
         </MidContent>
       </MainContext>
       <ListBar />
@@ -33,12 +35,12 @@ const MidContent = styled.div`
   width: 1000px;
   display: flex;
   flex-direction: row;
+  margin-top: 3rem;
 `;
 const LeftContent = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  border-right: 3px solid black;
 `;
 
 const RightContent = styled.div`
