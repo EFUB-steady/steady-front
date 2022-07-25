@@ -4,7 +4,7 @@ import SideBar from "../components/sidebar/SideBar";
 import ListBar from "../components/mypage/ListBar";
 import ToDo from "../components/mypage/ToDo";
 import MyInfo from "../components/mypage/MyInfo";
-import MyAuthList from "../components/mypage/MyAuthList";
+import MyAuthCal from "../components/mypage/MyAuthCal";
 import DateAndBtn from "../components/mypage/DateAndBtn";
 
 export default function MyPagePage() {
@@ -20,7 +20,7 @@ export default function MyPagePage() {
             <MyInfo />
           </LeftContent>
           <RightContent>
-            <MyAuthList />
+            <MyAuthCal />
           </RightContent>
         </MidContent>
       </MainContext>
