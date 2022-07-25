@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export default function LoginBtn() {
-  return <Button>로그인</Button>;
+export default function ArrowBtn() {
+  return <Button>버튼</Button>;
 }
 
 const Button = styled.button`
   width: 77px;
-  height: 130px;
+  height: 173px;
   background: black;
   border-radius: 5px;
   color: white;

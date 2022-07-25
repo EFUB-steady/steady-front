@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Login from "../components/login/Login";
-import ExplanationPic from "../components/login/ExplanationPic";
+import pic from "../../assets/web_explanation_pic.png";
 
 export default function LoginPage() {
   return (
@@ -9,25 +9,28 @@ export default function LoginPage() {
         <LeftContent>
           <Login />
         </LeftContent>
-        <RightContent>
-          <ExplanationPic />
-        </RightContent>
+        <Pic src={pic} />
       </Wrapper>
     </div>
   );
 }
 
 const Wrapper = styled.div`
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  width: 90vw;
-  margin: 0px 90px;
-  padding: 10px;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 const LeftContent = styled.div`
-  width: 50;
-  height: 50;
-  margin: 300px;
-  padding-left: 0px;
+  width: 400rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10rem;
 `;
 
-const RightContent = styled.div``;
+const Pic = styled.img`
+  height: 750px;
+`;

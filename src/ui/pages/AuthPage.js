@@ -4,11 +4,11 @@ import SideBar from "../components/sidebar/SideBar";
 import ListBar from "../components/mypage/ListBar";
 import ToDo from "../components/mypage/ToDo";
 import MyInfo from "../components/mypage/MyInfo";
-import MyAuthCal from "../components/mypage/MyAuthCal";
-import DateAndBtn from "../components/mypage/DateAndBtn";
 import MyAuthList from "../components/mypage/MyAuthList";
+import DateAndBtn from "../components/mypage/DateAndBtn";
+import Search from "../components/mypage/Search";
 
-export default function MyPagePage() {
+export default function AuthPage() {
   return (
     <Wrapper>
       <SideBar />
@@ -17,13 +17,8 @@ export default function MyPagePage() {
         <DateAndBtn />
         <MidContent>
           <LeftContent>
-            <ToDo />
-            <MyInfo />
+            <Search />
           </LeftContent>
-          <RightContent>
-            <MyAuthCal />
-            <MyAuthList />
-          </RightContent>
         </MidContent>
       </MainContext>
       <ListBar />
@@ -40,12 +35,12 @@ const MidContent = styled.div`
   width: 1000px;
   display: flex;
   flex-direction: row;
+  margin-top: 3rem;
 `;
 const LeftContent = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  border-right: 3px solid black;
 `;
 
 const RightContent = styled.div`
@@ -58,4 +53,3 @@ const FooterContent = styled.div`
   position: absolute;
   bottom: 0;
 `;
-//이렇게 내리니깐 스크롤바가 생기네..ㅠ

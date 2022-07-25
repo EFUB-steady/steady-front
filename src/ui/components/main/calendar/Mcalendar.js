@@ -1,7 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import "./reset.css";
-
+import "../../../../core/reset.css";
 import Calendar from "react-calendar";
 
 // 제목
@@ -58,7 +57,8 @@ export default Mcalendar;
 
 const Bold = styled.div`
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-family: "Bauhaus93";
 `;
 
 // react-calendar style 포함
@@ -90,6 +90,7 @@ const Container = styled.div`
 
     .react-calendar__month-view__weekdays {
       font-family: "bauhaus";
+      font-family: "Bauhaus93";
 
       .react-calendar__month-view__weekdays__weekday {
         background-color: #fc3c49;
@@ -114,7 +115,7 @@ const Container = styled.div`
     }
 
     .react-calendar__month-view__days {
-      border: 1px solid #000000;
+      border: 2px solid #000000;
 
       .react-calendar__month-view__days__day {
         position: relative;

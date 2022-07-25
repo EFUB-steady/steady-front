@@ -1,8 +1,13 @@
 import styled from "styled-components";
 import { textboxColor } from "../../../../core/colors";
+import CustomLink from "../../commons/CustomLink";
 
 export default function IndexMyPage() {
-  return <Button>MY PAGE</Button>;
+  return (
+    <CustomLink to="/mypage">
+      <Button>MY PAGE</Button>
+    </CustomLink>
+  );
 }
 
 const Button = styled.button`
@@ -26,11 +31,6 @@ const Button = styled.button`
   font-weight: 400;
   font-size: 21px;
   line-height: 100%;
-
-  //display: block; //텍스트 세로 정렬 하기 위한 시도들
-  /* padding-left: 1rem;
- padding-right: 1rem; */
-  //padding: 5px 0;
 
   /*간격*/
   margin: 0;

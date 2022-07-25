@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { textboxColor } from "../../../../core/colors";
 
+import { hintColor } from "./../../../../core/colors";
 export default function IndexFindPw() {
   return <Button>Find PW</Button>;
 }
@@ -26,6 +27,7 @@ const Button = styled.button`
   font-weight: 400;
   font-size: 21px;
   line-height: 100%;
+  color: ${hintColor};
 
   /*간격*/
   margin: 0;

@@ -3,16 +3,30 @@ import LoginBtn from "./../buttons/user/LoginBtn";
 import TextField from "@mui/material/TextField";
 import logo from "../../../assets/logo_horizontal.png";
 
+// 로그인 배치
 export default function Login() {
   return (
     <LoginBox>
       <LogoImg src={logo} />
       <IdPwBox>
-        <div>
-          <TextField sx={{ mb: 6 }} label="이메일 아이디" />
-          <TextField margin="20px" label="비밀번호" />
-        </div>
-        <LoginBtn />
+        <IdPwBoxLeft>
+          <TextField
+            sx={{ mb: 2, mt: 4 }}
+            label="이메일 아이디"
+            name="id"
+            fullWidth
+          />
+          <TextField
+            margin="20px"
+            label="비밀번호"
+            name="pw"
+            type="password"
+            fullWidth
+          />
+        </IdPwBoxLeft>
+        <IdPwBoxRight>
+          <LoginBtn sx={{ mb: 2, mt: 4 }} />
+        </IdPwBoxRight>
       </IdPwBox>
       <div style={{ display: "flex" }}>
         <LoginHelpText> 아이디/비밀번호 찾기</LoginHelpText>
@@ -32,10 +46,27 @@ export const LoginHelpText = styled.div`
   font-size: 14px;
   line-height: 100%;
 `;
-const LoginBox = styled.div``;
+const LoginBox = styled.div`
+  width: 500px;
+  left: 200px;
+  top: 415px;
+`;
 
 const IdPwBox = styled.div`
-  display: flex;
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+`;
+
+const IdPwBoxLeft = styled.div`
+  order: 1;
+  width: 70%;
+`;
+
+const IdPwBoxRight = styled.div`
+  order: 2;
+  width: 30%;
+  padding: 1.6em;
 `;
 
 const LogoImg = styled.img``;
