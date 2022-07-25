@@ -23,7 +23,7 @@ const Box = styled.div`
   height: 300px;
   border: 3px solid #000000;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-bottom: 20px;
 `;
 
 const TitleWrapper = styled.div`
@@ -39,4 +39,5 @@ const ListContaniner = styled.div`
   height: 450px;
   box-sizing: border-box;
   width: 520px;
+  margin-top: 20px;
 `;
