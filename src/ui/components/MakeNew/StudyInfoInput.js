@@ -29,6 +29,7 @@ export default function StudyInfoInput() {
             fontSize: 40,
             fontWeight: 700,
             height: 55,
+            fontFamily: "pretendard",
           }}
         />
         <SaveBtn />
@@ -49,6 +50,7 @@ export default function StudyInfoInput() {
             backgroundColor: gray100,
             padding: "8px",
             fontSize: 18,
+            fontFamily: "pretendard",
           }}
         />
       </Content>
@@ -58,8 +60,8 @@ export default function StudyInfoInput() {
 
 const Content = styled.div`
   box-sizing: border-box;
-  min-width: 987px;
-  height: 149px;
+  width: 100%;
+  min-height: 149px;
   background-color: ${gray100};
   border: 3px solid #000000;
   border-radius: 5px;

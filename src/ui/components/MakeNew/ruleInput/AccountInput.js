@@ -24,8 +24,7 @@ const Input = styled.input`
   height: 35px;
   text-align: center;
   border: 0;
-  margin-left: 25px;
-  margin-right: 10px;
+  margin-right: 20px;
   font-size: 18px;
   font-family: "Pretendard";
 `;
