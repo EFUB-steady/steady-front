@@ -9,6 +9,7 @@ const MyAuthList = () => {
     <>
       <Text>나의 인증 목록</Text>
       <DatePicker
+        dateFormat="yyyy/MM/dd"
         selected={startDate}
         onChange={(date) => setStartDate(date)}
       />
