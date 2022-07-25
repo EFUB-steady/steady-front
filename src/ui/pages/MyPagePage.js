@@ -53,6 +53,7 @@ const RightContent = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 3rem;
+  margin-top: 2rem;
 `;
 const FooterContent = styled.div`
   position: absolute;
