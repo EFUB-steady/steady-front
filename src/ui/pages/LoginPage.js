@@ -17,7 +17,7 @@ export default function LoginPage() {
 
 const Wrapper = styled.div`
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
