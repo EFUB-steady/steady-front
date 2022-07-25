@@ -6,6 +6,7 @@ import ToDo from "../components/mypage/ToDo";
 import MyInfo from "../components/mypage/MyInfo";
 import MyAuthCal from "../components/mypage/MyAuthCal";
 import DateAndBtn from "../components/mypage/DateAndBtn";
+import MyAuthList from "../components/mypage/MyAuthList";
 
 export default function MyPagePage() {
   return (
@@ -21,6 +22,7 @@ export default function MyPagePage() {
           </LeftContent>
           <RightContent>
             <MyAuthCal />
+            <MyAuthList />
           </RightContent>
         </MidContent>
       </MainContext>
