@@ -4,11 +4,12 @@ import { Body2 } from "../../../../core/texts";
 export default function NoticeItem({ notice }) {
   return (
     <Wrapper>
-        <Body2> ㆍ {notice.notice}</Body2>
+      <Body2>
+        {notice.id}. {notice.notice}
+      </Body2>
     </Wrapper>
   );
 }
 const Wrapper = styled.div`
   display: flex;
 `;
-
