@@ -16,7 +16,7 @@ const Button = styled.div`
   height: 48px;
   background-color: black;
   border-radius: 5px;
-  margin-top: 58px;
+  margin-top: 40px;
 `;
 
 const Text = styled.div`

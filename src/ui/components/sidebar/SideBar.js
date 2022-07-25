@@ -7,30 +7,37 @@ import SideLogoBox from "./SideLogoBox";
 
 export default function SideBar() {
   return (
-    <SideBarBox>
-      <SideLogoBox />
+    <Wrapper>
+      <SideBarBox>
+        <SideLogoBox />
 
-      <SideBarStudyList />
+        <SideBarStudyList />
 
-      <Divider />
+        <Divider />
 
-      <Penalty />
+        <Penalty />
 
-      <MakeNewStudyBtn />
-    </SideBarBox>
+        <MakeNewStudyBtn />
+      </SideBarBox>
+    </Wrapper>
   );
 }
 
-const SideBarBox = styled.div`
+const Wrapper = styled.div`
   background-color: ${gray100};
   position: fixed;
-  width: 198px;
   left: 0;
   top: 0;
   bottom: 0;
+  width: 198px;
+`;
+
+const SideBarBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
 `;
 
 const Divider = styled.div`

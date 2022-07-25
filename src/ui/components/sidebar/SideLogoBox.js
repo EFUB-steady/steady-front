@@ -4,15 +4,22 @@ import logo from "../../../assets/logo_vertical.png";
 
 export default function SideLogoBox() {
   return (
-    <>
+    <Wrapper>
       <Logo src={logo} />
       <Subtitle2>MY STUDY</Subtitle2>
-    </>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+`;
 
 const Logo = styled.img`
   width: 104px;
   height: 167px;
-  margin: 40px 0;
+  margin-bottom: 25px;
 `;
