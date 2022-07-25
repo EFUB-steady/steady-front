@@ -1,8 +1,13 @@
 import styled from "styled-components";
 import { textboxColor } from "../../../../core/colors";
+import CustomLink from "../../commons/CustomLink";
 
 export default function IndexMyPage() {
-  return <Button>MY PAGE</Button>;
+  return (
+    <CustomLink to="/mypage">
+      <Button>MY PAGE</Button>
+    </CustomLink>
+  );
 }
 
 const Button = styled.button`
