@@ -7,6 +7,8 @@ import MyInfo from "../components/mypage/MyInfo";
 import MyAuthList from "../components/mypage/MyAuthList";
 import DateAndBtn from "../components/mypage/DateAndBtn";
 import Search from "../components/mypage/Search";
+import CheckPic from "../components/mypage/CheckPic";
+import CheckLink from "../components/mypage/CheckLink";
 
 export default function AuthPage() {
   return (
@@ -18,7 +20,11 @@ export default function AuthPage() {
         <MidContent>
           <LeftContent>
             <Search />
+            <CheckPic />
           </LeftContent>
+          <RightContent>
+            <CheckLink />
+          </RightContent>
         </MidContent>
       </MainContext>
       <ListBar />
