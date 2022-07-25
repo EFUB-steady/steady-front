@@ -6,7 +6,6 @@ function CheckLink() {
     <>
       <Title3>링크 인증하기</Title3>
       <Box>
-        {" "}
         <AuthBox>
           블로그, 깃허브 등의 글을 작성한 웹 링크로 인증하기
           <Input>
