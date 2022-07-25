@@ -4,7 +4,7 @@ import { useState } from "react";
 import { gray100 } from "../../../core/colors";
 import { Divider, Input } from "@mui/material";
 
-export default function Info() {
+export default function MyInfo() {
   const [nickInput, setNickInput] = useState("");
   const [nameInput, setNameInput] = useState("");
   const [idInput, setIdInput] = useState("");
