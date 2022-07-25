@@ -146,6 +146,7 @@ const Text = styled.div`
 const InfoHeader = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 380px;
 
   padding-top: 40px;
   margin-right: 20px;

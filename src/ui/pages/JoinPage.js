@@ -3,7 +3,7 @@ import styled from "styled-components";
 import logo from "../../assets/logo_horizontal.png";
 import pic from "../../assets/web_explanation_pic.png";
 import SignInfo from "./../components/login/SignInfo";
-import { gray300 } from "../../core/colors";
+
 import GoBackBtn from "../components/buttons/common/GoBackBtn";
 
 export default function JoinPage() {
