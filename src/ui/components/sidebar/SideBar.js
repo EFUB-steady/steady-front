@@ -30,6 +30,7 @@ const Wrapper = styled.div`
   top: 0;
   bottom: 0;
   width: 198px;
+  z-index: 10;
 `;
 
 const SideBarBox = styled.div`
