@@ -9,7 +9,7 @@ export default function DateAndBtn() {
     <>
       <TitleBox>
         <Title>{formattedToday}</Title>
-        <Button>저장하기 </Button>
+        <Button>저장하기</Button>
       </TitleBox>
     </>
   );
