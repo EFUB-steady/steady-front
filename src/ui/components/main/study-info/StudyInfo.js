@@ -20,6 +20,7 @@ const Content = styled.div`
   box-sizing: border-box;
 
   width: 100%;
+  min-width: 987px;
   height: 149px;
   left: 282px;
   top: 269px;

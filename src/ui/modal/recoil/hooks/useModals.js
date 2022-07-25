@@ -1,21 +1,6 @@
-import { useRecoilState } from 'recoil'
-import { uploadStudyModalState } from '../states/modalStates'
+import { generateModalHook } from "../generateModalHook";
+import { uploadStudyModalState, dateStudyModalState } from "../states/modalStates";
 
-export default function useModals() {
-  const [modal, setModal] = useRecoilState(uploadStudyModalState)
+export const useUploadStudyModal = generateModalHook(uploadStudyModalState);
 
-  const openModal = ({ modalType, modalProps }) => {
-    setModal({ modalType, modalProps })
-  }
-
-  const closeModal = () => {
-    setModal(null)
-  }
-
-  return {
-    modal,
-    setModal,
-    openModal,
-    closeModal,
-  }
-}
+export const useDateStudyModal = generateModalHook(dateStudyModalState); 

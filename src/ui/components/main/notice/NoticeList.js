@@ -29,6 +29,8 @@ export default function NoticeList() {
 const Wrapper = styled.div`
   display: flex;
   height: auto;
+  width: 100%;
+  min-width: 987px;
   background-color: ${gray100};
   border: 3px solid black;
   border-radius: 5px;

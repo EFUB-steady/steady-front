@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Body2, Subtitle2 } from "../../../../core/texts";
 import { Row } from "../../commons/Row";
 
-export default function Account({}) {
+export default function Account() {
   return (
     <AccountWrapper>
       <div style={{ width: 100 }}>

@@ -3,9 +3,9 @@ import peopleIcon from "../../../assets/icon_people.png";
 import { gray400 } from "../../../core/colors";
 import CopyInviteLinkBtn from "../buttons/study/CopyInviteLinkBtn";
 import MainSubTitle from "../main/MainSubTitle";
-export default function Members() {
+export default function MembersInput() {
   return (
-    <Wrapper>
+    <>
       <TitleWrapper>
         <MainSubTitle iconSrc={peopleIcon} title={"스터디 구성원 관리"} />
         <CopyInviteLinkBtn />
@@ -21,21 +21,19 @@ export default function Members() {
         <Li>회원을 추가할 수 있습니다!</Li>
         <Li>회원을 추가할 수 있습니다!</Li>
       </Content>
-    </Wrapper>
+    </>
   );
 }
 
-const Wrapper = styled.div`
-  margin-bottom: 40px;
-`;
-
 const TitleWrapper = styled.div`
   display: flex;
+  min-width: 987px;
   justify-content: space-between;
   align-items: center;
 `;
 
 const Content = styled.ul`
+  min-width: 987px;
   border-left: 3px solid black;
   border-bottom: 3px solid black;
 `;

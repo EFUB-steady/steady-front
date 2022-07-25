@@ -67,6 +67,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  min-width: 987px;
   height: auto;
   background-color: ${gray100};
   border: 3px solid black;

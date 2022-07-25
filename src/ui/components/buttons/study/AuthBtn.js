@@ -1,21 +1,9 @@
-import styled from 'styled-components'
-import useModals from '../../../modal/recoil/hooks/useModals'
+import styled from "styled-components";
+import { useUploadStudyModal } from "../../../modal/recoil/hooks/useModals";
 
 export default function AuthBtn() {
-  const { openModal } = useModals()
-
-  const handleUploadStudyModal = () => {
-    openModal({
-      modalType: 'UploadStudyModal',
-      modalProps: {
-        date: '5월 31일',
-        handleSave: () => {
-          console.log('저장하기')
-        },
-      },
-    })
-  }
-  return <Button onClick={handleUploadStudyModal}>인증하기</Button>
+  const { openModal } = useUploadStudyModal();
+  return <Button onClick={openModal}>인증하기</Button>;
 }
 
 const Button = styled.button`
@@ -25,7 +13,7 @@ const Button = styled.button`
   border: 3px solid black;
   background: black;
   text-align: center;
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -39,4 +27,4 @@ const Button = styled.button`
     background: white;
     color: black;
   }
-`
+`;
