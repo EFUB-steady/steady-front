@@ -32,11 +32,6 @@ const Button = styled.button`
   font-size: 21px;
   line-height: 100%;
 
-  //display: block; //텍스트 세로 정렬 하기 위한 시도들
-  /* padding-left: 1rem;
- padding-right: 1rem; */
-  //padding: 5px 0;
-
   /*간격*/
   margin: 0;
 
