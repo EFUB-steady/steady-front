@@ -6,8 +6,25 @@ import "react-datepicker/dist/react-datepicker.css";
 const MyAuthList = () => {
   const [startDate, setStartDate] = useState(new Date());
   return (
-    <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
+    <>
+      <Text>나의 인증 목록</Text>
+      <DatePicker
+        selected={startDate}
+        onChange={(date) => setStartDate(date)}
+      />
+    </>
   );
 };
 
 export default MyAuthList;
+
+const Text = styled.div`
+  width: 150px;
+  height: 50px;
+  margin-top: 40px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 100%;
+`;

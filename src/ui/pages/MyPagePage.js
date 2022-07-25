@@ -19,7 +19,9 @@ export default function MyPagePage() {
             <ToDo />
             <MyInfo />
           </LeftContent>
-          <RightContent></RightContent>
+          <RightContent>
+            <MyAuthList />
+          </RightContent>
         </MidContent>
         <FooterContent>
           <Listbar />
@@ -50,6 +52,7 @@ const RightContent = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
+  margin-left: 3rem;
 `;
 const FooterContent = styled.div`
   position: absolute;
