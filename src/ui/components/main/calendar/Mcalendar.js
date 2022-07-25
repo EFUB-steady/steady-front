@@ -5,7 +5,7 @@ import "./reset.css";
 import Calendar from "react-calendar";
 
 // 제목
-function NavigationLabel(month: string) {
+function NavigationLabel(month) {
   return (
     <>
       <Bold>{month} 일정</Bold>
@@ -28,7 +28,7 @@ function Mcalendar() {
         showNeighboringMonth
         navigationLabel={({ date }) =>
           NavigationLabel(
-            date.toLocaleDateString("ko-KR", { month: "2-digit" })
+            date.toLocaleDateString("ko-KR", { month: "2-digit" }),
           )
         }
         prev2Label={null}
@@ -37,7 +37,7 @@ function Mcalendar() {
           const lastDate = new Date(
             date.getFullYear(),
             date.getMonth() + 1,
-            0
+            0,
           ).getDate();
 
           {
@@ -50,7 +50,6 @@ function Mcalendar() {
           ) : null;
         }}
       />
-      ;
     </Container>
   );
 }
@@ -68,10 +67,10 @@ const Bold = styled.div`
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  min-width: 987px;
+  margin: 42px 0;
 
   .react-calendar {
-    width: 1000px;
-
     display: flex;
     flex-direction: column;
     align-items: flex-end;
