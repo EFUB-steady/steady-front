@@ -15,9 +15,8 @@ export default function JoinPage() {
           <LogoImg src={logo} />
           <SignInfo />
         </LeftContent>
-        <RightContent>
-          <Pic src={pic} />
-        </RightContent>
+
+        <Pic src={pic} />
       </Wrapper>
     </div>
   );
@@ -27,16 +26,10 @@ const LogoImg = styled.img`
 `;
 
 const Pic = styled.img`
-  width: 500px;
   height: 750px;
 `;
 
 const Wrapper = styled.div`
-  /* display: flex;
-  width: 90vw;
-  height: 100vh;
-  margin: 40px 90px;
-  padding-left: 0px; */
   width: 100%;
   height: 100%;
   display: flex;
@@ -46,20 +39,10 @@ const Wrapper = styled.div`
 
 const LeftContent = styled.div`
   width: 400rem;
-  float: left;
+
   box-sizing: border-box;
-  margin-top: 200px;
-  margin-left: 350px;
-
-  padding-right: 215px;
-`;
-
-const RightContent = styled.div`
-  position: absolute;
-  width: 640px;
-  height: 1024px;
-  left: 1250px;
-  top: 0px;
-
-  background: ${gray300};
+  align-items: center;
+  justify-content: center;
+  margin-left: 15rem;
+  margin-top: 7rem;
 `;
