@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Title3 } from "../../../core/texts";
 
 const OPTIONS = [
   { value: "0", name: "코딩 스터디" },
@@ -14,34 +15,37 @@ const SelectBox = (props) => {
   };
 
   return (
-    <SelectBoxWrapper>
-      <Select onChange={handleChange}>
-        {props.options.map((option) => (
-          <option
-            key={option.value}
-            value={option.value}
-            defaultValue={props.defaultValue === option.value}
-          >
-            {option.src}
-            {option.name}
-          </option>
-        ))}
-      </Select>
-      <IconSVG
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          d="M10 14L16 6H4L10 14Z"
-          fill="#1A1A1A"
-        />
-      </IconSVG>
-    </SelectBoxWrapper>
+    <>
+      <Title3>스터디 이름</Title3>
+      <SelectBoxWrapper>
+        <Select onChange={handleChange}>
+          {props.options.map((option) => (
+            <option
+              key={option.value}
+              value={option.value}
+              defaultValue={props.defaultValue === option.value}
+            >
+              {option.src}
+              {option.name}
+            </option>
+          ))}
+        </Select>
+        <IconSVG
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M10 14L16 6H4L10 14Z"
+            fill="#1A1A1A"
+          />
+        </IconSVG>
+      </SelectBoxWrapper>
+    </>
   );
 };
 
@@ -73,6 +77,7 @@ export const Select = styled.select`
   &:focus {
     border-color: red;
   }
+  margin-top: 2rem;
 `;
 
 const IconSVG = styled.svg`
@@ -80,6 +85,7 @@ const IconSVG = styled.svg`
   align-self: center;
   width: 24px;
   height: 24px;
+  margin-top: 2rem;
 `;
 
 // const Dot = styled.div`
