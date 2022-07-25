@@ -19,9 +19,7 @@ export default function MyPagePage() {
             <ToDo />
             <MyInfo />
           </LeftContent>
-          <RightContent>
-            <MyAuthList />
-          </RightContent>
+          <RightContent></RightContent>
         </MidContent>
         <FooterContent>
           <Listbar />
