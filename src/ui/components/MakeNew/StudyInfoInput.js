@@ -2,7 +2,7 @@ import styled from "styled-components";
 import MainSubTitle from "../main/MainSubTitle";
 import iconSetting from "../../../assets/icon_setting.png";
 import { useState } from "react";
-import { Divider, Input } from "@mui/material";
+import { Input } from "@mui/material";
 import { gray100 } from "../../../core/colors";
 import { Row } from "../commons/Row";
 import SaveBtn from "../buttons/study/SaveBtn";
@@ -12,8 +12,8 @@ export default function StudyInfoInput() {
   const [infoInput, setInfoInput] = useState("");
 
   return (
-    <Wrapper>
-      <MainSubTitle iconSrc={iconSetting} title={"스터디 개설하기"} />
+    <>
+      <MainSubTitle iconSrc={iconSetting} title={"스터디 설정"} />
       <Row>
         <Input
           placeholder="스터디 이름"
@@ -28,11 +28,11 @@ export default function StudyInfoInput() {
             padding: "8px",
             fontSize: 40,
             fontWeight: 700,
+            height: 55,
           }}
         />
         <SaveBtn />
       </Row>
-      <Divider style={{ marginTop: 10, backgroundColor: "black" }} />
       <Content>
         <Input
           placeholder="200자 이내의 간단한 스터디 소개"
@@ -52,13 +52,9 @@ export default function StudyInfoInput() {
           }}
         />
       </Content>
-    </Wrapper>
+    </>
   );
 }
-
-const Wrapper = styled.div`
-  margin-bottom: 40px;
-`;
 
 const Content = styled.div`
   box-sizing: border-box;
@@ -69,5 +65,5 @@ const Content = styled.div`
   border-radius: 5px;
   line-height: 36px;
   padding: 15px;
-  margin-top: 24px;
+  margin-top: 15px;
 `;

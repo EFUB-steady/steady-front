@@ -7,8 +7,6 @@ import Rule from "../components/main/rule/Rule";
 import StudyInfo from "../components/main/study-info/StudyInfo";
 import SideBar from "../components/sidebar/SideBar";
 
-const innerw = window.innerWidth - 198;
-
 export default function MainPage() {
   return (
     <Wrapper>

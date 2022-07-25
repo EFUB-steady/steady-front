@@ -4,8 +4,13 @@ import "../../../../core/reset.css";
 import Calendar from "react-calendar";
 
 // 제목
-function NavigationLabel(month: string) {
-  return <Bold>{month}</Bold>;
+function NavigationLabel(month) {
+  return (
+    <>
+      <Bold>{month} 일정</Bold>
+      {/* 일정 div 나눠서 글씨 작게 만들기 */}
+    </>
+  );
 }
 
 // 캘린더
@@ -44,7 +49,6 @@ function Mcalendar() {
           ) : null;
         }}
       />
-      ;
     </Container>
   );
 }
@@ -63,10 +67,10 @@ const Bold = styled.div`
 const Container = styled.div`
   display: flex;
   justify-content: center;
+  min-width: 987px;
+  margin: 42px 0;
 
   .react-calendar {
-    width: 1000px;
-
     display: flex;
     flex-direction: column;
     align-items: flex-end;
