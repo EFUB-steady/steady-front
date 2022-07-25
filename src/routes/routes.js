@@ -6,6 +6,7 @@ const routes = {
   FINDPW: "findpw/",
   MAKENEW: "makenew/",
   MYPAGE: "mypage/",
+  AUTHPAGE: "authpage/",
 };
 
 export default routes;
