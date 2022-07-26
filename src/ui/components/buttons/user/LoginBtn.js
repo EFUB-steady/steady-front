@@ -1,7 +1,12 @@
 import styled from "styled-components";
+import CustomLink from "../../commons/CustomLink";
 
 export default function LoginBtn() {
-  return <Button>로그인</Button>;
+  return (
+    <CustomLink to="/main">
+      <Button>로그인</Button>
+    </CustomLink>
+  );
 }
 
 const Button = styled.button`
