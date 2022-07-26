@@ -2,13 +2,14 @@ import styled from "styled-components";
 import { gray100 } from "../../../core/colors";
 import ListBarStudyList from "./ListBarStudyList";
 import ArrowBtn from "./ArrowBtn";
+import ArrowBtn2 from "./ArrowBtn2";
 
 export default function ListBar() {
   return (
     <ListBarBox>
       <ArrowBtn />
       <ListBarStudyList />
-      <ArrowBtn />
+      <ArrowBtn2 />
     </ListBarBox>
   );
 }
