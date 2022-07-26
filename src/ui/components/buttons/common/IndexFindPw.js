@@ -2,18 +2,30 @@ import styled from "styled-components";
 import { textboxColor } from "../../../../core/colors";
 import { hintColor } from "./../../../../core/colors";
 import CustomLink from "../../commons/CustomLink";
+import React, { useState } from "react";
 
-export default function IndexFindPw() {
+const IndexFindPw = () => {
+  const [color, setColor] = useState("black");
+
+  const onClick = () => {
+    color === "black" ? setColor("gray") : setColor("black");
+  };
+
   return (
     <CustomLink to="/findpw">
-      <Button>Find PW</Button>
+      <Button color={color} onClick={onClick}>
+        Find PW
+      </Button>
     </CustomLink>
   );
-}
+};
+
+export default IndexFindPw;
 
 const Button = styled.button`
   /*박스*/
-  background-color: ${textboxColor};
+  /* background-color: ${textboxColor}; */
+  background-color: ${(props) => props.color};
   color: black;
   height: 48px;
   margin-right: 5px;
