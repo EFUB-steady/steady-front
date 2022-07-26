@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export default function BackToLogin() {
+export default function BackToLoginBtn() {
   return <Button>로그인 페이지로 돌아가기</Button>;
 }
 
