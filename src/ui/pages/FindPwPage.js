@@ -1,16 +1,17 @@
 import styled from "styled-components";
 import logo from "../../assets/logo_horizontal.png";
-import FindBox from "../components/login/FindBox";
+import Indexes from "../components/login/Indexes";
 import { Subtitle3, Body } from "../../core/texts";
 import { hintColor } from "../../core/colors";
 import GoBackBtn from "../components/buttons/common/GoBackBtn";
+import UserCheckBtn from "../components/buttons/user/UserCheckBtn";
 export default function FindPwPage() {
   return (
     <>
       <GoBackBtn />
       <Wrapper>
         <LogoImg src={logo} />
-        <FindBox />
+        <Indexes />
         <Content>
           <SignBox>
             <Text>
@@ -26,7 +27,9 @@ export default function FindPwPage() {
             이메일 서비스 제공자 사정에 의해 즉시 도착하지 않을 수 있으니, 최대
             30분 정도 <br />
             기다리신 후 다시 시도해주세요.
+            <br />
           </Body>
+          <UserCheckBtn />
         </Content>
       </Wrapper>
     </>

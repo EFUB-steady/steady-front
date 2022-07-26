@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import logo from "../../assets/logo_horizontal.png";
-import FindBox from "../components/login/FindBox";
+import Indexes from "../components/login/Indexes";
 import { hintColor } from "../../core/colors";
 import { Subtitle3 } from "../../core/texts";
 import GoBackBtn from "../components/buttons/common/GoBackBtn";
@@ -11,7 +11,7 @@ export default function FindIdPage() {
       <GoBackBtn />
       <Wrapper>
         <LogoImg src={logo} />
-        <FindBox />
+        <Indexes />
         <SignBox>
           <Text>
             <Subtitle3>이름 (실명)</Subtitle3>
