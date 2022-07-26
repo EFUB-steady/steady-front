@@ -1,9 +1,14 @@
 import styled from "styled-components";
 import { textboxColor } from "../../../../core/colors";
-
 import { hintColor } from "./../../../../core/colors";
+import CustomLink from "../../commons/CustomLink";
+
 export default function IndexFindPw() {
-  return <Button>Find PW</Button>;
+  return (
+    <CustomLink to="/findpw">
+      <Button>Find PW</Button>
+    </CustomLink>
+  );
 }
 
 const Button = styled.button`
