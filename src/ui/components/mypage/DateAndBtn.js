@@ -46,4 +46,13 @@ const Button = styled.button`
   font-size: 14px;
   line-height: 100%;
   margin-top: 3rem;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
+  &:active {
+    background: white;
+    color: black;
+  }
 `;
