@@ -7,6 +7,7 @@ const routes = {
   MAKENEW: "makenew/",
   MYPAGE: "mypage/",
   AUTHPAGE: "authpage/",
+  HOSTMAIN: "hostmain/",
 };
 
 export default routes;

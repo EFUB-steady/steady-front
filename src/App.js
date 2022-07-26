@@ -7,6 +7,7 @@ import MyPagePage from "../src/ui/pages/MyPagePage";
 import AuthPage from "../src/ui/pages/AuthPage";
 import FindIdPage from "../src/ui/pages/FindIdPage";
 import FindPwPage from "../src/ui/pages/FindPwPage";
+import HostMainPage from "../src/ui/pages/HostMainPage";
 import routes from "./routes/routes";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path={routes.AUTHPAGE} element={<AuthPage />} />
         <Route path={routes.FINDID} element={<FindIdPage />} />
         <Route path={routes.FINDPW} element={<FindPwPage />} />
+        <Route path={routes.HOSTMAIN} element={<HostMainPage/>}/>
       </Routes>
     </BrowserRouter>
   );
