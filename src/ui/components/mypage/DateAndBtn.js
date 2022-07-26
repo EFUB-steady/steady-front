@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { format } from "date-fns";
+import CustomLink from "../commons/CustomLink";
 
 export default function DateAndBtn() {
   const today = new Date();
@@ -9,7 +10,9 @@ export default function DateAndBtn() {
     <>
       <TitleBox>
         <Title>{formattedToday}</Title>
-        <Button>저장하기</Button>
+        <CustomLink to="/authpage">
+          <Button>오늘의 스터디 인증하기</Button>
+        </CustomLink>
       </TitleBox>
     </>
   );
@@ -30,7 +33,7 @@ const Title = styled.div`
 `;
 
 const Button = styled.button`
-  width: 108px;
+  width: 200px;
   height: 40px;
   background: black;
   border-radius: 5px;
