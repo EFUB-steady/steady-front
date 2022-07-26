@@ -1,17 +1,14 @@
 import styled from "styled-components";
 import BackToLoginBtn from "../buttons/user/BackToLoginBtn";
-export default function FindIdPage() {
+import GoBackBtn from "../buttons/common/GoBackBtn";
+import logo from "../../../assets/logo_horizontal.png";
+import Indexes from "./Indexes";
+export default function Find2nd() {
   return (
     <>
-      <GoBackBtn />
-      <Wrapper>
-        <LogoImg src={logo} />
-        <Indexes />
-        <SignBox>
-          <div>회원님의 아이디는 ewhakim@mail.com 입니다.</div>
-        </SignBox>
-        <BackToLoginBtn />
-      </Wrapper>
+      <SignBox>
+        <div>회원님의 아이디는 ewhakim@mail.com 입니다.</div>
+      </SignBox>
     </>
   );
 }
