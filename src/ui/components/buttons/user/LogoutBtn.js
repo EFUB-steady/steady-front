@@ -1,7 +1,11 @@
 import styled from "styled-components";
-
+import CustomLink from "../../commons/CustomLink";
 export default function LogoutBtn() {
-  return <Button>LOGOUT</Button>;
+  return (
+    <CustomLink to="/">
+      <Button>LOGOUT</Button>
+    </CustomLink>
+  );
 }
 
 const Button = styled.button`

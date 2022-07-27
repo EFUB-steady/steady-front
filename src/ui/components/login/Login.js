@@ -2,6 +2,7 @@ import styled from "styled-components";
 import LoginBtn from "./../buttons/user/LoginBtn";
 import TextField from "@mui/material/TextField";
 import logo from "../../../assets/logo_horizontal.png";
+import CustomLink from "../commons/CustomLink";
 
 // 로그인 배치
 export default function Login() {
@@ -29,8 +30,16 @@ export default function Login() {
         </IdPwBoxRight>
       </IdPwBox>
       <div style={{ display: "flex" }}>
-        <LoginHelpText> 아이디/비밀번호 찾기</LoginHelpText>
-        <LoginHelpText>회원 가입하기</LoginHelpText>
+        <CustomLink to="/findid">
+          <Button>
+            <LoginHelpText> 아이디/비밀번호 찾기</LoginHelpText>
+          </Button>
+        </CustomLink>
+        <CustomLink to="/join">
+          <Button>
+            <LoginHelpText> 회원 가입하기</LoginHelpText>
+          </Button>
+        </CustomLink>
       </div>
     </LoginBox>
   );
@@ -70,3 +79,5 @@ const IdPwBoxRight = styled.div`
 `;
 
 const LogoImg = styled.img``;
+
+const Button = styled.button``;

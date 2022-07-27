@@ -78,6 +78,7 @@ export const Select = styled.select`
     border-color: red;
   }
   margin-top: 2rem;
+  margin-bottom: 3rem;
 `;
 
 const IconSVG = styled.svg`
@@ -86,6 +87,7 @@ const IconSVG = styled.svg`
   width: 24px;
   height: 24px;
   margin-top: 2rem;
+  margin-bottom: 3rem;
 `;
 
 // const Dot = styled.div`

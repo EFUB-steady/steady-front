@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import React, { useState } from "react";
 import { textboxColor } from "../../../../core/colors";
 import CustomLink from "../../commons/CustomLink";
 
 export default function IndexMainPage() {
   return (
-    <CustomLink to="/">
+    <CustomLink to="/main">
       <Button>MAIN PAGE</Button>
     </CustomLink>
   );

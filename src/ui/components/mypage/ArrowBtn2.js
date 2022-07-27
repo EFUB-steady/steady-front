@@ -2,10 +2,10 @@ import styled from "styled-components";
 import Larrow from "../../../assets/LeftArrow.png";
 import Rarrow from "../../../assets/RightArrow.png";
 
-export default function ArrowBtn() {
+export default function ArrowBtn2() {
   return (
     <Button>
-      <Arrow src={Larrow} />
+      <Arrow src={Rarrow} />
     </Button>
   );
 }
@@ -25,5 +25,5 @@ const Arrow = styled.img`
   justify-content: center;
   align-items: center;
   display: flex;
-  margin-left: 20px;
+  margin-left: 30px;
 `;

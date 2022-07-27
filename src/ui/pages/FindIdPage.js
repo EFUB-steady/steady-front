@@ -1,34 +1,35 @@
 import styled from "styled-components";
 import logo from "../../assets/logo_horizontal.png";
-import FindBox from "../components/login/FindBox";
+import Indexes from "../components/login/Indexes";
 import { hintColor } from "../../core/colors";
 import { Subtitle3 } from "../../core/texts";
 import GoBackBtn from "../components/buttons/common/GoBackBtn";
 import UserCheckBtn from "../components/buttons/user/UserCheckBtn";
-export default function FindIdPage() {
+import React, { useState } from "react";
+import FindId1st from "../components/login/FindId1st";
+import FindId2nd from "../components/login/FindId2nd";
+
+function FindIdPage() {
+  const [viewPage, setViewPage] = useState(true);
   return (
     <>
       <GoBackBtn />
       <Wrapper>
         <LogoImg src={logo} />
-        <FindBox />
-        <SignBox>
-          <Text>
-            <Subtitle3>이름 (실명)</Subtitle3>
-          </Text>
-          <InputBox>김이화</InputBox>
-        </SignBox>
-        <SignBox>
-          <Text>
-            <Subtitle3>휴대폰 번호</Subtitle3>
-          </Text>
-          <InputBox>010-0000-0000</InputBox>
-        </SignBox>
-        <UserCheckBtn />
+        <Indexes />
+        <MainContentWrapper>
+          {viewPage ? <FindId1st /> : <FindId2nd />}
+        </MainContentWrapper>
+
+        <UserCheckBtn onClick={() => setViewPage(false)} />
       </Wrapper>
     </>
   );
 }
+
+export default FindIdPage;
+
+const MainContentWrapper = styled.div``;
 const LogoImg = styled.img`
   padding: 2rem;
 `;

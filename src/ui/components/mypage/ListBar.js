@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { gray100 } from "../../../core/colors";
 import ListBarStudyList from "./ListBarStudyList";
 import ArrowBtn from "./ArrowBtn";
+import ArrowBtn2 from "./ArrowBtn2";
 
 // 폴더 이름 변경 커밋
 
@@ -10,7 +11,7 @@ export default function ListBar() {
     <ListBarBox>
       <ArrowBtn />
       <ListBarStudyList />
-      <ArrowBtn />
+      <ArrowBtn2 />
     </ListBarBox>
   );
 }

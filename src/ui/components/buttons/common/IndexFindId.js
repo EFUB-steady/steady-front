@@ -1,8 +1,11 @@
 import styled from "styled-components";
-import { textboxColor } from "../../../../core/colors";
-
+import CustomLink from "../../commons/CustomLink";
 export default function IndexFindId() {
-  return <Button>Find Id</Button>;
+  return (
+    <CustomLink to="/findid">
+      <Button>Find Id</Button>
+    </CustomLink>
+  );
 }
 
 const Button = styled.button`
