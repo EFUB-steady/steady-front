@@ -2,7 +2,7 @@ import styled from "styled-components";
 import IndexFindPw from "../buttons/common/IndexFindPw";
 import IndexFindId from "./../buttons/common/IndexFindId";
 
-export default function FindBox() {
+export default function Indexes() {
   return (
     <div>
       <Box>

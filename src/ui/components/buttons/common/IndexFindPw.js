@@ -1,14 +1,21 @@
 import styled from "styled-components";
 import { textboxColor } from "../../../../core/colors";
-
 import { hintColor } from "./../../../../core/colors";
+import CustomLink from "../../commons/CustomLink";
+import React, { useState } from "react";
+
 export default function IndexFindPw() {
-  return <Button>Find PW</Button>;
+  return (
+    <CustomLink to="/findpw">
+      <Button>Find PW</Button>
+    </CustomLink>
+  );
 }
 
 const Button = styled.button`
   /*박스*/
   background-color: ${textboxColor};
+
   color: black;
   height: 48px;
   margin-right: 5px;

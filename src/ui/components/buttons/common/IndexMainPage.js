@@ -5,7 +5,7 @@ import CustomLink from "../../commons/CustomLink";
 
 export default function IndexMainPage() {
   return (
-    <CustomLink to="/">
+    <CustomLink to="/main">
       <Button>MAIN PAGE</Button>
     </CustomLink>
   );

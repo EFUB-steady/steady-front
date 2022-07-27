@@ -2,13 +2,13 @@ import { useState } from "react";
 import styled from "styled-components";
 import "../../../../core/reset.css";
 import Calendar from "react-calendar";
+import { useUploadStudyModal } from "../../../modal/recoil/hooks/useModals";
 
 // 제목
 function NavigationLabel(month) {
   return (
     <>
       <Bold>{month} 일정</Bold>
-      {/* 일정 div 나눠서 글씨 작게 만들기 */}
     </>
   );
 }
@@ -16,6 +16,7 @@ function NavigationLabel(month) {
 // 캘린더
 function Mcalendar() {
   const [value, onChange] = useState(new Date());
+  const { openModal } = useUploadStudyModal();
 
   return (
     <Container>
@@ -32,16 +33,18 @@ function Mcalendar() {
         }
         prev2Label={null}
         next2Label={null}
+        // 캘린더 안에 내용물
         tileContent={({ date }) => {
           const lastDate = new Date(
             date.getFullYear(),
             date.getMonth() + 1,
             0,
           ).getDate();
+          // onClick={(event) => {
+          //   event.stopPropagation();
+          //   openModal} }
+          <Button onClick={openModal} />;
 
-          {
-            /* 언제 도트 찍히는지 나중에 조건문 적용하기.. */
-          }
           return date.getDate() === lastDate ? (
             <div className="dot-container">
               <div className="dot"></div>
@@ -176,6 +179,7 @@ const Container = styled.div`
       .react-calendar__tile--now {
         background-color: #eeeeee;
         abbr {
+          // 여기 파트
           text-decoration: underline;
         }
       }
@@ -188,4 +192,18 @@ const Container = styled.div`
       }
     }
   }
+`;
+
+const Button = styled.button`
+  width: 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: 3px solid black;
+  background: black;
+  text-align: center;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
 `;
