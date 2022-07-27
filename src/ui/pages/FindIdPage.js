@@ -11,6 +11,7 @@ import FindId2nd from "../components/login/FindId2nd";
 
 function FindIdPage() {
   const [viewPage, setViewPage] = useState(true);
+
   return (
     <>
       <GoBackBtn />
@@ -20,8 +21,14 @@ function FindIdPage() {
         <MainContentWrapper>
           {viewPage ? <FindId1st /> : <FindId2nd />}
         </MainContentWrapper>
-
-        <UserCheckBtn onClick={() => setViewPage(false)} />
+        <UserCheckBtn
+          onClick={() => {
+            setViewPage(!true);
+          }}
+        >
+          {" "}
+          {viewPage ? <FindId1st /> : <FindId2nd />}
+        </UserCheckBtn>
       </Wrapper>
     </>
   );

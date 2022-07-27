@@ -4,8 +4,6 @@ import ListBarStudyList from "./ListBarStudyList";
 import ArrowBtn from "./ArrowBtn";
 import ArrowBtn2 from "./ArrowBtn2";
 
-// 폴더 이름 변경 커밋
-
 export default function ListBar() {
   return (
     <>
