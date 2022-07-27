@@ -1,62 +1,72 @@
 import React from "react";
 import styled from "styled-components";
 import { gray100, gray300 } from "../../../core/colors";
-import { Subtitle4, Title5 } from "../../../core/texts";
-import homewhite from "../../../assets/btn_home_default.png";
+import { Body3, Subtitle2 } from "../../../core/texts";
+import linkIcon from "../../../assets/icon_link.png";
+import picIcon from "../../../assets/icon_picture.png";
+import GoToStudyBtn from "./../buttons/study/GoToStudyBtn";
 
 export default function ListBarStudy({ study }) {
   return (
     <Wrapper>
       <ImageContainer>
-        <Homeimage src={homewhite} />
+        <PicImage src={picIcon} />
+        <LinkImage src={linkIcon} />
       </ImageContainer>
       <StudyContainer>
         <div style={{ marginBottom: "4px" }}>
-          <Title5>{study.name}</Title5>
+          <Subtitle2>{study.name}</Subtitle2>
         </div>
-        <Subtitle4>{study.explain}</Subtitle4>
+        <Body3>{study.fine}</Body3>
       </StudyContainer>
+      <GoToStudyBtn />
     </Wrapper>
   );
 }
 
-const Wrapper = styled.button`
+const Wrapper = styled.div`
   display: flex;
-  background-color: ${gray100};
+  flex-direction: column;
+  background-color: white;
   border: 3px solid #000000;
   border-radius: 5px;
-  margin-top: 4px;
+  margin-top: 16px;
   margin-bottom: 4px;
-  margin-left: 4px;
-  margin-right: 4px;
-  width: 200px;
-  height: 172px;
+  margin-left: 16px;
+
+  width: 240px;
+  height: 170px;
 
   &:hover {
     background: ${gray300};
   }
 `;
+const ImageContainer = styled.div`
+  /* background-color: yellow; */
+  margin-top: 17px;
+  margin-left: 15px;
+`;
 
 const StudyContainer = styled.div`
+  /* background-color: red; */
+  margin-top: 13px;
+  margin-left: 15px;
+  margin-bottom: 26px;
+
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  height: 100%;
+  align-items: space-around;
+  /*justify-content: center;
+  height: 100%; */
 `;
 
-const Homeimage = styled.img`
-  width: 20px;
-  height: 19px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+const LinkImage = styled.img`
+  margin-left: 6px;
+  width: 18px;
+  height: 18px;
 `;
 
-const ImageContainer = styled.div`
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  margin: 0 10px;
+const PicImage = styled.img`
+  width: 18px;
+  height: 18px;
 `;

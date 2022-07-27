@@ -11,8 +11,8 @@ export default function ArrowBtn() {
 }
 
 const Button = styled.button`
-  width: 77px;
-  height: 173px;
+  width: 40px;
+  height: 200px;
   background: black;
   border-radius: 5px;
   color: white;
@@ -20,10 +20,10 @@ const Button = styled.button`
 `;
 
 const Arrow = styled.img`
-  width: 20px;
+  width: 13px;
   height: 19px;
   justify-content: center;
   align-items: center;
   display: flex;
-  margin-left: 20px;
+  margin-left: 10px;
 `;
