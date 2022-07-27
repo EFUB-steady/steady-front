@@ -3,6 +3,8 @@ import { gray100 } from "../../../core/colors";
 import ListBarStudyList from "./ListBarStudyList";
 import ArrowBtn from "./ArrowBtn";
 
+// 폴더 이름 변경 커밋
+
 export default function ListBar() {
   return (
     <ListBarBox>
