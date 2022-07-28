@@ -7,7 +7,10 @@ import FindPw1st from "../components/login/FindPw1st";
 import FindPw2nd from "../components/login/FindPw2nd";
 import React, { useState } from "react";
 function FindPwPage() {
-  const [viewPage, setViewPage] = useState(true);
+  const [isNow, setIsNow] = useState(true);
+  const handleConfirm = () => {
+    setIsNow(false);
+  };
   return (
     <>
       <GoBackBtn />
@@ -16,10 +19,9 @@ function FindPwPage() {
         <Indexes />
         <Content>
           <MainContentWrapper>
-            {viewPage ? <FindPw1st /> : <FindPw2nd />}
+            {isNow ? <FindPw1st /> : <FindPw2nd />}
           </MainContentWrapper>
-
-          <UserCheckBtn onClick={() => setViewPage(false)} />
+          <Button onClick={() => handleConfirm()}>확인</Button>
         </Content>
       </Wrapper>
     </>
@@ -45,4 +47,12 @@ const MainContentWrapper = styled.div`
   flex-direction: row;
   padding-bottom: 8px;
   padding: 2rem;
+`;
+const Button = styled.button`
+  width: 400px;
+  height: 50px;
+  background: black;
+  border-radius: 5px;
+  color: white;
+  margin: 4px;
 `;

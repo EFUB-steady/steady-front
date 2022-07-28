@@ -5,12 +5,15 @@ import { hintColor } from "../../core/colors";
 import { Subtitle3 } from "../../core/texts";
 import GoBackBtn from "../components/buttons/common/GoBackBtn";
 import UserCheckBtn from "../components/buttons/user/UserCheckBtn";
-import React, { useState } from "react";
+import React, { useState, Link } from "react";
 import FindId1st from "../components/login/FindId1st";
 import FindId2nd from "../components/login/FindId2nd";
 
 function FindIdPage() {
-  const [viewPage, setViewPage] = useState(true);
+  const [isNow, setIsNow] = useState(true);
+  const handleConfirm = () => {
+    setIsNow(false);
+  };
 
   return (
     <>
@@ -19,16 +22,9 @@ function FindIdPage() {
         <LogoImg src={logo} />
         <Indexes />
         <MainContentWrapper>
-          {viewPage ? <FindId1st /> : <FindId2nd />}
+          {isNow ? <FindId1st /> : <FindId2nd />}
         </MainContentWrapper>
-        <UserCheckBtn
-          onClick={() => {
-            setViewPage(!true);
-          }}
-        >
-          {" "}
-          {viewPage ? <FindId1st /> : <FindId2nd />}
-        </UserCheckBtn>
+        <Button onClick={() => handleConfirm()}>확인</Button>
       </Wrapper>
     </>
   );
@@ -78,4 +74,12 @@ const InputBox = styled.div`
   display: flex;
   align-items: center;
   padding-left: 17.15px;
+`;
+const Button = styled.button`
+  width: 400px;
+  height: 50px;
+  background: black;
+  border-radius: 5px;
+  color: white;
+  margin: 4px;
 `;
