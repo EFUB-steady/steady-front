@@ -14,7 +14,7 @@ export default function ListBarStudy({ study }) {
         <LinkImage src={linkIcon} />
       </ImageContainer>
       <StudyContainer>
-        <div style={{ marginBottom: "4px" }}>
+        <div style={{ marginBottom: "8px" }}>
           <Subtitle2>{study.name}</Subtitle2>
         </div>
         <Body3>{study.fine}</Body3>

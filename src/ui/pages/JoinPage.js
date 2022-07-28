@@ -23,6 +23,7 @@ export default function JoinPage() {
 }
 const LogoImg = styled.img`
   margin-bottom: 40.31px;
+  justify-content: center;
 `;
 
 const Pic = styled.img`
