@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { useGetMyStudy } from "../../../feature/stydies/myStudy/hooks/useGetMyStudy";
 import SideBarStudyItem from "./SideBarStudyItem";
 
 const STUDY_DATA = [
@@ -26,11 +27,16 @@ const STUDY_DATA = [
 ];
 
 export default function SideBarStudyList() {
+  // const { myStudy } = useGetMyStudy();
+
   return (
     <Wrapper>
-      {STUDY_DATA.map((study) => (
+      {/* {myStudy?.map((data) => {
+        console.log("test");
+      })} */}
+      {/* {STUDY_DATA.map((study) => (
         <SideBarStudyItem key={study.id} study={study} />
-      ))}
+      ))} */}
     </Wrapper>
   );
 }
