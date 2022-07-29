@@ -4,17 +4,21 @@ import { textboxColor } from "../../../../core/colors";
 import CustomLink from "../../commons/CustomLink";
 
 export default function IndexMainPage() {
+  //console.log(window.location.pathname);
+  const pathname = window.location.pathname;
+
   return (
     <CustomLink to="/main">
-      <Button>MAIN PAGE</Button>
+      <Button pathname={pathname}>MAIN PAGE</Button>
     </CustomLink>
   );
 }
 
 const Button = styled.button`
   /*박스*/
-  background-color: ${textboxColor};
-  color: black;
+  background-color: ${(props) =>
+    props.pathname == "/main" ? "black" : textboxColor};
+  color: ${(props) => (props.pathname == "/main" ? "white" : "black")};
   height: 48px;
   margin-right: 5px;
   width: 200px;
