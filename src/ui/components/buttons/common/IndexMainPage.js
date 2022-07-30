@@ -4,7 +4,6 @@ import { textboxColor } from "../../../../core/colors";
 import CustomLink from "../../commons/CustomLink";
 
 export default function IndexMainPage() {
-  //console.log(window.location.pathname);
   const pathname = window.location.pathname;
 
   return (

@@ -2,21 +2,22 @@ import styled from "styled-components";
 import { textboxColor } from "../../../../core/colors";
 import { hintColor } from "./../../../../core/colors";
 import CustomLink from "../../commons/CustomLink";
-import React, { useState } from "react";
 
 export default function IndexFindPw() {
+  const pathname = window.location.pathname;
   return (
     <CustomLink to="/findpw">
-      <Button>Find PW</Button>
+      <Button pathname={pathname}>Find PW</Button>
     </CustomLink>
   );
 }
 
 const Button = styled.button`
   /*박스*/
-  background-color: ${textboxColor};
+  background-color: ${(props) =>
+    props.pathname == "/findpw" ? "black" : textboxColor};
+  color: ${(props) => (props.pathname == "/findpw" ? "white" : hintColor)};
 
-  color: black;
   height: 48px;
   margin-right: 5px;
   width: 200px;
@@ -34,7 +35,6 @@ const Button = styled.button`
   font-weight: 400;
   font-size: 21px;
   line-height: 100%;
-  color: ${hintColor};
 
   /*간격*/
   margin: 0;
