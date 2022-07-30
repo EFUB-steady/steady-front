@@ -8,13 +8,13 @@ export default function FindId1st() {
         <Text>
           <Subtitle3>이름 (실명)</Subtitle3>
         </Text>
-        <InputBox>김이화</InputBox>
+        <InputBox placeholder="김이화" />
       </SignBox>
       <SignBox>
         <Text>
           <Subtitle3>휴대폰 번호</Subtitle3>
         </Text>
-        <InputBox>010-0000-0000</InputBox>{" "}
+        <InputBox placeholder="010-0000-0000" />{" "}
       </SignBox>{" "}
     </ContentWrapper>
   );
@@ -30,12 +30,12 @@ const SignBox = styled.div`
   display: flex;
   flex-direction: row;
   padding-bottom: 8px;
-  padding: 1.5rem;
+  padding: 2rem;
 `;
 
-const InputBox = styled.div`
+const InputBox = styled.input`
   /*박스*/
-  width: 240px;
+  width: 230px;
   height: 42px;
   background: #eeeeee;
   border-radius: 5px;
@@ -49,6 +49,5 @@ const InputBox = styled.div`
   line-height: 100%;
   display: flex;
   align-items: center;
-  padding-left: 17.15px;
 `;
 const ContentWrapper = styled.div``;

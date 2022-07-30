@@ -17,12 +17,11 @@ function FindPwPage() {
       <Wrapper>
         <LogoImg src={logo} />
         <Indexes />
-        <Content>
-          <MainContentWrapper>
-            {isNow ? <FindPw1st /> : <FindPw2nd />}
-          </MainContentWrapper>
-          <Button onClick={() => handleConfirm()}>확인</Button>
-        </Content>
+
+        <MainContentWrapper>
+          {isNow ? <FindPw1st /> : <FindPw2nd />}
+        </MainContentWrapper>
+        <Button onClick={() => handleConfirm()}>확인</Button>
       </Wrapper>
     </>
   );
@@ -38,15 +37,12 @@ const Wrapper = styled.div`
   padding: 5rem;
   border-radius: 1rem;
 `;
-const Content = styled.div`
-  width: 400px;
-  height: 196px;
-`;
+
 const MainContentWrapper = styled.div`
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   padding-bottom: 8px;
-  padding: 2rem;
+  padding: 2rem; */
 `;
 const Button = styled.button`
   width: 400px;
