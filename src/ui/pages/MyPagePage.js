@@ -26,18 +26,25 @@ export default function MyPagePage() {
           </RightContent>
         </MidContent>
       </MainContext>
-      <ListBar />
+      <FooterContent>
+        {/* <TitleText>나의 참여 스터디</TitleText> */}
+        <ListBar />
+      </FooterContent>
     </Wrapper>
   );
 }
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+`;
 
 const MainContext = styled.div`
   margin: 58px 90px 58px 288px;
 `;
 const MidContent = styled.div`
-  width: 1000px;
+  width: 100%;
   display: flex;
   flex-direction: row;
 `;
@@ -56,7 +63,19 @@ const RightContent = styled.div`
   margin-top: 2rem;
 `;
 const FooterContent = styled.div`
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
 `;
 //이렇게 내리니깐 스크롤바가 생기네..ㅠ
+
+// const TitleText = styled.div`
+//   width: 200px;
+//   height: 21px;
+
+//   font-family: "Pretendard";
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 21px;
+//   line-height: 100%;
+//   margin-bottom: 45px;
+// `;
