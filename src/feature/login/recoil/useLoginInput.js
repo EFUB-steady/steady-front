@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil";
-import { loginInputState } from "./loginInputState";
+import { loginInputState } from "./loginState";
 
 export const useLoginInput = () => {
   const [loginInput, setLoginInput] = useRecoilState(loginInputState);
