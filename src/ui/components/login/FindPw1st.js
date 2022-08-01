@@ -1,18 +1,16 @@
 import styled from "styled-components";
-
 import { Subtitle3, Body } from "../../../core/texts";
 import { hintColor } from "../../../core/colors";
-import UserCheckBtn from "../../components/buttons/user/UserCheckBtn";
 export default function FindPw1st() {
   return (
-    <>
-      <Content>
-        <SignBox>
-          <Text>
-            <Subtitle3>이메일 아이디</Subtitle3>
-          </Text>
-          <InputBox>ewhakim@mail.com</InputBox>
-        </SignBox>
+    <Content>
+      <SignBox>
+        <Text>
+          <Subtitle3>이메일 아이디</Subtitle3>
+        </Text>
+        <InputBox placeholder="ewhakim@mail.com" />
+      </SignBox>
+      <BodyWrapper>
         <Body>
           등록된 이메일 아이디로 비밀번호를 재설정할 수 있는 링크가 전송됩니다.{" "}
           <br />
@@ -23,8 +21,8 @@ export default function FindPw1st() {
           기다리신 후 다시 시도해주세요.
           <br />
         </Body>
-      </Content>
-    </>
+      </BodyWrapper>
+    </Content>
   );
 }
 
@@ -40,11 +38,14 @@ const SignBox = styled.div`
   flex-direction: row;
   padding-bottom: 8px;
   padding: 2rem;
+
+  width: 400px;
+  margin-left: 50px;
 `;
 
-const InputBox = styled.div`
+const InputBox = styled.input`
   /*박스*/
-  width: 300px;
+  width: 280px;
   height: 42px;
   background: #eeeeee;
   border-radius: 5px;
@@ -58,10 +59,13 @@ const InputBox = styled.div`
   line-height: 100%;
   display: flex;
   align-items: center;
-  padding-left: 17.15px;
 `;
 
-const Content = styled.div`
-  width: 400px;
-  height: 196px;
+const Content = styled.div``;
+
+const BodyWrapper = styled.div`
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
 `;

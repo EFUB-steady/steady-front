@@ -3,17 +3,22 @@ import { textboxColor } from "../../../../core/colors";
 import CustomLink from "../../commons/CustomLink";
 
 export default function IndexMyPage() {
+  //console.log(window.location.pathname);
+  const pathname = window.location.pathname;
+
   return (
     <CustomLink to="/mypage">
-      <Button>MY PAGE</Button>
+      <Button pathname={pathname}>MY PAGE</Button>
     </CustomLink>
   );
 }
 
 const Button = styled.button`
   /*박스*/
-  background-color: ${textboxColor};
-  color: black;
+  background-color: ${(props) =>
+    props.pathname == "/mypage" ? "black" : textboxColor};
+  color: ${(props) => (props.pathname == "/mypage" ? "white" : "black")};
+
   height: 48px;
   margin-right: 5px;
   width: 200px;
