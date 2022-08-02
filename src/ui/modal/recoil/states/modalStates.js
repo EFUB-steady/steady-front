@@ -11,6 +11,12 @@ export const todayStudyModalState = atom({
   default: null,
 });
 
+//전날 보충하기
+export const yesterdayStudyModalState = atom({
+  key: "yesterdayStudyModalState",
+  default: null,
+});
+
 //HostMain 창에서 신고 자세히 보기를 누르면 뜨는 부분입니다.
 export const reportMoreModalState = atom({
   key: "reportMoreModalState",
