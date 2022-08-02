@@ -1,14 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Dialog, DialogContent } from "@mui/material";
+import { useStudyListModal } from "../recoil/hooks/useModals";
 import StudyModalTitle from "../recoil/components/StudyModalTitle";
-import { useUploadStudyModal } from "../recoil/hooks/useModals";
-import { StudyModalPic } from "../recoil/components/StudyModalPic";
-import { StudyModalUrl } from "../recoil/components/StudyModalUrl";
+import { useStudyListDate } from "../../../feature/studyList/recoil/useStudyListDate";
 
-export default function UploadStudyModal() {
-  const { isOpen, closeModal } = useUploadStudyModal();
-
+export default function StudyListModal() {
+  const { isOpen, closeModal } = useStudyListModal();
+  const { selectedDate } = useStudyListDate();
   return (
     <Dialog
       open={isOpen}
@@ -21,13 +20,10 @@ export default function UploadStudyModal() {
       <ContentWrapper>
         <DialogContent>
           <StudyModalTitle
-            date={new Date()}
-            titleText={"스터디 인증하기"}
-            buttonText={"저장하기"}
+            date={selectedDate}
+            titleText={"스터디 인증목록"}
+            buttonText={"인증하기"}
           />
-          {/* <MemberList /> */}
-          <StudyModalPic />
-          <StudyModalUrl />
         </DialogContent>
       </ContentWrapper>
     </Dialog>
