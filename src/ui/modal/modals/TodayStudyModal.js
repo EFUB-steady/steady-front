@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Dialog, DialogContent } from "@mui/material";
 import StudyModalTitle from "../recoil/components/StudyModalTitle";
-import { useDateStudyModal } from "../recoil/hooks/useModals";
+import { useTodayStudyModal } from "../recoil/hooks/useModals";
 import MemberList from "../recoil/components/MemberList";
 
-export default function DateStudyModal() {
-  const { isOpen, closeModal } = useDateStudyModal();
+export default function TodayStudyModal() {
+  const { isOpen, closeModal } = useTodayStudyModal();
 
   return (
     <Dialog
@@ -25,7 +25,7 @@ export default function DateStudyModal() {
           />
           {/* <StudyModalPic />
           <StudyModalUrl /> */}
-          <MemberList/>
+          <MemberList />
         </DialogContent>
       </ContentWrapper>
     </Dialog>
