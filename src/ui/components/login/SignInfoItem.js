@@ -49,9 +49,3 @@ const InputBox = styled.input`
   align-items: center;
   padding-left: 17.15px;
 `;
-
-const BtnBox = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-top: 25px;
-`;
