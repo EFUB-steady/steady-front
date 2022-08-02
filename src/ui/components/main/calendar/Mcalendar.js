@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import "../../../../core/reset.css";
 import Calendar from "react-calendar";
-import { useUploadStudyModal } from "../../../modal/recoil/hooks/useModals";
+import { useYesterdayStudyModal } from "./../../../modal/recoil/hooks/useModals";
 
 // 제목
 function NavigationLabel(month) {
@@ -15,44 +15,50 @@ function NavigationLabel(month) {
 
 // 캘린더
 function Mcalendar() {
-  const [value, onChange] = useState(new Date());
-  const { openModal } = useUploadStudyModal();
+  // const today = new Date();
+  // const yesterday = new Date(today.setDate(today.getDate() - 1));
+
+  const [selectedDate, setSelectedDate] = useState(new Date());
+  // const { openModal } = useYesterdayStudyModal();
 
   return (
-    <Container>
-      <Calendar
-        value={value}
-        onChange={onChange}
-        locale={"en"}
-        calendarType={"US"}
-        showNeighboringMonth
-        navigationLabel={({ date }) =>
-          NavigationLabel(
-            date.toLocaleDateString("ko-KR", { month: "2-digit" }),
-          )
-        }
-        prev2Label={null}
-        next2Label={null}
-        // 캘린더 안에 내용물
-        tileContent={({ date }) => {
-          const lastDate = new Date(
-            date.getFullYear(),
-            date.getMonth() + 1,
-            0,
-          ).getDate();
-          // onClick={(event) => {
-          //   event.stopPropagation();
-          //   openModal} }
-          <Button onClick={openModal} />;
+    <>
+      <Container>
+        <Calendar
+          value={selectedDate}
+          onChange={setSelectedDate}
+          locale={"en"}
+          calendarType={"US"}
+          showNeighboringMonth
+          navigationLabel={({ date }) =>
+            NavigationLabel(
+              date.toLocaleDateString("ko-KR", { month: "2-digit" }),
+            )
+          }
+          prev2Label={null}
+          next2Label={null}
+          // 캘린더 안에 내용물
+          tileContent={({ date }) => {
+            const lastDate = new Date(
+              date.getFullYear(),
+              date.getMonth() + 1,
+              0,
+            ).getDate();
+            // onClick={(event) => {
+            //   event.stopPropagation();
+            //   openModal} }
+            // <Button onClick={openModal} />;
 
-          return date.getDate() === lastDate ? (
-            <div className="dot-container">
-              <div className="dot"></div>
-            </div>
-          ) : null;
-        }}
-      />
-    </Container>
+            return date.getDate() === lastDate ? (
+              <div className="dot-container">
+                <div className="dot"></div>
+              </div>
+            ) : null;
+          }}
+        />
+      </Container>
+      {/* {selectedDate.toDateString() == yesterday.toDateString() && openModal} */}
+    </>
   );
 }
 
