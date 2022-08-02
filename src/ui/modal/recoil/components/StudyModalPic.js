@@ -12,12 +12,15 @@ export function StudyModalPic() {
           <div style={{ marginTop: "11px" }}>사진 인증하기</div>
         </Subtitle2>
       </TitleWrapper>
-      <PlusHint>
-        <Subtitle2>+</Subtitle2>
-        <div style={{ marginTop: "77px" }}>
-          <Subtitle2>사진을 첨부해주세요</Subtitle2>
-        </div>
-      </PlusHint>
+      <label for="file">
+        <PicWrapper>
+          <Subtitle2>+</Subtitle2>
+          <div style={{ marginTop: "77px" }}>
+            <Subtitle2>사진을 첨부해주세요</Subtitle2>
+          </div>
+        </PicWrapper>
+      </label>
+      <input type="file" id="file" style={{ display: "none" }} accept="img/*"/>
     </Wrapper>
   );
 }
@@ -47,7 +50,7 @@ const TitleIcon = styled.img`
   margin-top: 9px;
 `;
 
-const PlusHint = styled.div`
+const PicWrapper = styled.div`
   color: ${hintColor};
   display: flex;
   justify-content: center;

@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { Dialog, DialogContent } from "@mui/material";
 import StudyModalTitle from "../recoil/components/StudyModalTitle";
 import { useUploadStudyModal } from "../recoil/hooks/useModals";
-import MemberList from "../recoil/components/MemberList";
+import { StudyModalPic } from "../recoil/components/StudyModalPic";
+import { StudyModalUrl } from "../recoil/components/StudyModalUrl";
 
 export default function UploadStudyModal() {
   const { isOpen, closeModal } = useUploadStudyModal();
@@ -23,7 +24,9 @@ export default function UploadStudyModal() {
             titleText={"스터디 인증하기"}
             buttonText={"저장하기"}
           />
-          <MemberList />
+          {/* <MemberList /> */}
+          <StudyModalPic/>
+          <StudyModalUrl/>
         </DialogContent>
       </ContentWrapper>
     </Dialog>
