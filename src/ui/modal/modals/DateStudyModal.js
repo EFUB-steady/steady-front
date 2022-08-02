@@ -3,8 +3,7 @@ import styled from "styled-components";
 import { Dialog, DialogContent } from "@mui/material";
 import StudyModalTitle from "../recoil/components/StudyModalTitle";
 import { useDateStudyModal } from "../recoil/hooks/useModals";
-import { StudyModalPic } from "../recoil/components/StudyMdalPicOther";
-import { StudyModalUrl } from "../recoil/components/StudyModalUrl";
+import MemberList from "../recoil/components/MemberList";
 
 export default function DateStudyModal() {
   const { isOpen, closeModal } = useDateStudyModal();
@@ -21,11 +20,12 @@ export default function DateStudyModal() {
       <ContentWrapper>
         <DialogContent>
           <StudyModalTitle
-            titleText={"스터디 인증하기"}
-            buttonText={"저장하기"}
+            titleText={"스터디 인증목록"}
+            buttonText={"인증하기"}
           />
-          <StudyModalPic />
-          <StudyModalUrl />
+          {/* <StudyModalPic />
+          <StudyModalUrl /> */}
+          <MemberList/>
         </DialogContent>
       </ContentWrapper>
     </Dialog>
