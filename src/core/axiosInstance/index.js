@@ -2,9 +2,10 @@ import axios from "axios";
 
 export const baseUrl = "http://43.200.181.148";
 
-export function getJWTHeader(user) {
+export function getJWTHeader(accessToken) {
+  //   const { accessToken } = useAccessToken();
   //   return { token: `Bearer ${user.token}` };
-  return { token: `${user.token}` };
+  return { "X-AUTH-TOKEN": `${accessToken}` };
 }
 
 const config = {
