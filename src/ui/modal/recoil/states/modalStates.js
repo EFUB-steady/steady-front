@@ -29,3 +29,9 @@ export const reportCancelModalState = atom({
   key: "reportCancelModalState",
   default: null,
 });
+
+// 로그인 실패 시 뜨는 모달입니다.
+export const loginFailModalState = atom({
+  key: "loginFailModalState",
+  default: null,
+});
