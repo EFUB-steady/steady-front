@@ -6,13 +6,15 @@ import SideBarStudyItem from "./SideBarStudyItem";
 export default function SideBarStudyList() {
   const { myStudy } = useMyStudy();
 
-  return (
-    <Wrapper>
-      {myStudy.map((study) => (
-        <SideBarStudyItem key={study.id} study={study} />
-      ))}
-    </Wrapper>
-  );
+  const renderStudyList = () => {
+    const result = [];
+    for (let i = 0; i < myStudy.length; i++) {
+      result.push(<SideBarStudyItem study={myStudy[i]} />);
+    }
+    return result;
+  };
+
+  return <Wrapper>{renderStudyList()}</Wrapper>;
 }
 
 const Wrapper = styled.div`

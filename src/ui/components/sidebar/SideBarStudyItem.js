@@ -1,21 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { gray100, gray300 } from "../../../core/colors";
 import { Subtitle4, Title5 } from "../../../core/texts";
 import homewhite from "../../../assets/btn_home_default.png";
+import { useNavigate } from "react-router-dom";
 
 export default function SideBarStudy({ study }) {
-  // TODO: 스터디의 name, discription으로 변경하기
+  const navigation = useNavigate();
+
+  const saveSelectedStudyId = () => {
+    if (study.studyId) {
+      localStorage.setItem("selectedStudyId", study.studyId);
+      console.log(localStorage.getItem("selectedStudyId"));
+    }
+  };
+
+  useEffect(() => {
+    navigation(`/studies/${localStorage.getItem("selectedStudyId")}`);
+  }, [localStorage.getItem("selectedStudyId")]);
+
   return (
-    <Wrapper>
+    <Wrapper onClick={() => saveSelectedStudyId()}>
       <ImageContainer>
         <Homeimage src={homewhite} />
       </ImageContainer>
       <StudyContainer>
-        <div style={{ marginBottom: "4px" }}>
-          <Title5>{study.userId}</Title5>
-        </div>
-        <Subtitle4>{study.studyId}</Subtitle4>
+        <Title5>{study.name}</Title5>
+        {study.description != null && (
+          <>
+            <div style={{ height: "4px" }} />
+            <Subtitle4>{study.description}</Subtitle4>
+          </>
+        )}
       </StudyContainer>
     </Wrapper>
   );
