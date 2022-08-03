@@ -8,42 +8,6 @@ import { useLoginInput } from "../../../feature/login/recoil/useLoginInput";
 // 로그인 배치
 export default function Login() {
   const { email, password, setEmail, setPassword } = useLoginInput();
-  // const accessToken =
-  //   "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZnViQGV3aGEuY29tIiwicm9sZXMiOiJVU0VSIiwiaWF0IjoxNjU5MzU1ODI5LCJleHAiOjE2NTkzNjY2Mjl9.udp0dlgYNxNqf1a1zcbHlNZEOAOXLh4rBlBQh1I4M1o";
-  // axios.defaults.withCredentials = true;
-  // const click = () => {
-  //   const headers = {
-  //     "Content-Type": "application/json",
-  //     "X-AUTH-TOKEN":
-  //       "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZnViQGV3aGEuY29tIiwicm9sZXMiOiJVU0VSIiwiaWF0IjoxNjU5MzU1ODI5LCJleHAiOjE2NTkzNjY2Mjl9.udp0dlgYNxNqf1a1zcbHlNZEOAOXLh4rBlBQh1I4M1o",
-  //   };
-  //   const url = "http://43.200.181.148/users/1";
-
-  //   axios
-  //     .get(url, { credentials: "include", headers })
-  //     .then(function (response) {
-  //       console.log(response.data);
-  //     })
-  //     .catch(function (error) {
-  //       console.log(error);
-  //     });
-  // };
-
-  // const onClick = () => {
-  //   API.get("/users/1", {
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       "X-AUTH-TOKEN":
-  //         "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZnViQGV3aGEuY29tIiwicm9sZXMiOiJVU0VSIiwiaWF0IjoxNjU5MzU1ODI5LCJleHAiOjE2NTkzNjY2Mjl9.udp0dlgYNxNqf1a1zcbHlNZEOAOXLh4rBlBQh1I4M1o",
-  //     },
-  //   })
-  //     .then(function (response) {
-  //       console.log(response);
-  //     })
-  //     .catch(function (error) {
-  //       console.log(error);
-  //     });
-  // };
 
   return (
     <LoginBox>
