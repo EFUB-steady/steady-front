@@ -1,8 +1,6 @@
 import styled from "styled-components";
-
 import icon from "../../../assets/icon_email_success.png";
 
-import UserCheckBtn from "../../components/buttons/user/UserCheckBtn";
 export default function FindPw2nd() {
   return (
     <>
@@ -20,13 +18,6 @@ const Text = styled.div`
   height: 42px;
   display: flex;
   align-items: center;
-`;
-
-const SignBox = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 8px;
-  padding: 2rem;
 `;
 
 const Content = styled.div`

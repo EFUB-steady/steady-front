@@ -2,15 +2,14 @@ import styled from "styled-components";
 import { gray300 } from "../../../../core/colors";
 import { format } from "date-fns";
 
-export default function StudyModalTitle({ titleText, buttonText }) {
-  const today = new Date();
-  const formattedToday = format(today, "MM월 dd일");
+export default function StudyModalTitle({ date, titleText, buttonText }) {
+  const formattedDate = format(date, "MM월 dd일");
 
   return (
     <>
       <Wrapper>
         <Title>
-          {formattedToday} {titleText}
+          {formattedDate} {titleText}
         </Title>
         <Button onClick={() => {}}>
           <ButtonText>{buttonText}</ButtonText>
