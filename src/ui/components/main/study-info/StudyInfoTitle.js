@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import AuthBtn from "./../../buttons/study/AuthBtn";
 import { Title1 } from "./../../../../core/texts";
+import AuthSupplyBtn from "../../buttons/study/AuthSupplyBtn";
 
 export default function StudyInfoTitle() {
   return (
     <InfoTitleBox>
       <Title1>Folio</Title1>
-      <AuthBtn />
+      <div>
+        <AuthSupplyBtn />
+        <AuthBtn />
+      </div>
     </InfoTitleBox>
   );
 }

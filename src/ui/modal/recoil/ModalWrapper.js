@@ -1,11 +1,13 @@
 import UploadStudyModal from "../modals/UploadStudyModal";
-import YesterdayStudyModal from "../modals/YesterdayStudyModal";
+import UploadStudySupplyModal from "../modals/UploadStudySupplyModal";
+import StudyListModal from "../modals/StudyListModal";
 
 export default function ModalWrapper() {
   return (
     <>
       <UploadStudyModal />
-      <YesterdayStudyModal />
+      <UploadStudySupplyModal />
+      <StudyListModal />
     </>
   );
 }

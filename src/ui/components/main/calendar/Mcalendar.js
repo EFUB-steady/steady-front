@@ -1,8 +1,9 @@
-import { useState } from "react";
 import styled from "styled-components";
 import "../../../../core/reset.css";
 import Calendar from "react-calendar";
-import { useYesterdayStudyModal } from "./../../../modal/recoil/hooks/useModals";
+import { useStudyListDate } from "../../../../feature/studyList/recoil/useStudyListDate";
+import { useEffect } from "react";
+import { useStudyListModal } from "../../../modal/recoil/hooks/useModals";
 
 // 제목
 function NavigationLabel(month) {
@@ -15,11 +16,13 @@ function NavigationLabel(month) {
 
 // 캘린더
 function Mcalendar() {
-  // const today = new Date();
-  // const yesterday = new Date(today.setDate(today.getDate() - 1));
+  const today = new Date();
+  const { selectedDate, setSelectedDate } = useStudyListDate();
+  const { openModal } = useStudyListModal();
 
-  const [selectedDate, setSelectedDate] = useState(new Date());
-  // const { openModal } = useYesterdayStudyModal();
+  useEffect(() => {
+    if (selectedDate.toDateString() != today.toDateString()) openModal();
+  }, [selectedDate]);
 
   return (
     <>
@@ -44,10 +47,6 @@ function Mcalendar() {
               date.getMonth() + 1,
               0,
             ).getDate();
-            // onClick={(event) => {
-            //   event.stopPropagation();
-            //   openModal} }
-            // <Button onClick={openModal} />;
 
             return date.getDate() === lastDate ? (
               <div className="dot-container">
@@ -57,7 +56,6 @@ function Mcalendar() {
           }}
         />
       </Container>
-      {/* {selectedDate.toDateString() == yesterday.toDateString() && openModal} */}
     </>
   );
 }
