@@ -16,12 +16,13 @@ function NavigationLabel(month) {
 
 // 캘린더
 function Mcalendar() {
-  const today = new Date();
+  const today = new Date(); //오늘 날짜
   const { selectedDate, setSelectedDate } = useStudyListDate();
   const { openModal } = useStudyListModal();
 
   useEffect(() => {
     if (selectedDate.toDateString() != today.toDateString()) openModal();
+    if (selectedDate.toDateString() == today.toDateString()) openModal();
   }, [selectedDate]);
 
   return (
@@ -183,7 +184,6 @@ const Container = styled.div`
       .react-calendar__tile--now {
         background-color: #eeeeee;
         abbr {
-          // 여기 파트
           text-decoration: underline;
         }
       }
