@@ -3,6 +3,7 @@ import ModifyInfoBtn from "../buttons/user/ModifyInfoBtn";
 import { useState } from "react";
 import { gray100 } from "../../../core/colors";
 import { Divider, Input } from "@mui/material";
+import { useUser } from "../../../feature/user/recoil/useUser";
 
 export default function MyInfo() {
   const [nickInput, setNickInput] = useState("");
@@ -10,6 +11,9 @@ export default function MyInfo() {
   const [idInput, setIdInput] = useState("");
   const [pwInput, setPwInput] = useState("");
   const [phoneNumInput, setPhoneNumInput] = useState("");
+
+  const { user } = useUser();
+
   return (
     <>
       <InfoHeader>
@@ -19,7 +23,7 @@ export default function MyInfo() {
       <SignBox>
         <Text>닉네임</Text>
         <Input
-          placeholder="이화연22"
+          placeholder={user.nickname}
           value={nickInput}
           onChange={(e) => {
             setNickInput(e.target.value);

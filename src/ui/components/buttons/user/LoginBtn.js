@@ -1,12 +1,41 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import CustomLink from "../../commons/CustomLink";
+import { useLogin } from "../../../../feature/login/api/useLogin";
+import { useLoginFailModal } from "../../../modal/recoil/hooks/useModals";
+import { useLoginInput } from "../../../../feature/login/recoil/useLoginInput";
+import { useUserInfo } from "../../../../feature/user/api/useUserAPI";
 
 export default function LoginBtn() {
-  return (
-    <CustomLink to="/main">
-      <Button>로그인</Button>
-    </CustomLink>
-  );
+  const { login, isLoading } = useLogin();
+  const navigation = useNavigate();
+  const { openModal } = useLoginFailModal();
+  const { loginReset } = useLoginInput();
+
+  const { userInfo } = useUserInfo({
+    onSuccess: () => {
+      console.log("success!!");
+    },
+    onFail: () => {
+      console.log("fail....");
+    },
+  });
+
+  const loginHandler = () => {
+    login({
+      onSuccess: () => {
+        loginReset();
+        navigation("/main");
+      },
+      onFail: () => {
+        openModal();
+      },
+    });
+    userInfo();
+  };
+
+  if (isLoading) return <div>loading...</div>;
+
+  return <Button onClick={() => loginHandler()}>로그인</Button>;
 }
 
 const Button = styled.button`
