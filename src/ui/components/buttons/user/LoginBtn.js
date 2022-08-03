@@ -3,12 +3,22 @@ import styled from "styled-components";
 import { useLogin } from "../../../../feature/login/api/useLogin";
 import { useLoginFailModal } from "../../../modal/recoil/hooks/useModals";
 import { useLoginInput } from "../../../../feature/login/recoil/useLoginInput";
+import { useUserInfo } from "../../../../feature/user/api/useUserAPI";
 
 export default function LoginBtn() {
   const { login, isLoading } = useLogin();
   const navigation = useNavigate();
   const { openModal } = useLoginFailModal();
   const { loginReset } = useLoginInput();
+
+  const { userInfo } = useUserInfo({
+    onSuccess: () => {
+      console.log("success!!");
+    },
+    onFail: () => {
+      console.log("fail....");
+    },
+  });
 
   const loginHandler = () => {
     login({
@@ -20,6 +30,7 @@ export default function LoginBtn() {
         openModal();
       },
     });
+    userInfo();
   };
 
   if (isLoading) return <div>loading...</div>;
