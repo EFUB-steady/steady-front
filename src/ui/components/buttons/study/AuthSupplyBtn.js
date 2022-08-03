@@ -3,7 +3,7 @@ import { useUploadStudySupplyModal } from "../../../modal/recoil/hooks/useModals
 
 export default function AuthSupplyBtn() {
   const { openModal } = useUploadStudySupplyModal();
-  return <Button onClick={openModal}>보충하기</Button>;
+  return <Button onClick={openModal}>지각 제출</Button>;
 }
 
 const Button = styled.button`
