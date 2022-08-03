@@ -23,12 +23,6 @@ const Text = styled.div`
   align-items: center;
 `;
 
-const SignBox = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 8px;
-`;
-
 const InputBox = styled.div`
   /*박스*/
   width: 300px;

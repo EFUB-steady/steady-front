@@ -2,7 +2,7 @@ import styled from "styled-components";
 import ModifyInfoBtn from "../buttons/user/ModifyInfoBtn";
 import { useState } from "react";
 import { gray100 } from "../../../core/colors";
-import { Divider, Input } from "@mui/material";
+import { Input } from "@mui/material";
 
 export default function MyInfo() {
   const [nickInput, setNickInput] = useState("");

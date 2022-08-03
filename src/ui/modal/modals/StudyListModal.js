@@ -4,6 +4,7 @@ import { Dialog, DialogContent } from "@mui/material";
 import { useStudyListModal } from "../recoil/hooks/useModals";
 import StudyModalTitle from "../recoil/components/StudyModalTitle";
 import { useStudyListDate } from "../../../feature/studyList/recoil/useStudyListDate";
+import MemberList  from "../recoil/components/MemberList";
 
 export default function StudyListModal() {
   const { isOpen, closeModal } = useStudyListModal();
@@ -24,6 +25,7 @@ export default function StudyListModal() {
             titleText={"스터디 인증목록"}
             buttonText={"인증하기"}
           />
+          <MemberList />
         </DialogContent>
       </ContentWrapper>
     </Dialog>

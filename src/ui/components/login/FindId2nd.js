@@ -1,8 +1,5 @@
 import styled from "styled-components";
-import BackToLoginBtn from "../buttons/user/BackToLoginBtn";
-import GoBackBtn from "../buttons/common/GoBackBtn";
-import logo from "../../../assets/logo_horizontal.png";
-import Indexes from "./Indexes";
+
 export default function Find2nd() {
   return (
     <>

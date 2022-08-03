@@ -27,7 +27,7 @@ export default function MyPagePage() {
         </MidContent>
       </MainContext>
       <FooterContent>
-        {/* <TitleText>나의 참여 스터디</TitleText> */}
+        <TitleText>나의 참여 스터디</TitleText>
         <ListBar />
       </FooterContent>
     </Wrapper>
@@ -36,13 +36,19 @@ export default function MyPagePage() {
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
 `;
 
 const MainContext = styled.div`
-  margin: 58px 90px 58px 288px;
+  display: flex;
+  width: 75%;
+  min-width: 987px;
+  flex-direction: column;
+  margin: 58px 90px 0px 288px;
 `;
+
 const MidContent = styled.div`
   width: 100%;
   display: flex;
@@ -60,22 +66,21 @@ const RightContent = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 3rem;
-  margin-top: 2rem;
+  //margin-top: 2rem;
 `;
 const FooterContent = styled.div`
-  /* position: absolute;
-  bottom: 0; */
+  width: 75%;
+  margin-left: 198px;
 `;
-//이렇게 내리니깐 스크롤바가 생기네..ㅠ
 
-// const TitleText = styled.div`
-//   width: 200px;
-//   height: 21px;
-
-//   font-family: "Pretendard";
-//   font-style: normal;
-//   font-weight: 700;
-//   font-size: 21px;
-//   line-height: 100%;
-//   margin-bottom: 45px;
-// `;
+const TitleText = styled.div`
+  width: 200px;
+  height: 21px;
+  margin-left: 40px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 100%;
+  margin-bottom: 18px;
+`;

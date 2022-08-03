@@ -1,10 +1,7 @@
 import styled from "styled-components";
 import logo from "../../assets/logo_horizontal.png";
 import Indexes from "../components/login/Indexes";
-import { hintColor } from "../../core/colors";
-import { Subtitle3 } from "../../core/texts";
 import GoBackBtn from "../components/buttons/common/GoBackBtn";
-import UserCheckBtn from "../components/buttons/user/UserCheckBtn";
 import React, { useState, Link } from "react";
 import FindId1st from "../components/login/FindId1st";
 import FindId2nd from "../components/login/FindId2nd";

@@ -8,9 +8,9 @@ export default function ListBar() {
   return (
     <>
       <ContentWrapper>
-        <TitleBox>
+        {/* <TitleBox>
           <TitleText>나의 참여 스터디</TitleText>
-        </TitleBox>
+        </TitleBox> */}
         <ListBarBox>
           <ArrowBtn />
           <ListBarStudyList />
@@ -30,31 +30,19 @@ const ListBarBox = styled.div`
   background-color: ${gray100};
   display: flex;
   flex-direction: row;
-  position: absolute;
-  width: 1200px;
+
+  width: 1208px;
   height: 200px;
-  left: 200px;
-  top: 824px;
 `;
 
-const TitleText = styled.div`
-  width: 200px;
-  height: 21px;
-  display: flex;
-  margin: 30px;
+// const TitleText = styled.div`
+//   width: 200px;
+//   height: 21px;
 
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 100%;
-  margin-bottom: 45px;
-`;
-
-const TitleBox = styled.div`
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  left: 238px;
-  top: 760px;
-`;
+//   font-family: "Pretendard";
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 21px;
+//   line-height: 100%;
+//   margin-bottom: 45px;
+// `;

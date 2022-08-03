@@ -23,4 +23,5 @@ const InfoTitleBox = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  min-width: 987px;
 `;
