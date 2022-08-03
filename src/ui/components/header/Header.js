@@ -18,8 +18,9 @@ export default function Header() {
 
 const HeaderBox = styled.div`
   display: flex;
-  //height: auto;
-  height: 990rem;
+  height: auto;
+  //height: 990px;
+  min-width: 987px;
   justify-content: space-between;
   border-bottom: 3px solid black;
 `;

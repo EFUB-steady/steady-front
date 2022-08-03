@@ -32,6 +32,7 @@ const Wrapper = styled.div`
 const MainContext = styled.div`
   display: flex;
   width: 100%;
+  min-width: 987px;
   flex-direction: column;
   margin: 58px 90px 58px 288px;
 `;
