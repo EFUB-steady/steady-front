@@ -5,12 +5,16 @@ import { hintColor } from "../../core/colors";
 import { Subtitle3 } from "../../core/texts";
 import GoBackBtn from "../components/buttons/common/GoBackBtn";
 import UserCheckBtn from "../components/buttons/user/UserCheckBtn";
-import React, { useState } from "react";
+import React, { useState, Link } from "react";
 import FindId1st from "../components/login/FindId1st";
 import FindId2nd from "../components/login/FindId2nd";
 
 function FindIdPage() {
-  const [viewPage, setViewPage] = useState(true);
+  const [isNow, setIsNow] = useState(true);
+  const handleConfirm = () => {
+    setIsNow(false);
+  };
+
   return (
     <>
       <GoBackBtn />
@@ -18,10 +22,9 @@ function FindIdPage() {
         <LogoImg src={logo} />
         <Indexes />
         <MainContentWrapper>
-          {viewPage ? <FindId1st /> : <FindId2nd />}
+          {isNow ? <FindId1st /> : <FindId2nd />}
         </MainContentWrapper>
-
-        <UserCheckBtn onClick={() => setViewPage(false)} />
+        <Button onClick={() => handleConfirm()}>확인</Button>
       </Wrapper>
     </>
   );
@@ -40,35 +43,12 @@ const Wrapper = styled.div`
   padding: 5rem;
   border-radius: 1rem;
 `;
-const Text = styled.div`
-  width: 155px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-`;
 
-const SignBox = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding-bottom: 8px;
-  padding: 1.5rem;
-`;
-
-const InputBox = styled.div`
-  /*박스*/
-  width: 240px;
-  height: 42px;
-  background: #eeeeee;
+const Button = styled.button`
+  width: 400px;
+  height: 50px;
+  background: black;
   border-radius: 5px;
-
-  /*글씨*/
-  color: ${hintColor};
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 100%;
-  display: flex;
-  align-items: center;
-  padding-left: 17.15px;
+  color: white;
+  margin: 4px;
 `;

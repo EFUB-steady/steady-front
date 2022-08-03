@@ -16,7 +16,7 @@ export default function FindPw2nd() {
 }
 
 const Text = styled.div`
-  width: 400px;
+  width: 280px;
   height: 42px;
   display: flex;
   align-items: center;
@@ -32,6 +32,12 @@ const SignBox = styled.div`
 const Content = styled.div`
   width: 400px;
   height: 196px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `;
 
-const Img = styled.img``;
+const Img = styled.img`
+  padding-bottom: 15px;
+  padding-top: 30px;
+`;

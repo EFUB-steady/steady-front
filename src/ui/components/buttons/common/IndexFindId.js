@@ -1,19 +1,25 @@
 import styled from "styled-components";
 import CustomLink from "../../commons/CustomLink";
+import { textboxColor } from "../../../../core/colors";
+import { hintColor } from "./../../../../core/colors";
+
 export default function IndexFindId() {
+  const pathname = window.location.pathname;
+
   return (
     <CustomLink to="/findid">
-      <Button>Find Id</Button>
+      <Button pathname={pathname}>Find Id</Button>
     </CustomLink>
   );
 }
 
 const Button = styled.button`
   /*박스*/
-  background-color: black;
-  color: white;
-  height: 48px;
+  background-color: ${(props) =>
+    props.pathname == "/findid" ? "black" : textboxColor};
+  color: ${(props) => (props.pathname == "/findid" ? "white" : hintColor)};
 
+  height: 48px;
   width: 200px;
 
   /*테두리*/

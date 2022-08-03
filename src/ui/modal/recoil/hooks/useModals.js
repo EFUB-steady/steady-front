@@ -1,12 +1,20 @@
 import { generateModalHook } from "../generateModalHook";
 import {
   uploadStudyModalState,
-  dateStudyModalState,
-  loginFailModalState,
+  uploadStudyModalSupplyState,
+  reportMoreModalState,
+  reportCancelModalState,
+  studyListModalState,
 } from "../states/modalStates";
 
 export const useUploadStudyModal = generateModalHook(uploadStudyModalState);
 
-export const useDateStudyModal = generateModalHook(dateStudyModalState);
+export const useUploadStudySupplyModal = generateModalHook(
+  uploadStudyModalSupplyState,
+);
 
-export const useLoginFailModal = generateModalHook(loginFailModalState);
+export const useStudyListModal = generateModalHook(studyListModalState);
+
+export const useReportMoreModal = generateModalHook(reportMoreModalState);
+
+export const useReportCancelModal = generateModalHook(reportCancelModalState);

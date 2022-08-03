@@ -1,11 +1,13 @@
 import UploadStudyModal from "../modals/UploadStudyModal";
-import LoginFailModal from "../modals/LoginFailModal";
+import UploadStudySupplyModal from "../modals/UploadStudySupplyModal";
+import StudyListModal from "../modals/StudyListModal";
 
 export default function ModalWrapper() {
   return (
     <>
       <UploadStudyModal />
-      <LoginFailModal />
+      <UploadStudySupplyModal />
+      <StudyListModal />
     </>
   );
 }

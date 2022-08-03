@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import UserJoinBtn from "../buttons/user/UserJoinBtn";
 import { hintColor } from "../../../core/colors";
-import SignInfoList from "./SignInfoList";
-export default function SignInfo({ sign }) {
+import { Subtitle3 } from "./../../../core/texts";
+export default function SignInfoItem({ sign }) {
   return (
     <Wrapper>
-      <SignInfoList />
-      <BtnBox>
-        <Text></Text>
-        <UserJoinBtn />
-      </BtnBox>
+      <SignBox>
+        <Text>
+          <Subtitle3>{sign.name}</Subtitle3>
+        </Text>
+        <InputBox placeholder={sign.explain} />
+      </SignBox>
     </Wrapper>
   );
 }
@@ -26,10 +26,12 @@ const Text = styled.div`
 const SignBox = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 455px;
   padding-bottom: 8px;
 `;
 
-const InputBox = styled.div`
+const InputBox = styled.input`
   /*박스*/
   width: 300px;
   height: 42px;

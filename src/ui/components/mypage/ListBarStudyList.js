@@ -5,27 +5,27 @@ const STUDY_DATA = [
   {
     id: 1,
     name: "FOLIO",
-    explain: "디자인 포폴 스터디",
+    fine: "벌금: 결석 시 5000원",
   },
   {
     id: 2,
     name: "이영스",
-    explain: "이화 영어 회화 스터디",
+    fine: "벌금: 결석 시 5000원",
   },
   {
     id: 3,
-    name: "이영스",
-    explain: "이화 영어 회화 스터디",
+    name: "스터디 이름",
+    fine: "벌금: 지각 시 3000원",
   },
   {
     id: 4,
-    name: "이영스",
-    explain: "이화 영어 회화 스터디",
+    name: "스터디 이름",
+    fine: "벌금: 지각 시 3000원",
   },
   {
     id: 5,
-    name: "이영스",
-    explain: "이화 영어 회화 스터디",
+    name: "스터디 이름",
+    fine: "벌금: 결석 시 4000원",
   },
 ];
 

@@ -3,7 +3,8 @@ import { gray100, hintColor } from "../../../../core/colors";
 import icon from "../../../../assets/icon_picture_card_mypage.png";
 import { Subtitle2 } from "../../../../core/texts";
 
-export function StudyModalPic() {
+//신고_자세히보기 부분의 사진 인증 컴포넌트 유아이
+export function ReportStudyModalPic() {
   return (
     <Wrapper>
       <TitleWrapper>
@@ -12,15 +13,6 @@ export function StudyModalPic() {
           <div style={{ marginTop: "11px" }}>사진 인증하기</div>
         </Subtitle2>
       </TitleWrapper>
-      <label for="file">
-        <PicWrapper>
-          <Subtitle2>+</Subtitle2>
-          <div style={{ marginTop: "77px" }}>
-            <Subtitle2>사진을 첨부해주세요</Subtitle2>
-          </div>
-        </PicWrapper>
-      </label>
-      <input type="file" id="file" style={{ display: "none" }} accept="img/*"/>
     </Wrapper>
   );
 }
@@ -48,13 +40,4 @@ const TitleIcon = styled.img`
   margin-left: 17px;
   margin-right: 9px;
   margin-top: 9px;
-`;
-
-const PicWrapper = styled.div`
-  color: ${hintColor};
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  flex-direction: column;
 `;
