@@ -2,8 +2,21 @@ import styled from "styled-components";
 import { gray100, hintColor } from "../../../../core/colors";
 import icon from "../../../../assets/icon_picture_card_mypage.png";
 import { Subtitle2 } from "../../../../core/texts";
+import { useState } from "react";
 
 export function StudyModalPic() {
+  const [image, setImage] = useState("");
+
+  const encoderFileToBase64 = (fileBlob) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(fileBlob);
+    return new Promise((resolve) => {
+      reader.onload = () => {
+        setImage(reader.result);
+        resolve();
+      };
+    });
+  };
   return (
     <Wrapper>
       <TitleWrapper>
@@ -20,7 +33,16 @@ export function StudyModalPic() {
           </div>
         </PicWrapper>
       </label>
-      <input type="file" id="file" style={{ display: "none" }} accept="img/*"/>
+      <input
+        type="file"
+        id="file"
+        style={{ display: "none" }}
+        accept="img/*"
+        onChange={(e) => {
+          encoderFileToBase64(e.target.files[0]);
+        }}
+      />
+      {image && <img src={image} alt="preview-img" />}
     </Wrapper>
   );
 }
