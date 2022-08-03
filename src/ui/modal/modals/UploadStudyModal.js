@@ -21,12 +21,13 @@ export default function UploadStudyModal() {
       <ContentWrapper>
         <DialogContent>
           <StudyModalTitle
+            date={new Date()}
             titleText={"스터디 인증하기"}
             buttonText={"저장하기"}
           />
           {/* <MemberList /> */}
-          <StudyModalPic/>
-          <StudyModalUrl/>
+          <StudyModalPic />
+          <StudyModalUrl />
         </DialogContent>
       </ContentWrapper>
     </Dialog>
