@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import styled from "styled-components";
+import { useMyStudyAPI } from "../../feature/studies/myStudy/api/useMyStudyAPI";
 import Header from "../components/header/Header";
 import Mcalendar from "../components/main/calendar/Mcalendar";
 import Notice from "../components/main/notice/Notice";
@@ -8,6 +10,19 @@ import StudyInfo from "../components/main/study-info/StudyInfo";
 import SideBar from "../components/sidebar/SideBar";
 
 export default function MainPage() {
+  const { myStudyAPI } = useMyStudyAPI({
+    onSuccess: () => {
+      console.log("myStudyAPI success!!");
+    },
+    onFail: () => {
+      console.log("myStudyAPI fail....");
+    },
+  });
+
+  useEffect(() => {
+    myStudyAPI();
+  }, []);
+
   return (
     <Wrapper>
       <SideBar />

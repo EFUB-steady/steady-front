@@ -5,6 +5,7 @@ import { Subtitle4, Title5 } from "../../../core/texts";
 import homewhite from "../../../assets/btn_home_default.png";
 
 export default function SideBarStudy({ study }) {
+  // TODO: 스터디의 name, discription으로 변경하기
   return (
     <Wrapper>
       <ImageContainer>
@@ -12,9 +13,9 @@ export default function SideBarStudy({ study }) {
       </ImageContainer>
       <StudyContainer>
         <div style={{ marginBottom: "4px" }}>
-          <Title5>{study.name}</Title5>
+          <Title5>{study.userId}</Title5>
         </div>
-        <Subtitle4>{study.explain}</Subtitle4>
+        <Subtitle4>{study.studyId}</Subtitle4>
       </StudyContainer>
     </Wrapper>
   );
