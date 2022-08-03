@@ -17,11 +17,12 @@ function NavigationLabel(month) {
 // 캘린더
 function Mcalendar() {
   const today = new Date(); //오늘 날짜
+  const yesterday = new Date(today.setDate(today.getDate() - 1));
   const { selectedDate, setSelectedDate } = useStudyListDate();
   const { openModal } = useStudyListModal();
 
   useEffect(() => {
-    if (selectedDate.toDateString() != today.toDateString()) openModal();
+    if (selectedDate.toDateString() == yesterday.toDateString()) openModal();
     if (selectedDate.toDateString() == today.toDateString()) openModal();
   }, [selectedDate]);
 
