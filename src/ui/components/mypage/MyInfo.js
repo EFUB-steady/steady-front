@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import ModifyInfoBtn from "../buttons/user/ModifyInfoBtn";
-import { useState } from "react";
+
 import { gray100 } from "../../../core/colors";
 import { Input } from "@mui/material";
 import { useUser } from "../../../feature/user/recoil/useUser";
+import ModifyCompleteBtn from "../buttons/user/ModifyCompleteBtn";
+import React, { useState } from "react";
 
 export default function ModifyMyInfo() {
   const [nickInput, setNickInput] = useState("");
