@@ -5,18 +5,19 @@ import { Row } from "../../commons/Row";
 
 export default function Account() {
   const { selectedStudy } = useSelectedStudyInfo();
+const bankName=selectedStudy.account.substring(0,2);
+const accountNum=selectedStudy.account.substring(3);
 
-  return (
+return (
     <AccountWrapper>
       <div style={{ width: 100 }}>
         <Subtitle2>벌금 계좌</Subtitle2>
       </div>
       <WhiteBox>
-        <Body3>은행명</Body3>
+        <Body3>{bankName}</Body3>
       </WhiteBox>
       <WhiteBox>
-        {/* <Body3>{selectedStudy.account}</Body3> */}
-        <Body3>계좌번호</Body3>
+        <Body3>{accountNum}</Body3>
       </WhiteBox>
       <Row>
         <WhiteBox>

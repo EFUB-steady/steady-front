@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const baseUrl = "http://15.165.141.199";
+export const baseUrl = "https://steadyday.shop";
 
 export const axiosInstanceHeader = axios.create({
   baseURL: baseUrl,
