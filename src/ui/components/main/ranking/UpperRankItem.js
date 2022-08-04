@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { Subtitle1 } from "../../../../core/texts";
 
 export default function UpperRankItem({ ranking, rank }) {
-  // TODO: 이름, 색상
   return (
     <Wrapper>
       <Rank>
@@ -10,7 +9,7 @@ export default function UpperRankItem({ ranking, rank }) {
       </Rank>
       <User>
         <UserColor color={`#${ranking.color}`} />
-        {/* <Subtitle1>{rank.name}</Subtitle1> */}
+        <Subtitle1>{ranking.nickname}</Subtitle1>
       </User>
       <Score>{ranking.score}점</Score>
     </Wrapper>
