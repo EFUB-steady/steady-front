@@ -35,3 +35,9 @@ export const loginFailModalState = atom({
   key: "loginFailModalState",
   default: null,
 });
+
+//회원가입 실패 시 뜨는 모달입니다.
+export const signinFailModalState = atom({
+  key: "signinFailModalState",
+  default: null,
+});
