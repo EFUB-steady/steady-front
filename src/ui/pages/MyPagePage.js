@@ -7,8 +7,15 @@ import ModifyMyInfo from "../components/mypage/ModifyMyInfo";
 import MyAuthCal from "../components/mypage/MyAuthCal";
 import DateAndBtn from "../components/mypage/DateAndBtn";
 import MyAuthList from "../components/mypage/MyAuthList";
+import MyInfo from "../components/mypage/MyInfo";
+import ModifyInfoBtn from "../components/buttons/user/ModifyInfoBtn";
+import React, { useState } from "react";
 
-export default function MyPagePage() {
+function MyPagePage() {
+  const [isNow, setIsNow] = useState(true);
+  const handleConfirm = () => {
+    setIsNow(false);
+  };
   return (
     <Wrapper>
       <SideBar />
@@ -18,7 +25,13 @@ export default function MyPagePage() {
         <MidContent>
           <LeftContent>
             <ToDo />
-            <ModifyMyInfo />
+            {/* <InfoHeader>
+              <TitleText>인포메이션!</TitleText>
+              <ModifyInfoBtn onClick={() => handleConfirm()}></ModifyInfoBtn>
+            </InfoHeader> */}
+            <InfoConentWrapper>
+              {isNow ? <MyInfo /> : <ModifyMyInfo />}
+            </InfoConentWrapper>
           </LeftContent>
           <RightContent>
             <MyAuthCal />
@@ -33,6 +46,8 @@ export default function MyPagePage() {
     </Wrapper>
   );
 }
+
+export default MyPagePage;
 
 const Wrapper = styled.div`
   display: flex;
@@ -84,3 +99,23 @@ const TitleText = styled.div`
   line-height: 100%;
   margin-bottom: 18px;
 `;
+
+const Button = styled.button`
+  width: 400px;
+  height: 50px;
+  background: black;
+  border-radius: 5px;
+  color: white;
+  margin: 4px;
+`;
+
+const InfoHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+
+  padding-top: 40px;
+  margin-right: 20px;
+`;
+
+const InfoConentWrapper = styled.div``;

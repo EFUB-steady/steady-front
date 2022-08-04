@@ -1,10 +1,9 @@
 import styled from "styled-components";
-
+import ModifyInfoBtn from "../buttons/user/ModifyInfoBtn";
 import { useState } from "react";
 import { gray100 } from "../../../core/colors";
 import { Input } from "@mui/material";
 import { useUser } from "../../../feature/user/recoil/useUser";
-import ModifyCompleteBtn from "./../buttons/user/ModifyCompleteBtn";
 
 export default function ModifyMyInfo() {
   const [nickInput, setNickInput] = useState("");
@@ -17,10 +16,10 @@ export default function ModifyMyInfo() {
 
   return (
     <>
-      {/* <InfoHeader>
+      <InfoHeader>
         <TitleText>내 정보</TitleText>
-        <ModifyCompleteBtn />
-      </InfoHeader> */}
+        <ModifyCompleteBtn onClick={() => handleConfirm()} />
+      </InfoHeader>
       <SignBox>
         <Text>닉네임</Text>
         <Input
