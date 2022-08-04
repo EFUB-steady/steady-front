@@ -5,7 +5,7 @@ import { useLoginInput } from "../recoil/useLoginInput";
 
 export const useLogin = () => {
   const { email: inputEmail, password: inputPassword } = useLoginInput();
-  const { isLoggedIn, setIsLoggedIn } = useLoggedIn();
+  const { setIsLoggedIn } = useLoggedIn();
   const [isLoading, setIsLoading] = useState(false);
 
   const login = async ({ onSuccess, onFail }) => {

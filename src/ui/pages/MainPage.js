@@ -1,4 +1,7 @@
+import { useEffect } from "react";
 import styled from "styled-components";
+import { useSelectedStudyAPI } from "../../feature/studies/studySelect/api/useSelectedStudyAPI";
+import { useSelectedStudyId } from "../../feature/studies/studySelect/recoil/useSelectedStudy";
 import Header from "../components/header/Header";
 import Mcalendar from "../components/main/calendar/Mcalendar";
 import Notice from "../components/main/notice/Notice";
@@ -8,6 +11,14 @@ import StudyInfo from "../components/main/study-info/StudyInfo";
 import SideBar from "../components/sidebar/SideBar";
 
 export default function MainPage() {
+  const { selectedStudyId } = useSelectedStudyId();
+  const { selectedStudyAPI } = useSelectedStudyAPI();
+
+  useEffect(() => {
+    selectedStudyAPI();
+  }, [selectedStudyId]);
+
+  // TODO: StudyInfo 처럼 스터디 정보별로 다르게 출력되도록 수정하기
   return (
     <Wrapper>
       <SideBar />
