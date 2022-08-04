@@ -91,6 +91,5 @@ const PicWrapper = styled.div`
   justify-content: center;
   align-items: center;
   height: 92%;
-  background-color: red;
   flex-direction: column;
 `;
