@@ -1,11 +1,11 @@
 import { Dialog, DialogContent } from "@mui/material";
 import styled from "styled-components";
-import { useSignInFailModal } from "../recoil/hooks/useModals";
+import { useSignUpFailModal } from "../recoil/hooks/useModals";
 import React from "react";
 import { Subtitle3 } from "../../../core/texts";
 
-export default function SignInFailModal() {
-  const { isOpen, closeModal } = useSignInFailModal();
+export default function SignUpFailModal() {
+  const { isOpen, closeModal } = useSignUpFailModal();
 
   return (
     <Dialog
@@ -19,7 +19,7 @@ export default function SignInFailModal() {
       <ContentWrapper>
         <DialogContent>
           <Subtitle3 style={{ color: "red" }}>
-            이미 가입된 계정입니다. 
+            이미 가입된 계정입니다.
           </Subtitle3>
         </DialogContent>
       </ContentWrapper>

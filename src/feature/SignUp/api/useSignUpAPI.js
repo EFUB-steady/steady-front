@@ -1,19 +1,19 @@
 import { axiosInstance } from "../../../core/axiosInstance";
-import { useSignIn } from "../recoil/useSignIn";
+import {  useSignUp } from "../recoil/useSignUp";
 import { useState } from "react";
 
-export const useSignInAPI = () => {
+export const useSignUpAPI = () => {
   const {
     name: inputName,
     nickname: inputNickName,
     email: inputEmail,
     password: inputPassWord,
     phone: inputPhone,
-  } = useSignIn();
+  } = useSignUp();
 
   const [isLoading, setIsLoading] = useState(false);
 
-  const signin = async ({ onSuccess, onFail }) => {
+  const signup = async ({ onSuccess, onFail }) => {
     setIsLoading(true);
 
     try {
@@ -37,5 +37,5 @@ export const useSignInAPI = () => {
       setIsLoading(false);
     }
   };
-  return { signin, isLoading };
+  return {  signup, isLoading };
 };

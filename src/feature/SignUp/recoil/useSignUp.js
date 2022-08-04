@@ -1,46 +1,46 @@
 import { useRecoilState } from "recoil";
-import { signInState } from "./SignInState";
+import { signUpState } from "./SignUpState";
 
-export const useSignIn = () => {
-  const [signIn, setSignIn] = useRecoilState(signInState);
+export const useSignUp = () => {
+  const [signUp, setSignUp] = useRecoilState(signUpState);
 
   const setName = (name) => {
-    setSignIn((input) => ({
+    setSignUp((input) => ({
       ...input,
       name: name,
     }));
   };
 
   const setNickName = (nickname) => {
-    setSignIn((input) => ({
+    setSignUp((input) => ({
       ...input,
       nickname: nickname,
     }));
   };
 
   const setEmail = (email) => {
-    setSignIn((input) => ({
+    setSignUp((input) => ({
       ...input,
       email: email,
     }));
   };
 
   const setPassWord = (password) => {
-    setSignIn((input) => ({
+    setSignUp((input) => ({
       ...input,
       password: password,
     }));
   };
 
   const setPhone = (phone) => {
-    setSignIn((input) => ({
+    setSignUp((input) => ({
       ...input,
       phone: phone,
     }));
   };
 
-  const SignInReset = () => {
-    setSignIn({
+  const signUpReset = () => {
+    setSignUp({
       name: "",
       nickname: "",
       email: "",
@@ -50,16 +50,16 @@ export const useSignIn = () => {
   };
 
   return {
-    name: signIn.name,
-    nickname: signIn.nickname,
-    email: signIn.email,
-    password: signIn.password,
-    phone: signIn.phone,
+    name: signUp.name,
+    nickname: signUp.nickname,
+    email: signUp.email,
+    password: signUp.password,
+    phone: signUp.phone,
     setName,
     setNickName,
     setEmail,
     setPassWord,
     setPhone,
-    SignInReset
+    signUpReset,
   };
 };
