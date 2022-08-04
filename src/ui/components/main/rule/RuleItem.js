@@ -3,8 +3,11 @@ import { gray100 } from "../../../../core/colors";
 import Account from "./Account";
 import RuleAuthDay from "./RuleAuthDay";
 import PaneltyMoney from "./PaneltyMoney";
+import { useSelectedStudyInfo } from "../../../../feature/studies/studySelect/recoil/useSelectedStudy";
 
 export default function RuleItem() {
+  const { selectedStudy } = useSelectedStudyInfo();
+
   return (
     <Wrapper>
       <RuleAuthWrapper>
@@ -12,9 +15,9 @@ export default function RuleItem() {
         <Account />
       </RuleAuthWrapper>
       <RuleMoneyWrapper>
-        <PaneltyMoney title="지각 시" money={1000} />
+        <PaneltyMoney title="지각 시" money={selectedStudy.lateMoney} />
         <div style={{ height: 30 }} />
-        <PaneltyMoney title="결석 시" money={2000} />
+        <PaneltyMoney title="결석 시" money={selectedStudy.money} />
       </RuleMoneyWrapper>
     </Wrapper>
   );
