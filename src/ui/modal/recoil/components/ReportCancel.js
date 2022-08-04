@@ -4,11 +4,8 @@ import AuthCancelYesBtn from "../../../components/buttons/study/AuthCancelYesBtn
 import AuthCancelNoBtn from "../../../components/buttons/study/AuthCancelNoBtn";
 import { startOfSecond } from "date-fns";
 
-{/*피그마 최종_신고팝업 모달 ui 부분
-Modal은 ReportCancelModal.js 부분이고, 소진님께서 노션에 올려주신 recoil을 이용한 
-Modal 창 띄우는 부분에서 state, useModals.js에서 hooks 정도까지 만들어 놓았습니다. */}
 
-export default function ReportCancle() {
+export default function ReportCancel() {
   return (
     <>
       <Wrapper>
@@ -18,10 +15,10 @@ export default function ReportCancle() {
           <Body2>인증을 취소하시겠습니까?</Body2>
         </SecondWrapper>
         <ButtonWrapper>
-          <div style={{ marginLeft: "12px" }}>
+          <div style={{ marginRight: "12px" }}>
             <AuthCancelYesBtn />
           </div>
-          <div style={{ marginRight: "12px" }}>
+          <div>
             <AuthCancelNoBtn />
           </div>
         </ButtonWrapper>

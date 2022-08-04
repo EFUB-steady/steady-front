@@ -16,13 +16,14 @@ function NavigationLabel(month) {
 
 // 캘린더
 function Mcalendar() {
-  const today = new Date();
+  const today = new Date(); //오늘 날짜
   const { selectedDate, setSelectedDate } = useStudyListDate();
   const { openModal } = useStudyListModal();
 
-  useEffect(() => {
-    if (selectedDate.toDateString() != today.toDateString()) openModal();
-  }, [selectedDate]);
+  // (index) 날짜+1=오늘 날짜
+  // useEffect(() => {
+  //   if (selectedDate.toDateString() != today.toDateString()) openModal();
+  // }, [selectedDate]);
 
   return (
     <>
@@ -41,6 +42,7 @@ function Mcalendar() {
           prev2Label={null}
           next2Label={null}
           // 캘린더 안에 내용물
+          onClickDay={openModal}
           tileContent={({ date }) => {
             const lastDate = new Date(
               date.getFullYear(),
@@ -68,8 +70,9 @@ const Bold = styled.div`
   font-family: "Bauhaus93";
 `;
 
-// react-calendar style 포함
-// CSS 변수 통일 해놓기 - 지금 상태는 피그마에서 바로 가져온 값들
+const Containerbox = styled.div`
+  width: 50%;
+`;
 
 const Container = styled.div`
   display: flex;
@@ -183,7 +186,6 @@ const Container = styled.div`
       .react-calendar__tile--now {
         background-color: #eeeeee;
         abbr {
-          // 여기 파트
           text-decoration: underline;
         }
       }

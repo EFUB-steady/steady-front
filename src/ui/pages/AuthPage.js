@@ -2,9 +2,6 @@ import styled from "styled-components";
 import Header from "../components/header/Header";
 import SideBar from "../components/sidebar/SideBar";
 import ListBar from "../components/mypage/ListBar";
-import ToDo from "../components/mypage/ToDo";
-import MyInfo from "../components/mypage/MyInfo";
-import MyAuthList from "../components/mypage/MyAuthList";
 import DateAndBtn from "../components/mypage/DateAndBtn";
 import Search from "../components/mypage/Search";
 import CheckPic from "../components/mypage/CheckPic";
@@ -27,18 +24,30 @@ export default function AuthPage() {
           </RightContent>
         </MidContent>
       </MainContext>
-      <ListBar />
+      <FooterContent>
+        <TitleText>나의 참여 스터디</TitleText>
+        <ListBar />
+      </FooterContent>
     </Wrapper>
   );
 }
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+`;
 
 const MainContext = styled.div`
-  margin: 58px 90px 58px 288px;
+  display: flex;
+  width: 75%;
+  min-width: 987px;
+  flex-direction: column;
+  margin: 58px 90px 0px 288px;
 `;
 const MidContent = styled.div`
-  width: 1000px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   margin-top: 3rem;
@@ -57,6 +66,18 @@ const RightContent = styled.div`
   margin-top: 8.4rem;
 `;
 const FooterContent = styled.div`
-  position: absolute;
-  bottom: 0;
+  width: 75%;
+  margin-left: 198px;
+`;
+
+const TitleText = styled.div`
+  width: 200px;
+  height: 21px;
+  margin-left: 40px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 100%;
+  margin-bottom: 18px;
 `;

@@ -2,8 +2,21 @@ import styled from "styled-components";
 import { gray100, hintColor } from "../../../../core/colors";
 import icon from "../../../../assets/icon_picture_card_mypage.png";
 import { Subtitle2 } from "../../../../core/texts";
+import { useState } from "react";
 
 export function StudyModalPic() {
+  const [image, setImage] = useState("");
+
+  const encoderFileToBase64 = (fileBlob) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(fileBlob);
+    return new Promise((resolve) => {
+      reader.onload = () => {
+        setImage(reader.result);
+        resolve();
+      };
+    });
+  };
   return (
     <Wrapper>
       <TitleWrapper>
@@ -14,13 +27,35 @@ export function StudyModalPic() {
       </TitleWrapper>
       <label for="file">
         <PicWrapper>
-          <Subtitle2>+</Subtitle2>
-          <div style={{ marginTop: "77px" }}>
-            <Subtitle2>사진을 첨부해주세요</Subtitle2>
-          </div>
+          {image ? (
+            <img
+              src={image}
+              alt="preivew-img"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          ) : (
+            <>
+              <Subtitle2>+</Subtitle2>
+              <div style={{ marginTop: "77px" }}>
+                <Subtitle2>사진을 첨부해주세요</Subtitle2>
+              </div>
+            </>
+          )}
         </PicWrapper>
       </label>
-      <input type="file" id="file" style={{ display: "none" }} accept="img/*"/>
+      <input
+        type="file"
+        id="file"
+        style={{ display: "none" }}
+        accept="img/*"
+        onChange={(e) => {
+          encoderFileToBase64(e.target.files[0]);
+        }}
+      />
     </Wrapper>
   );
 }
@@ -36,7 +71,7 @@ const Wrapper = styled.div`
 `;
 const TitleWrapper = styled.div`
   width: 914px;
-  height: 40px;
+  height: 8%;
   background-color: #ffffff;
   border-bottom: 3px solid #000000;
   display: flex;
@@ -55,6 +90,6 @@ const PicWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 92%;
   flex-direction: column;
 `;

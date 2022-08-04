@@ -5,7 +5,6 @@ import icon from "../../../../assets/icon_alert.png";
 import { Body2 } from "../../../../core/texts";
 import AuthCancelBtn from "../../../../ui/components/buttons/study/AuthCancelBtn";
 
-//피그마 신고 자세히보기 작성자 000님 + 밑줄까지 ui
 export default function ReportMoreModalTitle() {
   const today = new Date();
   const formattedToday = format(today, "MM월 dd일");
