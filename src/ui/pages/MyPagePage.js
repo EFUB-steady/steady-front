@@ -10,11 +10,13 @@ import MyAuthList from "../components/mypage/MyAuthList";
 import MyInfo from "../components/mypage/MyInfo";
 import ModifyInfoBtn from "../components/buttons/user/ModifyInfoBtn";
 import React, { useState } from "react";
+import ModifyCompleteBtn from "../components/buttons/user/ModifyCompleteBtn";
 
 function MyPagePage() {
   const [isNow, setIsNow] = useState(true);
+
   const handleConfirm = () => {
-    setIsNow(false);
+    isNow ? setIsNow(false) : setIsNow(true);
   };
   return (
     <Wrapper>
@@ -25,10 +27,12 @@ function MyPagePage() {
         <MidContent>
           <LeftContent>
             <ToDo />
-            {/* <InfoHeader>
-              <TitleText>인포메이션!</TitleText>
-              <ModifyInfoBtn onClick={() => handleConfirm()}></ModifyInfoBtn>
-            </InfoHeader> */}
+            <InfoHeader>
+              <InfoText>내 정보</InfoText>
+              <Button onClick={() => handleConfirm()}>
+                {isNow ? <ModifyInfoBtn /> : <ModifyCompleteBtn />}
+              </Button>
+            </InfoHeader>
             <InfoConentWrapper>
               {isNow ? <MyInfo /> : <ModifyMyInfo />}
             </InfoConentWrapper>
@@ -87,7 +91,6 @@ const FooterContent = styled.div`
   width: 75%;
   margin-left: 198px;
 `;
-
 const TitleText = styled.div`
   width: 200px;
   height: 21px;
@@ -100,22 +103,37 @@ const TitleText = styled.div`
   margin-bottom: 18px;
 `;
 
+const InfoHeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  width: 380px;
+  height: 120px;
+  //background-color: skyblue;
+  padding-top: 40px;
+  margin-right: 20px;
+`;
+
+const InfoText = styled.div`
+  width: 150px;
+  height: 30px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  margin-top: 15px;
+  //background-color: pink;
+`;
+
 const Button = styled.button`
-  width: 400px;
+  /* width: 400px;
   height: 50px;
   background: black;
   border-radius: 5px;
   color: white;
-  margin: 4px;
-`;
-
-const InfoHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 380px;
-
-  padding-top: 40px;
-  margin-right: 20px;
+  margin: 4px; */
+  //background-color: yellow;
 `;
 
 const InfoConentWrapper = styled.div``;

@@ -17,10 +17,6 @@ export default function ModifyMyInfo() {
 
   return (
     <>
-      {/* <InfoHeader>
-        <TitleText>내 정보</TitleText>
-        <ModifyCompleteBtn />
-      </InfoHeader> */}
       <SignBox>
         <Text>닉네임</Text>
         <Input
@@ -35,7 +31,7 @@ export default function ModifyMyInfo() {
             backgroundColor: gray100,
             padding: "8px",
             fontSize: 10,
-            fontWeight: 400,
+            fontWeight: 700,
             width: 220,
             height: 28,
           }}
@@ -55,7 +51,7 @@ export default function ModifyMyInfo() {
             backgroundColor: gray100,
             padding: "8px",
             fontSize: 10,
-            fontWeight: 400,
+            fontWeight: 700,
             width: 220,
             height: 28,
           }}
@@ -75,7 +71,7 @@ export default function ModifyMyInfo() {
             backgroundColor: gray100,
             padding: "8px",
             fontSize: 10,
-            fontWeight: 400,
+            fontWeight: 700,
             width: 220,
             height: 28,
           }}
@@ -95,7 +91,7 @@ export default function ModifyMyInfo() {
             backgroundColor: gray100,
             padding: "8px",
             fontSize: 10,
-            fontWeight: 400,
+            fontWeight: 700,
             width: 220,
             height: 28,
           }}
@@ -115,7 +111,7 @@ export default function ModifyMyInfo() {
             backgroundColor: gray100,
             padding: "8px",
             fontSize: 10,
-            fontWeight: 400,
+            fontWeight: 700,
             width: 220,
             height: 28,
           }}
