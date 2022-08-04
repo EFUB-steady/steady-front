@@ -17,7 +17,6 @@ export const useSelectedStudyAPI = () => {
 
       if (data) {
         setSelectedStudy(data);
-        console.log(data);
       }
     } catch (error) {
       console.log(error);

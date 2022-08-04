@@ -1,17 +1,18 @@
 import styled from "styled-components";
 import { Subtitle1 } from "../../../../core/texts";
 
-export default function UpperRankItem({ rank }) {
+export default function UpperRankItem({ ranking, rank }) {
+  // TODO: 이름, 색상
   return (
     <Wrapper>
       <Rank>
-        <Subtitle1>● {rank.rank}위</Subtitle1>
+        <Subtitle1>● {rank}위</Subtitle1>
       </Rank>
       <User>
-        <UserColor color={rank.color} />
-        <Subtitle1>{rank.name}</Subtitle1>
+        {/* <UserColor color={rank.color} /> */}
+        {/* <Subtitle1>{rank.name}</Subtitle1> */}
       </User>
-      <Score>{rank.score}점</Score>
+      <Score>{ranking.score}점</Score>
     </Wrapper>
   );
 }

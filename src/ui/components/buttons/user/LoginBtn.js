@@ -5,12 +5,15 @@ import { useLoginFailModal } from "../../../modal/recoil/hooks/useModals";
 import { useLoginInput } from "../../../../feature/login/recoil/useLoginInput";
 import { useUserInfo } from "../../../../feature/user/api/useUserAPI";
 import { useMyStudyAPI } from "../../../../feature/studies/myStudy/api/useMyStudyAPI";
+import { useRankingAPI } from "../../../../feature/ranking/api/useRankingAPI";
 
 export default function LoginBtn() {
   const { login, isLoading } = useLogin();
   const navigation = useNavigate();
   const { openModal } = useLoginFailModal();
   const { loginReset } = useLoginInput();
+
+  const { rankingAPI } = useRankingAPI();
 
   // TODO: 에러처리
   const { userInfo } = useUserInfo({
@@ -39,6 +42,7 @@ export default function LoginBtn() {
         navigation("/studies/7"); // TODO: 7번 말고, 기본 스터디로 변경 (현재 기본스터디를 볼수있는 api 없음)
         userInfo();
         myStudyAPI();
+        rankingAPI();
       },
       onFail: () => {
         openModal();
