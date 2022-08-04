@@ -1,5 +1,5 @@
 const routes = {
-  MAIN: "main/",
+  MAIN: "studies/:studyId",
   LOGIN: "/",
   JOIN: "join/",
   FINDID: "findid/",

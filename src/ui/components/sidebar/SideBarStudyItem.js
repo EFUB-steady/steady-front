@@ -4,20 +4,21 @@ import { gray100, gray300 } from "../../../core/colors";
 import { Subtitle4, Title5 } from "../../../core/texts";
 import homewhite from "../../../assets/btn_home_default.png";
 import { useNavigate } from "react-router-dom";
+import { useSelectedStudyId } from "../../../feature/studies/studySelect/recoil/useSelectedStudy";
 
 export default function SideBarStudy({ study }) {
   const navigation = useNavigate();
+  const { selectedStudyId, setSelectedStudyId } = useSelectedStudyId();
 
   const saveSelectedStudyId = () => {
-    if (study.studyId) {
-      localStorage.setItem("selectedStudyId", study.studyId);
-      console.log(localStorage.getItem("selectedStudyId"));
+    if (study.studyId != selectedStudyId) {
+      setSelectedStudyId(study.studyId);
     }
   };
 
   useEffect(() => {
-    navigation(`/studies/${localStorage.getItem("selectedStudyId")}`);
-  }, [localStorage.getItem("selectedStudyId")]);
+    navigation(`/studies/${selectedStudyId}`);
+  }, [selectedStudyId]);
 
   return (
     <Wrapper onClick={() => saveSelectedStudyId()}>

@@ -22,7 +22,7 @@ function App() {
         <Route path={routes.AUTHPAGE} element={<AuthPage />} />
         <Route path={routes.FINDID} element={<FindIdPage />} />
         <Route path={routes.FINDPW} element={<FindPwPage />} />
-        <Route path={routes.HOSTMAIN} element={<HostMainPage/>}/>
+        <Route path={routes.HOSTMAIN} element={<HostMainPage />} />
       </Routes>
     </BrowserRouter>
   );
