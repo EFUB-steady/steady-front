@@ -2,10 +2,10 @@ import styled from "styled-components";
 import ModifyInfoBtn from "../buttons/user/ModifyInfoBtn";
 import { useState } from "react";
 import { gray100 } from "../../../core/colors";
-import { nDivider, Input } from "@mui/material";
+import { Input } from "@mui/material";
 import { useUser } from "../../../feature/user/recoil/useUser";
 
-export default function MyInfo() {
+export default function ModifyMyInfo() {
   const [nickInput, setNickInput] = useState("");
   const [nameInput, setNameInput] = useState("");
   const [idInput, setIdInput] = useState("");
@@ -43,7 +43,7 @@ export default function MyInfo() {
       <SignBox>
         <Text>이름</Text>
         <Input
-          placeholder="김이화"
+          placeholder={user.name}
           value={nameInput}
           onChange={(e) => {
             setNameInput(e.target.value);
@@ -63,7 +63,7 @@ export default function MyInfo() {
       <SignBox>
         <Text>ID</Text>
         <Input
-          placeholder="ewhakim22"
+          placeholder={user.email}
           value={idInput}
           onChange={(e) => {
             setIdInput(e.target.value);
@@ -103,7 +103,7 @@ export default function MyInfo() {
       <SignBox>
         <Text>연락처</Text>
         <Input
-          placeholder="김이화"
+          placeholder={user.phone}
           value={phoneNumInput}
           onChange={(e) => {
             setPhoneNumInput(e.target.value);
