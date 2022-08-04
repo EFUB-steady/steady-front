@@ -10,3 +10,8 @@ export const signUpState = atom({
     phone: "",
   },
 });
+
+// export const signedUpState = atom({
+//   key: "signedUpState",
+//   default: false,
+// })

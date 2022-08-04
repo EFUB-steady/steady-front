@@ -19,7 +19,7 @@ export default function SignUpFailModal() {
       <ContentWrapper>
         <DialogContent>
           <Subtitle3 style={{ color: "red" }}>
-            이미 가입된 계정입니다.
+            이미 가입된 계정이거나 입력되지 않은 부분이 있습니다.
           </Subtitle3>
         </DialogContent>
       </ContentWrapper>
