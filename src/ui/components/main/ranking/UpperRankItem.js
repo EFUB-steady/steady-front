@@ -21,6 +21,7 @@ const Wrapper = styled.div`
   height: 65px;
   justify-content: space-around;
   align-items: center;
+  padding: 0 20px;
 `;
 
 const Rank = styled.div`
@@ -29,8 +30,7 @@ const Rank = styled.div`
 
 const User = styled.div`
   display: flex;
-  justify-content: space-between;
-  width: 23%;
+  width: 40%;
 `;
 
 const UserColor = styled.div`
@@ -39,10 +39,11 @@ const UserColor = styled.div`
   height: 20px;
   border-radius: 50%;
   border: 1px solid black;
+  margin-right: 10px;
 `;
 
 const Score = styled.div`
   display: flex;
   justify-content: end;
-  width: 20%;
+  width: 30%;
 `;
