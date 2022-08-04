@@ -27,10 +27,24 @@ export function StudyModalPic() {
       </TitleWrapper>
       <label for="file">
         <PicWrapper>
-          <Subtitle2>+</Subtitle2>
-          <div style={{ marginTop: "77px" }}>
-            <Subtitle2>사진을 첨부해주세요</Subtitle2>
-          </div>
+          {image ? (
+            <img
+              src={image}
+              alt="preivew-img"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          ) : (
+            <>
+              <Subtitle2>+</Subtitle2>
+              <div style={{ marginTop: "77px" }}>
+                <Subtitle2>사진을 첨부해주세요</Subtitle2>
+              </div>
+            </>
+          )}
         </PicWrapper>
       </label>
       <input
@@ -42,7 +56,6 @@ export function StudyModalPic() {
           encoderFileToBase64(e.target.files[0]);
         }}
       />
-      {image && <img src={image} alt="preview-img" />}
     </Wrapper>
   );
 }
@@ -58,7 +71,7 @@ const Wrapper = styled.div`
 `;
 const TitleWrapper = styled.div`
   width: 914px;
-  height: 40px;
+  height: 8%;
   background-color: #ffffff;
   border-bottom: 3px solid #000000;
   display: flex;
@@ -77,6 +90,6 @@ const PicWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 92%;
   flex-direction: column;
 `;
