@@ -9,7 +9,7 @@ export default function StudyInfo() {
   return (
     <>
       <StudyInfoTitle />
-      <Content>{selectedStudy.description} (아직 api 준비가 안 됨..!)</Content>
+      <Content>{selectedStudy.description}</Content>
     </>
   );
 }
