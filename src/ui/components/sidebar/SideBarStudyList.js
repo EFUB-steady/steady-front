@@ -1,38 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import { useMyStudy } from "../../../feature/studies/myStudy/recoil/useMyStudy";
 import SideBarStudyItem from "./SideBarStudyItem";
 
-const STUDY_DATA = [
-  {
-    id: 1,
-    name: "FOLIO",
-    explain: "디자인 포폴 스터디",
-  },
-  {
-    id: 2,
-    name: "이영스",
-    explain: "이화 영어 회화 스터디",
-  },
-  {
-    id: 3,
-    name: "이영스",
-    explain: "이화 영어 회화 스터디",
-  },
-  {
-    id: 4,
-    name: "이영스",
-    explain: "이화 영어 회화 스터디",
-  },
-];
-
 export default function SideBarStudyList() {
-  return (
-    <Wrapper>
-      {STUDY_DATA.map((study) => (
-        <SideBarStudyItem key={study.id} study={study} />
-      ))}
-    </Wrapper>
-  );
+  const { myStudy } = useMyStudy();
+
+  const renderStudyList = () => {
+    const result = [];
+    for (let i = 0; i < myStudy.length; i++) {
+      result.push(<SideBarStudyItem study={myStudy[i]} />);
+    }
+    return result;
+  };
+
+  return <Wrapper>{renderStudyList()}</Wrapper>;
 }
 
 const Wrapper = styled.div`
