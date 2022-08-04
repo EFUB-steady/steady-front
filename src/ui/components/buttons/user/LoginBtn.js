@@ -4,6 +4,8 @@ import { useLogin } from "../../../../feature/login/api/useLogin";
 import { useLoginFailModal } from "../../../modal/recoil/hooks/useModals";
 import { useLoginInput } from "../../../../feature/login/recoil/useLoginInput";
 import { useUserInfo } from "../../../../feature/user/api/useUserAPI";
+import { useMyStudyAPI } from "../../../../feature/studies/myStudy/api/useMyStudyAPI";
+import { useRankingAPI } from "../../../../feature/ranking/api/useRankingAPI";
 
 export default function LoginBtn() {
   const { login, isLoading } = useLogin();
@@ -11,6 +13,9 @@ export default function LoginBtn() {
   const { openModal } = useLoginFailModal();
   const { loginReset } = useLoginInput();
 
+  const { rankingAPI } = useRankingAPI();
+
+  // TODO: 에러처리
   const { userInfo } = useUserInfo({
     onSuccess: () => {
       console.log("success!!");
@@ -20,17 +25,29 @@ export default function LoginBtn() {
     },
   });
 
+  // TODO: 에러처리
+  const { myStudyAPI } = useMyStudyAPI({
+    onSuccess: () => {
+      console.log("myStudyAPI success!!");
+    },
+    onFail: () => {
+      console.log("myStudyAPI fail....");
+    },
+  });
+
   const loginHandler = () => {
     login({
       onSuccess: () => {
         loginReset();
-        navigation("/main");
+        navigation("/studies/7"); // TODO: 7번 말고, 기본 스터디로 변경 (현재 기본스터디를 볼수있는 api 없음)
+        userInfo();
+        myStudyAPI();
+        rankingAPI();
       },
       onFail: () => {
         openModal();
       },
     });
-    userInfo();
   };
 
   if (isLoading) return <div>loading...</div>;

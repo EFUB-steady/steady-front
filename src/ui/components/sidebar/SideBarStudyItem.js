@@ -1,20 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { gray100, gray300 } from "../../../core/colors";
 import { Subtitle4, Title5 } from "../../../core/texts";
 import homewhite from "../../../assets/btn_home_default.png";
+import { useNavigate } from "react-router-dom";
+import { useSelectedStudyId } from "../../../feature/studies/studySelect/recoil/useSelectedStudy";
 
 export default function SideBarStudy({ study }) {
+  const navigation = useNavigate();
+  const { selectedStudyId, setSelectedStudyId } = useSelectedStudyId();
+
+  const saveSelectedStudyId = () => {
+    if (study.studyId != selectedStudyId) {
+      setSelectedStudyId(study.studyId);
+    }
+  };
+
+  useEffect(() => {
+    navigation(`/studies/${selectedStudyId}`);
+  }, [selectedStudyId]);
+
   return (
-    <Wrapper>
+    <Wrapper onClick={() => saveSelectedStudyId()}>
       <ImageContainer>
         <Homeimage src={homewhite} />
       </ImageContainer>
       <StudyContainer>
-        <div style={{ marginBottom: "4px" }}>
-          <Title5>{study.name}</Title5>
-        </div>
-        <Subtitle4>{study.explain}</Subtitle4>
+        <Title5>{study.name}</Title5>
+        {study.description != null && (
+          <>
+            <div style={{ height: "4px" }} />
+            <Subtitle4>{study.description}</Subtitle4>
+          </>
+        )}
       </StudyContainer>
     </Wrapper>
   );
