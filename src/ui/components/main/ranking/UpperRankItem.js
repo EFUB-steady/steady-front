@@ -9,7 +9,7 @@ export default function UpperRankItem({ ranking, rank }) {
         <Subtitle1>● {rank}위</Subtitle1>
       </Rank>
       <User>
-        {/* <UserColor color={rank.color} /> */}
+        <UserColor color={`#${ranking.color}`} />
         {/* <Subtitle1>{rank.name}</Subtitle1> */}
       </User>
       <Score>{ranking.score}점</Score>

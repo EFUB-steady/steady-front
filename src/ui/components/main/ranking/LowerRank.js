@@ -39,7 +39,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   width: 60%;
-  height: 197px;
+  height: 201px;
 `;
 
 const List = styled.div`
