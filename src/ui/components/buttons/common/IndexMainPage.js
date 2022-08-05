@@ -6,8 +6,9 @@ import CustomLink from "../../commons/CustomLink";
 export default function IndexMainPage() {
   const pathname = window.location.pathname;
 
+  
   return (
-    <CustomLink to="/main">
+    <CustomLink to="/studies/7">
       <Button pathname={pathname}>MAIN PAGE</Button>
     </CustomLink>
   );
@@ -16,8 +17,8 @@ export default function IndexMainPage() {
 const Button = styled.button`
   /*박스*/
   background-color: ${(props) =>
-    props.pathname == "/main" ? "black" : textboxColor};
-  color: ${(props) => (props.pathname == "/main" ? "white" : "black")};
+    props.pathname == "/studies/7" ? "black" : textboxColor};
+  color: ${(props) => (props.pathname == "/studies/7" ? "white" : "black")};
   height: 48px;
   margin-right: 5px;
   width: 200px;
