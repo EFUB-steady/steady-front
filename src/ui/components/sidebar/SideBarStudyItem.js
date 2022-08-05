@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import { gray100, gray300 } from "../../../core/colors";
 import { Subtitle4, Title5 } from "../../../core/texts";
@@ -14,11 +14,8 @@ export default function SideBarStudy({ study }) {
     if (study.studyId != selectedStudyId) {
       setSelectedStudyId(study.studyId);
     }
-  };
-
-  useEffect(() => {
     navigation(`/studies/${selectedStudyId}`);
-  }, [selectedStudyId]);
+  };
 
   return (
     <Wrapper onClick={() => saveSelectedStudyId()}>

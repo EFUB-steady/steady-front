@@ -18,7 +18,6 @@ export default function MainPage() {
     selectedStudyAPI();
   }, [selectedStudyId]);
 
-  // TODO: StudyInfo 처럼 스터디 정보별로 다르게 출력되도록 수정하기
   return (
     <Wrapper>
       <SideBar />

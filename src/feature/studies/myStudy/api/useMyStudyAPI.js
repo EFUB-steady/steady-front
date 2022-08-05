@@ -1,23 +1,31 @@
+import { useState } from "react";
 import { axiosInstanceHeader } from "../../../../core/axiosInstance";
 import { useSelectedStudyId } from "../../studySelect/recoil/useSelectedStudy";
 import { useMyStudy } from "../recoil/useMyStudy";
 
-export const useMyStudyAPI = ({ onSuccess, onFail }) => {
+export const useMyStudyAPI = () => {
   const { setMyStudy } = useMyStudy();
-  const { setSelectedStudyId } = useSelectedStudyId();
+  const { selectedStudyId, setSelectedStudyId } = useSelectedStudyId();
+  const [isLoading, setIsLoading] = useState(false);
 
   const myStudyAPI = async () => {
+    setIsLoading(true);
+
     try {
       const { data } = await axiosInstanceHeader.get("studies/my-study");
       if (data) {
-        onSuccess && onSuccess();
+        if (selectedStudyId.studyId == null) {
+          setSelectedStudyId(data[0].studyId);
+        }
+        console.log("myStudyAPI success!!");
         setMyStudy(data);
-        setSelectedStudyId(data[0].studyId);
       }
     } catch (error) {
-      onFail && onFail();
+      console.log("myStudyAPI fail....");
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  return { myStudyAPI };
+  return { myStudyAPI, isLoading };
 };
