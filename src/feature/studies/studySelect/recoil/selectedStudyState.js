@@ -23,3 +23,10 @@ export const selectedStudyInfoState = atom({
     lateMoney: 0,
   },
 });
+
+export const selectedStudyIsLeaderState = atom({
+  key: "selectedStudyIsLeaderState",
+  default: {
+    leader: false,
+  },
+});

@@ -4,21 +4,25 @@ import { gray100, gray300 } from "../../../core/colors";
 import { Subtitle4, Title5 } from "../../../core/texts";
 import homewhite from "../../../assets/btn_home_default.png";
 import { useNavigate } from "react-router-dom";
-import { useSelectedStudyId } from "../../../feature/studies/studySelect/recoil/useSelectedStudy";
+import {
+  useSelectedStudyId,
+  useSelectedStudyIsLeader,
+} from "../../../feature/studies/studySelect/recoil/useSelectedStudy";
 
 export default function SideBarStudy({ study }) {
   const navigation = useNavigate();
   const { selectedStudyId, setSelectedStudyId } = useSelectedStudyId();
-
-  const saveSelectedStudyId = () => {
+  const { setIsLeader } = useSelectedStudyIsLeader();
+  const saveSelectedStudyState = () => {
     if (study.studyId != selectedStudyId) {
       setSelectedStudyId(study.studyId);
     }
+    setIsLeader(study.leader);
     navigation(`/studies/${selectedStudyId}`);
   };
 
   return (
-    <Wrapper onClick={() => saveSelectedStudyId()}>
+    <Wrapper onClick={() => saveSelectedStudyState()}>
       <ImageContainer>
         <Homeimage src={homewhite} />
       </ImageContainer>
