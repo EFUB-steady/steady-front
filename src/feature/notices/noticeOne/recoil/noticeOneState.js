@@ -1,9 +1,8 @@
 import { atom } from "recoil";
 
-export const noticeListState = atom({
-  key: "noticeListState",
+export const noticeOneState = atom({
+  key: "noticeOneState",
   default: {
-    status: 0,
     noticeId: 0,
     studyId: 0,
     content: "",
