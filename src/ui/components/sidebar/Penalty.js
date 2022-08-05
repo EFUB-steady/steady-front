@@ -13,6 +13,13 @@ export default function Penalty() {
       </Row>
 
       <PenaltyAmount />
+
+      <Row>
+        <Subtitle2>지난주 벌금 정산</Subtitle2>
+        <Coin src={coin} />
+      </Row>
+
+      <PenaltyAmount />
     </PenaltyBox>
   );
 }
