@@ -16,8 +16,7 @@ export default function HostMainPage() {
       <StudySetting />
       <StudyInfo />
       <Mcalendar />
-      {/* <HostRanking /> */}
-      <Ranking/>
+      <Ranking />
       <Report />
       <Rule />
       <Notice />
