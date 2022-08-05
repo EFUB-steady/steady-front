@@ -6,7 +6,7 @@ export const penaltyState = atom({
   default: {
     userId: 0,
     studyId: 0,
-    lastFine: "",
-    nowFine: "",
+    lastFine: 0,
+    nowFine: 0,
   },
 });
