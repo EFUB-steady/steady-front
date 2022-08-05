@@ -4,35 +4,39 @@ import styled from "styled-components";
 import moment from "moment";
 import { usePenaltyAPI } from "../../../feature/penalty/api/usePenaltyAPI";
 import { usePenalty } from "../../../feature/penalty/recoil/usePenalty";
+import { useEffect } from "react";
 
 export default function PenaltyAmount() {
-  const { penalty, isLoading } = usePenalty();
+  const { penalty } = usePenalty();
+  const { penaltyAPI, isLoading } = usePenaltyAPI();
 
-  // TODO: 에러처리 - API 저장하고 리코일을 실행하는 함수
-  const { penaltyAPI } = usePenaltyAPI({
-    onSuccess: () => {
-      console.log("success!!");
-    },
-    onFail: () => {
-      console.log("fail....");
-    },
-  });
+  useEffect(() => {
+    penaltyAPI();
+  }, []);
 
-  const penaltyHandler = () => {
-    penalty({
-      onSuccess: () => {
-        penaltyAPI(); // 위에 함수를 이런 식으로 사용
-      },
-    });
-  };
+  // // TODO: 에러처리 - API 저장하고 리코일을 실행하는 함수
+  // const { penaltyAPI } = usePenaltyAPI({
+  //   onSuccess: () => {
+  //     console.log("success!!");
+  //   },
+  //   onFail: () => {
+  //     console.log("fail....");
+  //   },
+  // });
 
-  if (isLoading) return <div>loading...</div>;
+  // const penaltyHandler = () => {
+  //   penalty({
+  //     onSuccess: () => {
+  //       penaltyAPI(); // 위에 함수를 이런 식으로 사용
+  //     },
+  //   });
+  // };
+
+  // if (isLoading) return <div>loading...</div>;
 
   return (
     <Row>
-      <Body2>
-        <Button onClick={() => penaltyHandler()}>버튼</Button>
-      </Body2>
+      <Body2>ㆍ{penalty.nowFine}</Body2>
       <div style={{ width: 5 }} />
       <Subtitle2>원</Subtitle2>
     </Row>
