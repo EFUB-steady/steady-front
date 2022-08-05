@@ -18,7 +18,6 @@ export default function SignUpItem() {
     setPhone,
   } = useSignUp();
 
-  console.log(name);
   return (
     <Wrapper>
       <SignBox>

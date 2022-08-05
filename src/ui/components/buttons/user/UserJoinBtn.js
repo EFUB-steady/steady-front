@@ -10,18 +10,7 @@ export default function UserJoinBtn() {
   const { openModal } = useSignUpFailModal();
   const { signUpReset } = useSignUp();
 
-  const {
-    name,
-    nickname,
-    email,
-    password,
-    phone,
-    setName,
-    setNickName,
-    setEmail,
-    setPassWord,
-    setPhone,
-  } = useSignUp();
+  const { name, nickname, email, password, phone } = useSignUp();
 
   const signUpHandler = () => {
     if (
@@ -35,15 +24,12 @@ export default function UserJoinBtn() {
         onSuccess: () => {
           signUpReset();
           navigation("/");
-          console.log("가입 완");
         },
         onFail: () => {
           openModal();
-          console.log("가입실패");
         },
       });
     } else {
-      console.log("입력하시오");
       openModal();
     }
   };
