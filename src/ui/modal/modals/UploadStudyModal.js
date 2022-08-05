@@ -25,7 +25,6 @@ export default function UploadStudyModal() {
             titleText={"스터디 인증하기"}
             buttonText={"저장하기"}
           />
-          {/* <MemberList /> */}
           <StudyModalPic />
           <StudyModalUrl />
         </DialogContent>
