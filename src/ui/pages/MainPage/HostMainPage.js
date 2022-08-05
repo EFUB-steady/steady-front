@@ -2,12 +2,12 @@ import styled from "styled-components";
 import Header from "../../components/header/Header";
 import Mcalendar from "../../components/main/calendar/Mcalendar";
 import Notice from "../../components/main/notice/Notice";
-import HostRanking from "../../components/main/Host/HostRainking";
 import Rule from "../../components/main/rule/Rule";
 import StudyInfo from "../../components/main/study-info/StudyInfo";
 import Report from "../../components/main/Host/HostMainReport/Report";
 import SideBar from "../../components/sidebar/SideBar";
 import StudySetting from "../../components/main/Host/StudySetting";
+import Ranking from "../../components/main/ranking/Ranking";
 
 export default function HostMainPage() {
   return (
@@ -16,7 +16,8 @@ export default function HostMainPage() {
       <StudySetting />
       <StudyInfo />
       <Mcalendar />
-      <HostRanking />
+      {/* <HostRanking /> */}
+      <Ranking/>
       <Report />
       <Rule />
       <Notice />
