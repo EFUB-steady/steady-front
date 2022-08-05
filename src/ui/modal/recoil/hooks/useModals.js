@@ -6,6 +6,7 @@ import {
   reportCancelModalState,
   studyListModalState,
   loginFailModalState,
+  signUpFailModalState,
 } from "../states/modalStates";
 
 export const useUploadStudyModal = generateModalHook(uploadStudyModalState);
@@ -21,3 +22,5 @@ export const useReportMoreModal = generateModalHook(reportMoreModalState);
 export const useReportCancelModal = generateModalHook(reportCancelModalState);
 
 export const useLoginFailModal = generateModalHook(loginFailModalState);
+
+export const useSignUpFailModal = generateModalHook(signUpFailModalState);

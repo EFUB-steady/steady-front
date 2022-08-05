@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import logo from "../../assets/logo_horizontal.png";
 import pic from "../../assets/web_explanation_pic.png";
-import SignInfo from "./../components/login/SignInfo";
+import SignUpMain from "../components/login/SignUpMain";
 
 import GoBackBtn from "../components/buttons/common/GoBackBtn";
 
@@ -13,7 +13,7 @@ export default function JoinPage() {
         <GoBackBtn />
         <LeftContent>
           <LogoImg src={logo} />
-          <SignInfo />
+          <SignUpMain />
         </LeftContent>
 
         <Pic src={pic} />
