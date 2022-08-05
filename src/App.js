@@ -16,7 +16,8 @@ function App() {
       <Routes>
         <Route path={routes.LOGIN} element={<LoginPage />} />
         <Route path={routes.MAIN} element={<MainPage />} />
-        <Route path={routes.JOIN} element={<JoinPage />} />
+        {/* <Route path={routes.JOIN} element={<JoinPage />} /> */}
+        <Route path={routes.SIGNUP} element={<JoinPage/>}/>
         <Route path={routes.MAKENEW} element={<MakeNewPage />} />
         <Route path={routes.MYPAGE} element={<MyPagePage />} />
         <Route path={routes.AUTHPAGE} element={<AuthPage />} />
