@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-export default function ModifyInfoBtn() {
-  return <Button>정보 수정</Button>;
+export default function ModifyCompleteBtn() {
+  return <Button>수정 완료</Button>;
 }
 
 const Button = styled.button`

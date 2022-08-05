@@ -2,10 +2,12 @@ import styled from "styled-components";
 import logo from "../../assets/logo_horizontal.png";
 import Indexes from "../components/login/Indexes";
 import GoBackBtn from "../components/buttons/common/GoBackBtn";
-import UserCheckBtn from "../components/buttons/user/UserCheckBtn";
+
 import FindPw1st from "../components/login/FindPw1st";
 import FindPw2nd from "../components/login/FindPw2nd";
 import React, { useState } from "react";
+import BackToLoginBtn from "./../components/buttons/user/BackToLoginBtn";
+import UserCheckBtn from "./../components/buttons/user/UserCheckBtn";
 function FindPwPage() {
   const [isNow, setIsNow] = useState(true);
   const handleConfirm = () => {
@@ -21,7 +23,9 @@ function FindPwPage() {
         <MainContentWrapper>
           {isNow ? <FindPw1st /> : <FindPw2nd />}
         </MainContentWrapper>
-        <Button onClick={() => handleConfirm()}>확인</Button>
+        <Button onClick={() => handleConfirm()}>
+          {isNow ? <UserCheckBtn /> : <BackToLoginBtn />}
+        </Button>
       </Wrapper>
     </>
   );
@@ -45,10 +49,10 @@ const MainContentWrapper = styled.div`
   padding: 2rem; */
 `;
 const Button = styled.button`
-  width: 400px;
+  /* width: 400px;
   height: 50px;
   background: black;
   border-radius: 5px;
   color: white;
-  margin: 4px;
+  margin: 4px; */
 `;

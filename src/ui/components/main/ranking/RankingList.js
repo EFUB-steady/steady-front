@@ -9,7 +9,7 @@ import { useSelectedStudyId } from "../../../../feature/studies/studySelect/reco
 export default function RankingList() {
   const { selectedStudyId } = useSelectedStudyId();
 
-  const { rankingAPI } = useRankingAPI();
+  const { rankingAPI, isLoading } = useRankingAPI();
 
   useEffect(() => {
     rankingAPI({
@@ -21,6 +21,8 @@ export default function RankingList() {
       },
     });
   }, [selectedStudyId]);
+
+  if (isLoading) return <div>loading...</div>;
   return (
     <Wrapper>
       <UpperRank />
