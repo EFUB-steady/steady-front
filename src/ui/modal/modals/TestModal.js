@@ -1,27 +1,29 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
 
-export default function LoginFailModal({ isOpen, setIsOpen }) {
-  // const [open, setOpen] = React.useState(false);
+export default function AlertDialog() {
+  const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
-    setIsOpen(true);
+    setOpen(true);
   };
 
   const handleClose = () => {
-    setIsOpen(false);
+    setOpen(false);
   };
 
   return (
     <div>
-      {/* <Button variant="outlined" onClick={handleClickOpen}>
-        로그인실패버튼
-      </Button> */}
+      <Button variant="outlined" onClick={handleClickOpen}>
+        테스트모달버튼
+      </Button>
       <Dialog
-        open={isOpen}
+        open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"

@@ -12,7 +12,7 @@ export default function ModalWrapper() {
   return (
     <>
       <UploadStudyModal />
-      <ReportMoreModal />
+      {/* <ReportMoreModal /> */}
       <UploadStudySupplyModal />
       <ReportCancelModal />
       <StudyListModal />

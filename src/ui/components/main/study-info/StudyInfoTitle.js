@@ -3,6 +3,7 @@ import AuthBtn from "./../../buttons/study/AuthBtn";
 import { Title1 } from "./../../../../core/texts";
 import AuthSupplyBtn from "../../buttons/study/AuthSupplyBtn";
 import { useSelectedStudyInfo } from "../../../../feature/studies/studySelect/recoil/useSelectedStudy";
+import TestModal from "../../../modal/modals/TestModal";
 
 export default function StudyInfoTitle() {
   const { selectedStudy } = useSelectedStudyInfo();
@@ -13,6 +14,7 @@ export default function StudyInfoTitle() {
       <div>
         <AuthSupplyBtn />
         <AuthBtn />
+        <TestModal />
       </div>
     </InfoTitleBox>
   );
