@@ -31,7 +31,7 @@ export default function PenaltyAmount() {
   return (
     <Row>
       <Body2>
-        <Button onClick={() => penaltyHandler()}>로그인</Button>
+        <Button onClick={() => penaltyHandler()}>버튼</Button>
       </Body2>
       <div style={{ width: 5 }} />
       <Subtitle2>원</Subtitle2>
