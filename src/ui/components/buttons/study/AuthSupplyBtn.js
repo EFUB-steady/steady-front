@@ -1,11 +1,17 @@
+import { useState } from "react";
 import styled from "styled-components";
-import { useUploadStudySupplyModal } from "../../../modal/recoil/hooks/useModals";
+import UploadStudySupplyModal from "../../../modal/modals/UploadStudySupplyModal";
 
 export default function AuthSupplyBtn() {
-  const { openModal } = useUploadStudySupplyModal();
-  return <Button onClick={openModal}>지각 제출</Button>;
-}
+  const [isOpen, setIsOpen] = useState(false);
 
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>지각 제출</Button>
+      <UploadStudySupplyModal isOpen={isOpen} setIsOpen={setIsOpen} />
+    </>
+  );
+}
 const Button = styled.button`
   width: 108px;
   height: 40px;

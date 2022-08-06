@@ -1,28 +1,31 @@
-import { Dialog, DialogContent } from "@mui/material";
 import styled from "styled-components";
-import { useSignUpFailModal } from "../recoil/hooks/useModals";
-import React from "react";
-import { Subtitle3 } from "../../../core/texts";
+import * as React from "react";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
 
-export default function SignUpFailModal() {
-  const { isOpen, closeModal } = useSignUpFailModal();
+export default function SignUpFailModal({ isOpen, setIsOpen }) {
+  const closeHandler = () => {
+    setIsOpen(false);
+  };
 
   return (
     <Dialog
       open={isOpen}
-      onClose={closeModal}
+      onClose={() => closeHandler()}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
       maxWidth="false"
       sx={{ whiteSpace: "break-spaces" }}
     >
-      <ContentWrapper>
-        <DialogContent>
-          <Subtitle3 style={{ color: "red" }}>
-            이미 가입된 계정이거나 입력되지 않은 부분이 있습니다.
-          </Subtitle3>
-        </DialogContent>
-      </ContentWrapper>
+      <DialogContent>
+        <DialogContentText
+          id="alert-dialog-description"
+          style={{ color: "red" }}
+        >
+          이미 가입된 계정이거나 입력되지 않은 부분이 있습니다.
+        </DialogContentText>
+      </DialogContent>
     </Dialog>
   );
 }

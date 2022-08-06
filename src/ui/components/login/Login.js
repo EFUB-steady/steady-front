@@ -39,7 +39,6 @@ export default function Login() {
         </IdPwBoxLeft>
         <IdPwBoxRight>
           <LoginBtn sx={{ mb: 2, mt: 4 }} />
-          <TestModal />
         </IdPwBoxRight>
       </IdPwBox>
       <div style={{ display: "flex" }}>
