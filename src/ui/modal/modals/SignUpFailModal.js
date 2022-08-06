@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React from "react";
+import { Dialog, DialogContent, DialogContentText } from "@mui/material";
 
 export default function SignUpFailModal({ isOpen, setIsOpen }) {
   return (
@@ -22,7 +23,3 @@ export default function SignUpFailModal({ isOpen, setIsOpen }) {
     </Dialog>
   );
 }
-
-const ContentWrapper = styled.div`
-  margin: 10px;
-`;
