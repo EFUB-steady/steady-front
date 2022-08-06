@@ -1,7 +1,8 @@
 const routes = {
   MAIN: "studies/:studyId",
   LOGIN: "/",
-  JOIN: "join/",
+  SIGNUP: "signup/",
+  // JOIN: "join/",
   FINDID: "findid/",
   FINDPW: "findpw/",
   MAKENEW: "makenew/",

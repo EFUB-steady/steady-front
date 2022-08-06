@@ -1,17 +1,17 @@
 import styled from "styled-components";
 import { Subtitle1 } from "../../../../core/texts";
 
-export default function UpperRankItem({ rank }) {
+export default function UpperRankItem({ ranking, rank }) {
   return (
     <Wrapper>
       <Rank>
-        <Subtitle1>● {rank.rank}위</Subtitle1>
+        <Subtitle1>● {rank}위</Subtitle1>
       </Rank>
       <User>
-        <UserColor color={rank.color} />
-        <Subtitle1>{rank.name}</Subtitle1>
+        <UserColor color={`#${ranking.color}`} />
+        <Subtitle1>{ranking.nickname}</Subtitle1>
       </User>
-      <Score>{rank.score}점</Score>
+      <Score>{ranking.score}점</Score>
     </Wrapper>
   );
 }
@@ -21,6 +21,7 @@ const Wrapper = styled.div`
   height: 65px;
   justify-content: space-around;
   align-items: center;
+  padding: 0 20px;
 `;
 
 const Rank = styled.div`
@@ -29,8 +30,7 @@ const Rank = styled.div`
 
 const User = styled.div`
   display: flex;
-  justify-content: space-between;
-  width: 23%;
+  width: 40%;
 `;
 
 const UserColor = styled.div`
@@ -39,10 +39,11 @@ const UserColor = styled.div`
   height: 20px;
   border-radius: 50%;
   border: 1px solid black;
+  margin-right: 10px;
 `;
 
 const Score = styled.div`
   display: flex;
   justify-content: end;
-  width: 20%;
+  width: 30%;
 `;

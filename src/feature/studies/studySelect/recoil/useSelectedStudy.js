@@ -2,6 +2,7 @@ import { useRecoilState } from "recoil";
 import {
   selectedStudyIdState,
   selectedStudyInfoState,
+  selectedStudyIsLeaderState,
 } from "./selectedStudyState";
 
 export const useSelectedStudyId = () => {
@@ -22,5 +23,14 @@ export const useSelectedStudyInfo = () => {
   return {
     selectedStudy,
     setSelectedStudy,
+  };
+};
+
+export const useSelectedStudyIsLeader = () => {
+  const [isLeader, setIsLeader] = useRecoilState(selectedStudyIsLeaderState);
+
+  return {
+    isLeader,
+    setIsLeader,
   };
 };

@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import ModifyInfoBtn from "../buttons/user/ModifyInfoBtn";
-import { useState } from "react";
-import { gray100 } from "../../../core/colors";
-import { nDivider, Input } from "@mui/material";
-import { useUser } from "../../../feature/user/recoil/useUser";
 
-export default function MyInfo() {
+import { gray100 } from "../../../core/colors";
+import { Input } from "@mui/material";
+import { useUser } from "../../../feature/user/recoil/useUser";
+import ModifyCompleteBtn from "../buttons/user/ModifyCompleteBtn";
+import React, { useState } from "react";
+
+export default function ModifyMyInfo() {
   const [nickInput, setNickInput] = useState("");
   const [nameInput, setNameInput] = useState("");
   const [idInput, setIdInput] = useState("");
@@ -16,69 +18,17 @@ export default function MyInfo() {
 
   return (
     <>
-      <InfoHeader>
-        <TitleText>내 정보</TitleText>
-        <ModifyInfoBtn />
-      </InfoHeader>
       <SignBox>
         <Text>닉네임</Text>
-        <Input
-          placeholder={user.nickname}
-          value={nickInput}
-          onChange={(e) => {
-            setNickInput(e.target.value);
-          }}
-          fullWidth={true}
-          disableUnderline={true}
-          style={{
-            backgroundColor: gray100,
-            padding: "8px",
-            fontSize: 10,
-            fontWeight: 400,
-            width: 220,
-            height: 28,
-          }}
-        />
+        <InputBox>{user.nickname}</InputBox>
       </SignBox>
       <SignBox>
         <Text>이름</Text>
-        <Input
-          placeholder="김이화"
-          value={nameInput}
-          onChange={(e) => {
-            setNameInput(e.target.value);
-          }}
-          fullWidth={true}
-          disableUnderline={true}
-          style={{
-            backgroundColor: gray100,
-            padding: "8px",
-            fontSize: 10,
-            fontWeight: 400,
-            width: 220,
-            height: 28,
-          }}
-        />
+        <InputBox>{user.name}</InputBox>
       </SignBox>
       <SignBox>
         <Text>ID</Text>
-        <Input
-          placeholder="ewhakim22"
-          value={idInput}
-          onChange={(e) => {
-            setIdInput(e.target.value);
-          }}
-          fullWidth={true}
-          disableUnderline={true}
-          style={{
-            backgroundColor: gray100,
-            padding: "8px",
-            fontSize: 10,
-            fontWeight: 400,
-            width: 220,
-            height: 28,
-          }}
-        />
+        <InputBox>{user.email}</InputBox>
       </SignBox>
       <SignBox>
         <Text>PW</Text>
@@ -102,39 +52,12 @@ export default function MyInfo() {
       </SignBox>
       <SignBox>
         <Text>연락처</Text>
-        <Input
-          placeholder="김이화"
-          value={phoneNumInput}
-          onChange={(e) => {
-            setPhoneNumInput(e.target.value);
-          }}
-          fullWidth={true}
-          disableUnderline={true}
-          style={{
-            backgroundColor: gray100,
-            padding: "8px",
-            fontSize: 10,
-            fontWeight: 400,
-            width: 220,
-            height: 28,
-          }}
-        />
+        <InputBox>{user.phone}</InputBox>
       </SignBox>
     </>
   );
 }
 
-const TitleText = styled.div`
-  width: 200px;
-  height: 21px;
-
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 100%;
-  margin-bottom: 45px;
-`;
 const Text = styled.div`
   font-family: "Pretendard";
   font-style: normal;
@@ -160,4 +83,13 @@ const SignBox = styled.div`
   display: flex;
   flex-direction: row;
   padding-bottom: 8px;
+`;
+
+const InputBox = styled.div`
+  background-color: ${gray100};
+  padding: 8px;
+  font-size: 10px;
+  font-weight: 400;
+  width: 220px;
+  height: 28px;
 `;

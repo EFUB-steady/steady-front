@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import CustomLink from "../../commons/CustomLink";
 export default function LogoutBtn() {
+  const logoutCheck = () => {
+    localStorage.clear();
+  };
+
   return (
     <CustomLink to="/">
-      <Button>LOGOUT</Button>
+      <Button onClick={() => logoutCheck()}>LOGOUT</Button>
     </CustomLink>
   );
 }

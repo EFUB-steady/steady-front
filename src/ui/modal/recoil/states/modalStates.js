@@ -1,10 +1,10 @@
 import { atom } from "recoil";
 
-// 오늘 날짜 인증하기
-export const uploadStudyModalState = atom({
-  key: "uploadStudyModalState",
-  default: null,
-});
+// // 오늘 날짜 인증하기
+// export const uploadStudyModalState = atom({
+//   key: "uploadStudyModalState",
+//   default: null,
+// });
 
 //전날 보충하기
 export const uploadStudyModalSupplyState = atom({
@@ -33,5 +33,11 @@ export const reportCancelModalState = atom({
 // 로그인 실패 시 뜨는 모달입니다.
 export const loginFailModalState = atom({
   key: "loginFailModalState",
+  default: null,
+});
+
+//회원가입 실패 시 뜨는 모달입니다.
+export const signUpFailModalState = atom({
+  key: "signUpFailModalState",
   default: null,
 });

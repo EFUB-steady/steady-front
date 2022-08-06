@@ -5,7 +5,8 @@ import GoBackBtn from "../components/buttons/common/GoBackBtn";
 import React, { useState, Link } from "react";
 import FindId1st from "../components/login/FindId1st";
 import FindId2nd from "../components/login/FindId2nd";
-
+import BackToLoginBtn from "../components/buttons/user/BackToLoginBtn";
+import UserCheckBtn from "../components/buttons/user/UserCheckBtn";
 function FindIdPage() {
   const [isNow, setIsNow] = useState(true);
   const handleConfirm = () => {
@@ -21,7 +22,9 @@ function FindIdPage() {
         <MainContentWrapper>
           {isNow ? <FindId1st /> : <FindId2nd />}
         </MainContentWrapper>
-        <Button onClick={() => handleConfirm()}>확인</Button>
+        <Button onClick={() => handleConfirm()}>
+          {isNow ? <UserCheckBtn /> : <BackToLoginBtn />}
+        </Button>
       </Wrapper>
     </>
   );
@@ -42,10 +45,10 @@ const Wrapper = styled.div`
 `;
 
 const Button = styled.button`
-  width: 400px;
+  /* width: 400px;
   height: 50px;
   background: black;
   border-radius: 5px;
   color: white;
-  margin: 4px;
+  margin: 4px; */
 `;

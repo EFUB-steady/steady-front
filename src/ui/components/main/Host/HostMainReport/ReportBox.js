@@ -11,6 +11,11 @@ export default function ReportBox({ reportList }) {
       <ReportItem report={reportList[2]} />
       <Divider />
       <ReportItem report={reportList[3]} />
+      <Divider />
+      <ReportItem report={reportList[4]} />
+      <Divider />
+      <ReportItem report={reportList[5]} />
+      <Divider />
     </Wrapper>
   );
 }
@@ -21,7 +26,8 @@ const Wrapper = styled.div`
   justify-content: space-between;
   padding-top: 24px;
   padding-bottom: 24px;
-  height: 335px;
+  height: 600px;
+  width: 100%;
 `;
 
 const Divider = styled.div`
