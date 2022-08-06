@@ -10,7 +10,7 @@ const Button = styled.button`
   background: black;
   border-radius: 5px;
   color: white;
-  margin: 4px;
+
   text-align: center;
 
   font-style: normal;

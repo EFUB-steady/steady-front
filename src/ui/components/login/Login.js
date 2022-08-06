@@ -46,7 +46,7 @@ export default function Login() {
             <LoginHelpText> 아이디/비밀번호 찾기</LoginHelpText>
           </Button>
         </CustomLink>
-        <CustomLink to="/join">
+        <CustomLink to="/signup">
           <Button>
             <LoginHelpText> 회원 가입하기</LoginHelpText>
           </Button>

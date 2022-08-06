@@ -3,12 +3,12 @@ import { useLoggedIn } from "../recoil/useLoggedIn";
 import { useState } from "react";
 import { useLoginInput } from "../recoil/useLoginInput";
 
-export const useLogin = () => {
+export const useLoginAPI = () => {
   const { email: inputEmail, password: inputPassword } = useLoginInput();
   const { setIsLoggedIn } = useLoggedIn();
   const [isLoading, setIsLoading] = useState(false);
 
-  const login = async ({ onSuccess, onFail }) => {
+  const loginAPI = async ({ onSuccess, onFail }) => {
     setIsLoading(true);
     try {
       const data = await axiosInstance.post("users/login", {
@@ -29,5 +29,5 @@ export const useLogin = () => {
     }
   };
 
-  return { login, isLoading };
+  return { loginAPI, isLoading };
 };

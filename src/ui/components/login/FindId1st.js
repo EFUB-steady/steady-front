@@ -14,8 +14,8 @@ export default function FindId1st() {
         <Text>
           <Subtitle3>휴대폰 번호</Subtitle3>
         </Text>
-        <InputBox placeholder="010-0000-0000" />{" "}
-      </SignBox>{" "}
+        <InputBox placeholder="010-0000-0000" />
+      </SignBox>
     </ContentWrapper>
   );
 }
