@@ -2,8 +2,8 @@ import styled from "styled-components";
 import "../../../../core/reset.css";
 import Calendar from "react-calendar";
 import { useStudyListDate } from "../../../../feature/studyList/recoil/useStudyListDate";
-import { useEffect } from "react";
 import { useStudyListModal } from "../../../modal/recoil/hooks/useModals";
+import { useStudyListByDateAPI } from "../../../../feature/studies/studyListByDate/api/useStudyListByDateAPI";
 
 // 제목
 function NavigationLabel(month) {
@@ -19,11 +19,12 @@ function Mcalendar() {
   const today = new Date(); //오늘 날짜
   const { selectedDate, setSelectedDate } = useStudyListDate();
   const { openModal } = useStudyListModal();
+  const { studyListByDateAPI } = useStudyListByDateAPI();
 
-  // (index) 날짜+1=오늘 날짜
-  // useEffect(() => {
-  //   if (selectedDate.toDateString() != today.toDateString()) openModal();
-  // }, [selectedDate]);
+  const onClickDayHandler = () => {
+    openModal();
+    studyListByDateAPI();
+  };
 
   return (
     <>
@@ -42,7 +43,7 @@ function Mcalendar() {
           prev2Label={null}
           next2Label={null}
           // 캘린더 안에 내용물
-          onClickDay={openModal}
+          onClickDay={onClickDayHandler}
           tileContent={({ date }) => {
             const lastDate = new Date(
               date.getFullYear(),
