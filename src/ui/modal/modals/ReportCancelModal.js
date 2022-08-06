@@ -1,19 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 import { Dialog, DialogContent } from "@mui/material";
-import { useReportCancelModal } from "../recoil/hooks/useModals";
 
 import { Body2, Subtitle2 } from "../../../core/texts";
 import AuthCancelYesBtn from "../../../ui/components/buttons/study/AuthCancelYesBtn";
 import AuthCancelNoBtn from "../../../ui/components/buttons/study/AuthCancelNoBtn";
+import { useStudyPostInput } from "../../../feature/studies/studyPost/recoil/useStudyPost";
 
-export default function ReportCancelModal() {
-  const { isOpen, closeModal } = useReportCancelModal();
+export default function ReportCancelModal({ isOpen, setIsOpen }) {
+  const { setLink, setImageUrl } = useStudyPostInput();
+  const closeHandler = () => {
+    setIsOpen(false);
+    setLink("");
+    setImageUrl("");
+  };
 
   return (
     <Dialog
       open={isOpen}
-      onClose={closeModal}
+      onClose={() => closeHandler()}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
       maxWidth="sm"

@@ -1,9 +1,15 @@
 import styled from "styled-components";
-import { useReportMoreModal } from "../../../modal/recoil/hooks/useModals";
+import ReportMoreModal from "../../../modal/modals/ReportMoreModal";
+import { useState } from "react";
 
 export default function ReportMoreBtn() {
-  const { openModal } = useReportMoreModal();
-  return <Button onClick={openModal}>자세히 보기</Button>;
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>자세히 보기</Button>
+      <ReportMoreModal isOpen={isOpen} setIsOpen={setIsOpen} />
+    </>
+  );
 }
 
 const Button = styled.button`
