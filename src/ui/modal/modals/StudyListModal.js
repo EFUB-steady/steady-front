@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Dialog, DialogContent } from "@mui/material";
-import { useStudyListModal } from "../recoil/hooks/useModals";
-import StudyModalTitle from "../recoil/components/StudyModalTitle";
+import StudyModalTitle from "../components/StudyModalTitle";
 import { useStudyListDate } from "../../../feature/studyList/recoil/useStudyListDate";
-import MemberList from "../recoil/components/MemberList";
+import MemberList from "../components/MemberList";
 
 export default function StudyListModal({ isOpen, setIsOpen }) {
   const { selectedDate } = useStudyListDate();

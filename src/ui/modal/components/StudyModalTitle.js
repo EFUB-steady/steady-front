@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { gray300 } from "../../../../core/colors";
+import { gray300 } from "../../../core/colors";
 import { format } from "date-fns";
-import { useStudyPostAPI } from "../../../../feature/studies/studyPost/api/useStudyPostAPI";
-import { useStudyPostInput } from "../../../../feature/studies/studyPost/recoil/useStudyPost";
+import { useStudyPostAPI } from "../../../feature/studies/studyPost/api/useStudyPostAPI";
+import { useStudyPostInput } from "../../../feature/studies/studyPost/recoil/useStudyPost";
 
 export default function StudyModalTitle({ date, titleText, buttonText }) {
   const formattedDate = format(date, "MM월 dd일");
