@@ -1,5 +1,7 @@
 import { Divider } from "@mui/material";
+import { useEffect } from "react";
 import styled from "styled-components";
+import { useMakeStudy } from "../../feature/MakeStudy/recoil/useMakeStudy";
 import GoBackBtn from "../components/buttons/common/GoBackBtn";
 import DaysSelect from "../components/MakeNew/DaysSelect";
 import MembersInput from "../components/MakeNew/MembersInput";
@@ -9,6 +11,12 @@ import StudyInfoInput from "../components/MakeNew/StudyInfoInput";
 import SideBar from "../components/sidebar/SideBar";
 
 export default function MakeNewPage() {
+  const { MakeStudyReset } = useMakeStudy();
+
+  useEffect(() => {
+    MakeStudyReset();
+  }, []);
+
   return (
     <Wrapper>
       <SideBar />

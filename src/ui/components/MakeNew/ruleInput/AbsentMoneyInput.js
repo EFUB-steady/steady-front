@@ -2,9 +2,11 @@ import styled from "styled-components";
 import { Subtitle2 } from "../../../../core/texts";
 import { Row } from "../../commons/Row";
 import { useMakeStudy } from "../../../../feature/MakeStudy/recoil/useMakeStudy";
+import { useState } from "react";
 
 export default function AbsentMoneyInput() {
   const { money, setMoney } = useMakeStudy();
+  const [temp, setTemp] = useState("");
 
   return (
     <AuthDayWrapper>
@@ -14,7 +16,8 @@ export default function AbsentMoneyInput() {
           placeholder="2000"
           value={money}
           onChange={(e) => {
-            setMoney(e.target.value);
+            setTemp(e.target.value);
+            setMoney(Number(e.target.value));
           }}
         />
         <Subtitle2>원</Subtitle2>
