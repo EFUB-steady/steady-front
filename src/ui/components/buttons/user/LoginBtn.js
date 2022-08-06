@@ -7,6 +7,7 @@ import { useMyStudyAPI } from "../../../../feature/studies/myStudy/api/useMyStud
 import { useRankingAPI } from "../../../../feature/ranking/api/useRankingAPI";
 import LoginFailModal from "../../../modal/modals/LoginFailModal";
 import { useState } from "react";
+import { useMyStudy } from "../../../../feature/studies/myStudy/recoil/useMyStudy";
 
 export default function LoginBtn() {
   const { loginAPI, isLoading: isLoginLoading } = useLoginAPI();
@@ -26,15 +27,16 @@ export default function LoginBtn() {
   });
 
   const { myStudyAPI, isLoading: isMyStudyLoading } = useMyStudyAPI();
+  const { myStudy } = useMyStudy();
 
   const loginHandler = () => {
     loginAPI({
       onSuccess: () => {
-        loginReset();
-        navigation("/studies/53"); // TODO: 7번 말고, 기본 스터디로 변경 (현재 기본스터디를 볼수있는 api 없음)
         myStudyAPI();
         userAPI();
         rankingAPI();
+        loginReset();
+        navigation(`/studies/53`);
       },
       onFail: () => {
         setIsOpen(true);
