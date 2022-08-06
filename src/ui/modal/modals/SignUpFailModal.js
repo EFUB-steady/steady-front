@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import React from "react";
-import { Dialog, DialogContent, DialogContentText } from "@mui/material";
+import { Dialog } from "@mui/material";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
 
 export default function SignUpFailModal({ isOpen, setIsOpen }) {
   return (

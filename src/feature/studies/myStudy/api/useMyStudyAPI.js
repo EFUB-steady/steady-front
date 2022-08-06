@@ -19,7 +19,7 @@ export const useMyStudyAPI = () => {
       const { data } = await axiosInstanceHeader.get("studies/my-study");
       if (data) {
         if (selectedStudyId.studyId == null) {
-          setSelectedStudyId(data[0].studyId);
+          setSelectedStudyId(53);
           setIsLeader(data[0].leader);
         }
         console.log("myStudyAPI success!!");
