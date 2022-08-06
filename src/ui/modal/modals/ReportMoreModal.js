@@ -5,6 +5,7 @@ import { useReportMoreModal } from "../recoil/hooks/useModals";
 import ReportMoreModalTitle from "../recoil/components/ReportMoreModalTitle";
 import { ReportStudyModalPic } from "../recoil/components/ReportStudyModalPic";
 import { StudyModalUrl } from "../recoil/components/StudyModalUrl";
+import { ReportMoreModalURL } from "../recoil/components/ReportMoreModalUrl";
 
 export default function ReportMoreModal() {
   const { isOpen, closeModal } = useReportMoreModal();
@@ -22,7 +23,7 @@ export default function ReportMoreModal() {
         <DialogContent>
           <ReportMoreModalTitle />
           <ReportStudyModalPic />
-          <StudyModalUrl />
+          <ReportMoreModalURL />
         </DialogContent>
       </ContentWrapper>
     </Dialog>
