@@ -2,6 +2,7 @@ import styled from "styled-components";
 import "../../../../core/reset.css";
 import Calendar from "react-calendar";
 import { useStudyListDate } from "../../../../feature/studyList/recoil/useStudyListDate";
+import { useStudyListByDateAPI } from "../../../../feature/studies/studyListByDate/api/useStudyListByDateAPI";
 import { useState } from "react";
 import StudyListModal from "../../../modal/modals/StudyListModal";
 
@@ -13,10 +14,12 @@ function NavigationLabel(month) {
 // 캘린더
 function Mcalendar() {
   const { selectedDate, setSelectedDate } = useStudyListDate();
+  const { studyListByDateAPI } = useStudyListByDateAPI();
   const [isOpen, setIsOpen] = useState(false);
 
   const onClickDayHandler = () => {
     setIsOpen(true);
+    studyListByDateAPI();
   };
 
   return (
