@@ -1,23 +1,35 @@
 import styled from "styled-components";
-import React, { useState } from "react";
+import React from "react";
 import { textboxColor } from "../../../../core/colors";
-import CustomLink from "../../commons/CustomLink";
+import { useSelectedStudyId } from "../../../../feature/studies/studySelect/recoil/useSelectedStudy";
+import { useNavigate } from "react-router-dom";
 
 export default function IndexMainPage() {
   const pathname = window.location.pathname;
+  const navigation = useNavigate();
+  const { setSelectedStudyId } = useSelectedStudyId();
+  const buttonClickHandler = () => {
+    navigation("/studies/7");
+    setSelectedStudyId(7);
+  };
 
   return (
-    <CustomLink to="/main">
-      <Button pathname={pathname}>MAIN PAGE</Button>
-    </CustomLink>
+    <Button
+      pathname={pathname}
+      onClick={() => {
+        buttonClickHandler();
+      }}
+    >
+      MAIN PAGE
+    </Button>
   );
 }
 
 const Button = styled.button`
   /*박스*/
   background-color: ${(props) =>
-    props.pathname == "/main" ? "black" : textboxColor};
-  color: ${(props) => (props.pathname == "/main" ? "white" : "black")};
+    props.pathname == "/studies/7" ? "black" : textboxColor};
+  color: ${(props) => (props.pathname == "/studies/7" ? "white" : "black")};
   height: 48px;
   margin-right: 5px;
   width: 200px;

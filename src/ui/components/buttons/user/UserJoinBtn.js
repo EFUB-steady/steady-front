@@ -5,7 +5,7 @@ import { useSignUpAPI } from "../../../../feature/SignUp/api/useSignUpAPI";
 import { useSignUpFailModal } from "../../../modal/recoil/hooks/useModals";
 
 export default function UserJoinBtn() {
-  const { signUpAPI, isLoading } = useSignUpAPI();
+  const { signUpAPI } = useSignUpAPI();
   const navigation = useNavigate();
   const { openModal } = useSignUpFailModal();
   const { signUpReset } = useSignUp();

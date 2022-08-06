@@ -2,8 +2,11 @@ import styled from "styled-components";
 import { gray100, button2Color } from "../../../../core/colors";
 import icon from "../../../../assets/icon_link.png";
 import { Subtitle2 } from "../../../../core/texts";
+import { useStudyPostInput } from "../../../../feature/studies/studyPost/recoil/useStudyPost";
 
 export function StudyModalUrl() {
+  const { link, setLink } = useStudyPostInput();
+
   return (
     <Wrapper>
       <TitleWrapper>
@@ -13,13 +16,15 @@ export function StudyModalUrl() {
         </Subtitle2>
       </TitleWrapper>
 
-      <div>
-        <InputUrl
-          type="url"
-          pattern="http://*"
-          placeholder="http://"
-        ></InputUrl>
-      </div>
+      <InputUrl
+        value={link}
+        onChange={(e) => {
+          setLink(e.target.value);
+        }}
+        type="url"
+        pattern="http://*"
+        placeholder="http://"
+      />
     </Wrapper>
   );
 }

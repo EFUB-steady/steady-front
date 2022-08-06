@@ -18,10 +18,13 @@ export default function ReportItem({ report }) {
 
 const Wrapper = styled.div`
   display: flex;
-  height: 76px;
-  width: 1600px;
+  height: 20%;
+  width: 95%;
   justify-content: space-around;
   align-items: center;
   border: 3px solid black;
   border-radius: 5px;
+
+  margin-left: 2rem;
+  margin-bottom: 10px;
 `;

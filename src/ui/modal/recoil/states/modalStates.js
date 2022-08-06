@@ -1,10 +1,10 @@
 import { atom } from "recoil";
 
-// 오늘 날짜 인증하기
-export const uploadStudyModalState = atom({
-  key: "uploadStudyModalState",
-  default: null,
-});
+// // 오늘 날짜 인증하기
+// export const uploadStudyModalState = atom({
+//   key: "uploadStudyModalState",
+//   default: null,
+// });
 
 //전날 보충하기
 export const uploadStudyModalSupplyState = atom({
