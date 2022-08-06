@@ -1,8 +1,14 @@
 import styled from "styled-components";
 import { gray100, gray400 } from "../../../core/colors";
+import { useState } from "react";
 
 export default function DaysSelectItem({ day }) {
-  return <Box onClick={day.onClick}>{day.day}</Box>;
+
+  return (
+    <Box onClick={day.onClick} isClicked={day.isClicked}>
+      {day.day}
+    </Box>
+  );
 }
 
 const Box = styled.div`
@@ -11,14 +17,20 @@ const Box = styled.div`
   border: 3px solid black;
   border-right: 0;
   border-radius: 10px 10px 0 0;
-  background-color: ${gray100};
+
+  background-color: ${(props) => (props.isClicked ? "black" : "white")};
   justify-content: center;
   align-items: center;
   font-family: "Bauhaus93";
   font-size: 24px;
-  color: ${gray400};
+  color: ${(props) => (props.isClicked ? "white" : "black")};};
+
   &:hover {
     background-color: black;
+    color: white;
+  }
+  &:active {
+    background: black;
     color: white;
   }
 `;
