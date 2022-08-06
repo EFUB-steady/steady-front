@@ -14,7 +14,7 @@ export default function AbsentMoneyInput() {
       <Row>
         <Input
           placeholder="2000"
-          value={money}
+          value={temp}
           onChange={(e) => {
             setTemp(e.target.value);
             setMoney(Number(e.target.value));

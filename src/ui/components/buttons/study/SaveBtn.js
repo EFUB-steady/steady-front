@@ -1,10 +1,15 @@
 import styled from "styled-components";
 import { useMakeStudy } from "../../../../feature/MakeStudy/recoil/useMakeStudy";
 import { useMakeStudyAPI } from "../../../../feature/MakeStudy/api/useMakeStudyAPI";
+import { useNavigate } from "react-router-dom";
+import StudyPostFailModal from "../../../modal/modals/StudyPostFailModal";
+import { useState } from "react";
 
 export default function SaveBtn() {
   const { MakeStudyReset } = useMakeStudy();
   const { makeStudyAPI } = useMakeStudyAPI();
+  const navigation = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
   const {
     name,
@@ -49,6 +54,8 @@ export default function SaveBtn() {
       makeStudyAPI({
         onSuccess: () => {
           MakeStudyReset();
+          navigation("/mypage");
+
           console.log("추가했음");
         },
         onFail: () => {
@@ -56,10 +63,15 @@ export default function SaveBtn() {
         },
       });
     } else {
-      console.log("아무것도 아님");
+      setIsOpen(true);
     }
   };
-  return <Button onClick={() => makeStudyHandler()}>저장하기</Button>;
+  return (
+    <>
+      <StudyPostFailModal isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Button onClick={() => makeStudyHandler()}>저장하기</Button>
+    </>
+  );
 }
 
 const Button = styled.button`
