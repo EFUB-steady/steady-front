@@ -1,13 +1,11 @@
 import styled from "styled-components";
-import { gray100, hintColor, button2Color } from "../../../../core/colors";
-import icon from "../../../../assets/icon_picture_card_mypage.png";
-import alerticon from "../../../../assets/icon_alert_white.png";
-import { Subtitle2 } from "../../../../core/texts";
-import { style } from "@mui/system";
+import { gray100, hintColor, button2Color } from "../../../core/colors";
+import icon from "../../../assets/icon_picture_card_mypage.png";
+import alerticon from "../../../assets/icon_alert_white.png";
+import { Subtitle2 } from "../../../core/texts";
 
 export function OtherStudyModalPic({ member }) {
   return (
-    <>
     <Wrapper>
       <TitleWrapper>
         <TItleContainer>
@@ -22,9 +20,6 @@ export function OtherStudyModalPic({ member }) {
         <UserCircle color={member.color} /> {member.name}님
       </UserName>
     </Wrapper>
-
-
-    </>
   );
 }
 
@@ -99,4 +94,3 @@ const UserCircle = styled.span`
   background-color: ${(props) => props.color};
   margin-right: 13px;
 `;
-

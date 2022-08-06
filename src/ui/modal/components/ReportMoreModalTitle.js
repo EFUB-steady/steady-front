@@ -1,16 +1,22 @@
 import styled from "styled-components";
-import { gray300 } from "../../../../core/colors";
 import { format } from "date-fns";
-import icon from "../../../../assets/icon_alert.png";
-import { Body2 } from "../../../../core/texts";
-import AuthCancelBtn from "../../../../ui/components/buttons/study/AuthCancelBtn";
+import icon from "../../../assets/icon_alert.png";
+import { Body2 } from "../../../core/texts";
+import ReportCancelModal from "../modals/ReportCancelModal";
+import { useState } from "react";
 
-export default function ReportMoreModalTitle() {
+export default function ReportMoreModalTitle({ setIsOpenMore }) {
   const today = new Date();
   const formattedToday = format(today, "MM월 dd일");
+  const [isOpenCancel, setIsOpenCancel] = useState(false);
 
   return (
     <>
+      <ReportCancelModal
+        isOpenCancel={isOpenCancel}
+        setIsOpenCancel={setIsOpenCancel}
+        setIsOpenMore={setIsOpenMore}
+      />
       <Wrapper>
         <AlertIcon src={icon} />
         <Title>{formattedToday}</Title>
@@ -19,7 +25,7 @@ export default function ReportMoreModalTitle() {
         <div style={{ margin: "8px" }}>
           <Body2>작성자 000000님</Body2>
         </div>
-        <AuthCancelBtn />
+        <Button onClick={() => setIsOpenCancel(true)}>인증 취소</Button>
       </SecondWrapper>
       <Divider />
     </>
@@ -54,4 +60,13 @@ const Divider = styled.div`
   background-color: #000000;
   border-radius: 5px;
   display: flex;
+`;
+
+const Button = styled.button`
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  width: 108px;
+  height: 40px;
+  font-family: Pretendard;
 `;
