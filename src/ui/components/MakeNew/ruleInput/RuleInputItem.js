@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { gray100 } from "../../../../core/colors";
 import AccountInput from "./AccountInput";
 import RuleAuthDayInput from "./RuleAuthDayInput";
-import PaneltyMoneyInput from "./PaneltyMoneyInput";
+import LateMoneyInput from "./LateMoneyInput";
+import AbsentMoneyInput from "./AbsentMoneyInput";
 
 export default function RuleInputItem() {
   return (
@@ -12,9 +13,9 @@ export default function RuleInputItem() {
         <AccountInput />
       </RuleAuthWrapper>
       <RuleMoneyWrapper>
-        <PaneltyMoneyInput title="지각 시" money={1000} />
+        <LateMoneyInput />
         <div style={{ height: 30 }} />
-        <PaneltyMoneyInput title="결석 시" money={2000} />
+        <AbsentMoneyInput />
       </RuleMoneyWrapper>
     </Wrapper>
   );
