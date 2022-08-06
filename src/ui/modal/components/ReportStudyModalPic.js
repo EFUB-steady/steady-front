@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { gray100, hintColor } from "../../../../core/colors";
-import icon from "../../../../assets/icon_picture_card_mypage.png";
-import { Subtitle2 } from "../../../../core/texts";
+import { gray100 } from "../../../core/colors";
+import icon from "../../../assets/icon_picture_card_mypage.png";
+import { Subtitle2 } from "../../../core/texts";
 
 //신고_자세히보기 부분의 사진 인증 컴포넌트 유아이
 export function ReportStudyModalPic() {

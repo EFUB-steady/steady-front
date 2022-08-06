@@ -2,31 +2,29 @@ import styled from "styled-components";
 import "../../../../core/reset.css";
 import Calendar from "react-calendar";
 import { useStudyListDate } from "../../../../feature/studyList/recoil/useStudyListDate";
-import { useEffect } from "react";
-import { useStudyListModal } from "../../../modal/recoil/hooks/useModals";
+import { useStudyListByDateAPI } from "../../../../feature/studies/studyListByDate/api/useStudyListByDateAPI";
+import { useState } from "react";
+import StudyListModal from "../../../modal/modals/StudyListModal";
 
 // 제목
 function NavigationLabel(month) {
-  return (
-    <>
-      <Bold>{month} 일정</Bold>
-    </>
-  );
+  return <Bold>{month} 일정</Bold>;
 }
 
 // 캘린더
 function Mcalendar() {
-  const today = new Date(); //오늘 날짜
   const { selectedDate, setSelectedDate } = useStudyListDate();
-  const { openModal } = useStudyListModal();
+  const { studyListByDateAPI } = useStudyListByDateAPI();
+  const [isOpen, setIsOpen] = useState(false);
 
-  // (index) 날짜+1=오늘 날짜
-  // useEffect(() => {
-  //   if (selectedDate.toDateString() != today.toDateString()) openModal();
-  // }, [selectedDate]);
+  const onClickDayHandler = () => {
+    setIsOpen(true);
+    studyListByDateAPI();
+  };
 
   return (
     <>
+      <StudyListModal isOpen={isOpen} setIsOpen={setIsOpen} />
       <Container>
         <Calendar
           value={selectedDate}
@@ -42,7 +40,7 @@ function Mcalendar() {
           prev2Label={null}
           next2Label={null}
           // 캘린더 안에 내용물
-          onClickDay={openModal}
+          onClickDay={onClickDayHandler}
           tileContent={({ date }) => {
             const lastDate = new Date(
               date.getFullYear(),
@@ -68,10 +66,6 @@ const Bold = styled.div`
   font-weight: bold;
   font-size: 2.5rem;
   font-family: "Bauhaus93";
-`;
-
-const Containerbox = styled.div`
-  width: 50%;
 `;
 
 const Container = styled.div`
@@ -198,18 +192,4 @@ const Container = styled.div`
       }
     }
   }
-`;
-
-const Button = styled.button`
-  width: 10px;
-  height: 40px;
-  border-radius: 5px;
-  border: 3px solid black;
-  background: black;
-  text-align: center;
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  color: white;
 `;
