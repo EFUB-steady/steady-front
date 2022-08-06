@@ -72,12 +72,14 @@ const MidContent = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
+  background-color: yellow;
 `;
 const LeftContent = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
   border-right: 3px solid black;
+  //background-color: pink;
 `;
 
 const RightContent = styled.div`

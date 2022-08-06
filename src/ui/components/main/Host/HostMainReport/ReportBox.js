@@ -22,6 +22,7 @@ const Wrapper = styled.div`
   padding-top: 24px;
   padding-bottom: 24px;
   height: 335px;
+  width: 100%;
 `;
 
 const Divider = styled.div`

@@ -19,9 +19,11 @@ export default function ReportItem({ report }) {
 const Wrapper = styled.div`
   display: flex;
   height: 76px;
-  width: 1600px;
+  width: 95%;
   justify-content: space-around;
   align-items: center;
   border: 3px solid black;
   border-radius: 5px;
+  background-color: skyblue;
+  margin-left: 2rem;
 `;

@@ -45,6 +45,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
+
   height: 335px;
   background-color: ${gray100};
   border: 3px solid black;
