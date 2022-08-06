@@ -31,6 +31,20 @@ const REPORT_DATA = [
     reported: "시바",
     crtidate: "2022년 3월 26일자",
   },
+  {
+    index: "05",
+    date: "22.03.31",
+    reporter: "가재",
+    reported: "시바",
+    crtidate: "2022년 3월 26일자",
+  },
+  {
+    index: "06",
+    date: "22.03.31",
+    reporter: "가재",
+    reported: "시바",
+    crtidate: "2022년 3월 26일자",
+  },
 ];
 
 export default function ReportList() {
@@ -51,10 +65,11 @@ const Wrapper = styled.div`
   border: 3px solid black;
   border-radius: 5px;
   align-items: stretch;
-  overflow-y: scroll;
-  scrollbar-width: none;
+  overflow: scroll;
+  overflow-x: hidden;
+  /* scrollbar-width: none;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
     display: none;
-  }
+  } */
 `;
