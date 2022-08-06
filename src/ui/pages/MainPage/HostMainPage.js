@@ -26,7 +26,9 @@ export default function HostMainPage() {
 
 const MainContext = styled.div`
   display: flex;
-  width: 100%;
+  //width: 100%;
+  width: 100vw;
+  min-width: 1000px;
   flex-direction: column;
   margin: 58px 90px 58px 288px;
 `;
