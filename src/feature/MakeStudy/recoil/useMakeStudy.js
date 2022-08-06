@@ -101,14 +101,14 @@ export const useMakeStudy = () => {
   };
 
   const setMoney = (money) => {
-    setMoney((input) => ({
+    setMakeStudy((input) => ({
       ...input,
       money: money,
     }));
   };
 
   const setLateMoney = (latemoney) => {
-    setLateMoney((input) => ({
+    setMakeStudy((input) => ({
       ...input,
       latemoney: latemoney,
     }));
