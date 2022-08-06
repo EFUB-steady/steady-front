@@ -2,6 +2,7 @@ import { FormControl, MenuItem, Select } from "@mui/material";
 import { useState } from "react";
 import styled from "styled-components";
 import { Subtitle2 } from "../../../../core/texts";
+import { useMakeStudy } from "../../../../feature/MakeStudy/recoil/useMakeStudy";
 import { Row } from "../../commons/Row";
 
 export default function RuleAuthDayInput() {
@@ -10,6 +11,8 @@ export default function RuleAuthDayInput() {
   const timeZoneInputHandler = (e) => {
     setTimeZoneInput(e.target.value);
   };
+
+  const { hour, minute, setHour, setMinute } = useMakeStudy();
 
   return (
     <AuthDayWrapper>
@@ -37,11 +40,25 @@ export default function RuleAuthDayInput() {
         </Select>
       </FormControl>
       <Row>
-        <Input placeholder="00" type="text" />
+        <Input
+          placeholder="00"
+          type="text"
+          value={hour}
+          onChange={(e) => {
+            setHour(e.target.value);
+          }}
+        />
         <Subtitle2>시</Subtitle2>
       </Row>
       <Row>
-        <Input placeholder="00" type="text" />
+        <Input
+          value={minute}
+          placeholder="00"
+          type="text"
+          onChange={(e) => {
+            setMinute(e.target.value);
+          }}
+        />
         <Subtitle2>분</Subtitle2>
       </Row>
     </AuthDayWrapper>
