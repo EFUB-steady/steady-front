@@ -1,5 +1,3 @@
-//MemberListItem 기능
-
 import styled from "styled-components";
 
 import { gray100, button2Color } from "../../../core/colors";
@@ -21,7 +19,7 @@ export default function MemberListItem({ member }) {
           </IconWrapper>
         </TitleWrapper>
         <UserName>
-          <UserCircle color={`#${member.color}`} /> {member.name}님
+          <UserCircle color={member.color} /> {member.name}님
         </UserName>
       </Wrapper>
 
@@ -40,7 +38,7 @@ export default function MemberListItem({ member }) {
 
         <div>{member.link}</div>
         <UrlUserName>
-          <UrlUserCircle color={`#${member.color}`} /> {member.name}님
+          <UrlUserCircle color={member.color} /> {member.name}님
         </UrlUserName>
       </WrapperLink>
     </>

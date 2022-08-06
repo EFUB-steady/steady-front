@@ -29,7 +29,6 @@ export default function Login() {
             onChange={(e) => {
               setPassword(e.target.value);
             }}
-            margin="20px"
             label="비밀번호"
             name="pw"
             type="password"
