@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import styled from "styled-components";
 import { useSelectedStudyAPI } from "../../../feature/studies/studySelect/api/useSelectedStudyAPI";
+import { usePenaltyAPI } from "../../../feature/penalty/api/usePenaltyAPI";
 import { useSelectedStudyId } from "../../../feature/studies/studySelect/recoil/useSelectedStudy";
 import Header from "../../components/header/Header";
 import Mcalendar from "../../components/main/calendar/Mcalendar";
@@ -12,9 +13,11 @@ import StudyInfo from "../../components/main/study-info/StudyInfo";
 export default function MemberMainPage() {
   const { selectedStudyId } = useSelectedStudyId();
   const { selectedStudyAPI } = useSelectedStudyAPI();
+  const { penaltyAPI } = usePenaltyAPI();
 
   useEffect(() => {
     selectedStudyAPI();
+    penaltyAPI();
   }, [selectedStudyId]);
 
   return (

@@ -17,6 +17,7 @@ export const usePenaltyAPI = () => {
       if (data) {
         console.log("성공");
         setPenalty(data);
+        console.log(data);
       }
     } catch (error) {
       console.log("실패");
