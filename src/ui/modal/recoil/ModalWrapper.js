@@ -11,7 +11,7 @@ import SignUpFailModal from "../modals/SignUpFailModal";
 export default function ModalWrapper() {
   return (
     <>
-      <UploadStudyModal />
+      {/* <UploadStudyModal /> */}
       <ReportMoreModal />
       <UploadStudySupplyModal />
       <ReportCancelModal />

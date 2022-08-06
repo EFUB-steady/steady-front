@@ -2,17 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import { Dialog, DialogContent } from "@mui/material";
 import StudyModalTitle from "../recoil/components/StudyModalTitle";
-import { useUploadStudyModal } from "../recoil/hooks/useModals";
 import { StudyModalPic } from "../recoil/components/StudyModalPic";
 import { StudyModalUrl } from "../recoil/components/StudyModalUrl";
+import { useStudyPostInput } from "../../../feature/studies/studyPost/recoil/useStudyPost";
 
-export default function UploadStudyModal() {
-  const { isOpen, closeModal } = useUploadStudyModal();
+export default function UploadStudyModal({ isOpen, setIsOpen }) {
+  const { setLink, setImageUrl } = useStudyPostInput();
+  const closeHandler = () => {
+    setIsOpen(false);
+    setLink("");
+    setImageUrl("");
+  };
 
   return (
     <Dialog
       open={isOpen}
-      onClose={closeModal}
+      onClose={() => closeHandler()}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
       maxWidth="false"

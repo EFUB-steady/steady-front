@@ -2,17 +2,17 @@ import styled from "styled-components";
 import { gray100, hintColor } from "../../../../core/colors";
 import icon from "../../../../assets/icon_picture_card_mypage.png";
 import { Subtitle2 } from "../../../../core/texts";
-import { useState } from "react";
+import { useStudyPostInput } from "../../../../feature/studies/studyPost/recoil/useStudyPost";
 
 export function StudyModalPic() {
-  const [image, setImage] = useState("");
+  const { imageUrl, setImageUrl } = useStudyPostInput();
 
   const encoderFileToBase64 = (fileBlob) => {
     const reader = new FileReader();
     reader.readAsDataURL(fileBlob);
     return new Promise((resolve) => {
       reader.onload = () => {
-        setImage(reader.result);
+        setImageUrl(reader.result);
         resolve();
       };
     });
@@ -27,9 +27,9 @@ export function StudyModalPic() {
       </TitleWrapper>
       <label for="file">
         <PicWrapper>
-          {image ? (
+          {imageUrl ? (
             <img
-              src={image}
+              src={imageUrl}
               alt="preivew-img"
               style={{
                 width: "100%",
