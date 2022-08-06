@@ -4,12 +4,20 @@ import { Dialog, DialogContent } from "@mui/material";
 import StudyModalTitle from "../recoil/components/StudyModalTitle";
 import { StudyModalPic } from "../recoil/components/StudyModalPic";
 import { StudyModalUrl } from "../recoil/components/StudyModalUrl";
+import { useStudyPostInput } from "../../../feature/studies/studyPost/recoil/useStudyPost";
 
 export default function UploadStudyModal({ isOpen, setIsOpen }) {
+  const { setLink, setImageUrl } = useStudyPostInput();
+  const closeHandler = () => {
+    setIsOpen(false);
+    setLink("");
+    setImageUrl("");
+  };
+
   return (
     <Dialog
       open={isOpen}
-      onClose={() => setIsOpen(false)}
+      onClose={() => closeHandler()}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
       maxWidth="false"

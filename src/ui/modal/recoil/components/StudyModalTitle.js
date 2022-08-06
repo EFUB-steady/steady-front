@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import { gray300 } from "../../../../core/colors";
 import { format } from "date-fns";
+import { useStudyPostAPI } from "../../../../feature/studies/studyPost/api/useStudyPostAPI";
+import { useStudyPostInput } from "../../../../feature/studies/studyPost/recoil/useStudyPost";
 
 export default function StudyModalTitle({ date, titleText, buttonText }) {
   const formattedDate = format(date, "MM월 dd일");
+  const { studyPostAPI } = useStudyPostAPI();
+  const { imageUrl, link } = useStudyPostInput();
 
   return (
     <>
@@ -11,7 +15,11 @@ export default function StudyModalTitle({ date, titleText, buttonText }) {
         <Title>
           {formattedDate} {titleText}
         </Title>
-        <Button onClick={() => {}}>
+        <Button
+          onClick={() => {
+            (imageUrl != "" || link != "") && studyPostAPI();
+          }}
+        >
           <ButtonText>{buttonText}</ButtonText>
         </Button>
       </Wrapper>
