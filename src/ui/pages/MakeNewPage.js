@@ -13,7 +13,6 @@ export default function MakeNewPage() {
     <Wrapper>
       <SideBar />
       <MainContext>
-        <GoBackBtn />
         <StudyInfoInput />
         <Divider
           style={{ marginTop: 15, marginBottom: 40, backgroundColor: "black" }}
