@@ -2,53 +2,85 @@ import styled from "styled-components";
 import MainSubTitle from "../main/MainSubTitle";
 import calenderIcon from "../../../assets/icon_calender.png";
 import DaysSelectItem from "./DaysSelectItem";
-
-const DAYS = [
-  {
-    day: "Sun",
-    onClick: () => {
-      console.log("sun");
-    },
-  },
-  {
-    day: "Mon",
-    onClick: () => {
-      console.log("mon");
-    },
-  },
-  {
-    day: "Tue",
-    onClick: () => {
-      console.log("tue");
-    },
-  },
-  {
-    day: "Wed",
-    onClick: () => {
-      console.log("wed");
-    },
-  },
-  {
-    day: "Thr",
-    onClick: () => {
-      console.log("thr");
-    },
-  },
-  {
-    day: "Fri",
-    onClick: () => {
-      console.log("fri");
-    },
-  },
-  {
-    day: "Sat",
-    onClick: () => {
-      console.log("sat");
-    },
-  },
-];
+import { useMakeStudy } from "../../../feature/MakeStudy/recoil/useMakeStudy";
+import { useState } from "react";
 
 export default function DaysSelect() {
+  const {
+    mon,
+    tue,
+    wed,
+    thu,
+    fri,
+    sat,
+    sun,
+    setMon,
+    setTue,
+    setWed,
+    setThu,
+    setFri,
+    setSat,
+    setSun,
+  } = useMakeStudy();
+
+  const DAYS = [
+    {
+      day: "Sun",
+      isClicked: sun,
+      onClick: () => {
+        setSun(!sun);
+      },
+    },
+    {
+      day: "Mon",
+      isClicked: mon,
+      onClick: () => {
+        console.log("mon");
+        setMon(!mon);
+      },
+    },
+    {
+      day: "Tue",
+      isClicked: tue,
+      onClick: () => {
+        console.log("tue");
+        setTue(!tue);
+      },
+    },
+    {
+      day: "Wed",
+      isClicked: wed,
+      onClick: () => {
+        console.log("wed");
+        setWed(!wed);
+      },
+    },
+    {
+      day: "Thu",
+      isClicked: thu,
+      onClick: () => {
+        console.log("thu");
+        setThu(!thu);
+      },
+    },
+    {
+      day: "Fri",
+      isClicked: fri,
+      onClick: () => {
+        console.log("fri");
+        setFri(!fri);
+      },
+    },
+    {
+      day: "Sat",
+      isClicked: sat,
+      onClick: () => {
+        console.log("sat");
+        setSat(!sat);
+      },
+    },
+  ];
+
   return (
     <Wrapper>
       <MainSubTitle iconSrc={calenderIcon} title={"스터디 인증 요일 선택"} />
