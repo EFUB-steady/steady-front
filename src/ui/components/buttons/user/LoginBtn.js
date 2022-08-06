@@ -32,8 +32,8 @@ export default function LoginBtn() {
       onSuccess: () => {
         loginReset();
         navigation("/studies/53"); // TODO: 7번 말고, 기본 스터디로 변경 (현재 기본스터디를 볼수있는 api 없음)
-        userAPI();
         myStudyAPI();
+        userAPI();
         rankingAPI();
       },
       onFail: () => {
