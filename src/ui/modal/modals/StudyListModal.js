@@ -25,7 +25,6 @@ export default function StudyListModal({ isOpen, setIsOpen }) {
             titleText={"스터디 인증목록"}
             buttonText={"인증하기"}
           />
-
           <MemberList />
         </DialogContent>
       </ContentWrapper>

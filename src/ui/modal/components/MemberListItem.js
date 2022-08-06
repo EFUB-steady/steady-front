@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 
-import { gray100, hintColor, button2Color } from "../../../core/colors";
+import { gray100, button2Color } from "../../../core/colors";
 import icon from "../../../assets/icon_picture_card_mypage.png";
 import alerticon from "../../../assets/icon_alert_white.png";
 import { Subtitle2 } from "../../../core/texts";
@@ -21,33 +21,28 @@ export default function MemberListItem({ member }) {
           </IconWrapper>
         </TitleWrapper>
         <UserName>
-          <UserCircle color={member.color} /> {member.name}님
+          <UserCircle color={`#${member.color}`} /> {member.name}님
         </UserName>
       </Wrapper>
+
       <Divider />
 
-      <Wrapper>
+      <WrapperLink>
         <TitleWrapper>
           <TItleContainer>
             <TitleIcon src={icon} />
-            <Subtitle2>URL 인증하기</Subtitle2>
+            <Subtitle2>URL 인증</Subtitle2>
           </TItleContainer>
           <IconWrapper>
             <AlertIcon src={alerticon} />
           </IconWrapper>
         </TitleWrapper>
 
-        <div>
-          <InputUrl
-            type="url"
-            pattern="http://*"
-            placeholder="http://"
-          ></InputUrl>
-        </div>
+        <div>{member.link}</div>
         <UrlUserName>
-          <UrlUserCircle color={member.color} /> {member.name}님{" "}
+          <UrlUserCircle color={`#${member.color}`} /> {member.name}님
         </UrlUserName>
-      </Wrapper>
+      </WrapperLink>
     </>
   );
 }
@@ -60,6 +55,15 @@ const Divider = styled.div`
 const Wrapper = styled.div`
   width: 920px;
   height: 517.5px;
+  background-color: ${gray100};
+  border: 3px solid #000000;
+  margin-top: 40px;
+  box-sizing: border-box;
+  border-radius: 5px;
+`;
+
+const WrapperLink = styled.div`
+  width: 920px;
   background-color: ${gray100};
   border: 3px solid #000000;
   margin-top: 40px;

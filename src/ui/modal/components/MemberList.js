@@ -12,5 +12,6 @@ export default function MemberList() {
     }
     return result;
   };
-  return <div>{renderStudyList()}</div>;
+
+  return <>{renderStudyList()}</>;
 }
