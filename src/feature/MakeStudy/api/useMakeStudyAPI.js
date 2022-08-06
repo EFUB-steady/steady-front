@@ -19,6 +19,8 @@ export const useMakeStudyAPI = () => {
     accountName: inputAccountName,
     hour: inputHour,
     minute: inputMinute,
+    money: inputMoney,
+    lateMoney: inputLateMoney,
   } = useMakeStudy();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -43,6 +45,8 @@ export const useMakeStudyAPI = () => {
         accountName: inputAccountName,
         hour: inputHour,
         minute: inputMinute,
+        money: inputMoney,
+        lateMoney: inputLateMoney,
       });
 
       if (data) {

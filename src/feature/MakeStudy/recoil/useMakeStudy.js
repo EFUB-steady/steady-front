@@ -100,6 +100,21 @@ export const useMakeStudy = () => {
     }));
   };
 
+  const setMoney = (money) => {
+    setMoney((input) => ({
+      ...input,
+      money: money,
+    }));
+  };
+
+  const setLateMoney = (latemoney) => {
+    setLateMoney((input) => ({
+      ...input,
+      latemoney: latemoney,
+    }));
+  };
+
+
   const MakeStudyReset = () => {
     setMakeStudy({
       name: "",
@@ -138,6 +153,8 @@ export const useMakeStudy = () => {
     accountName: makeStudy.accountName,
     hour: makeStudy.hour,
     minute: makeStudy.minute,
+    money: makeStudy.money,
+    lateMoney: makeStudy.lateMoney,
     setName,
     setSummary,
     setDescription,
@@ -154,5 +171,7 @@ export const useMakeStudy = () => {
     setHour,
     setMinute,
     MakeStudyReset,
+    setMoney,
+    setLateMoney,
   };
 };
