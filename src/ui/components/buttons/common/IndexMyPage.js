@@ -1,14 +1,22 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { textboxColor } from "../../../../core/colors";
+import { useTodosAPI } from "../../../../feature/todos/api/useTodosAPI";
 import CustomLink from "../../commons/CustomLink";
 
 export default function IndexMyPage() {
   const pathname = window.location.pathname;
+  const navigation = useNavigate();
+  const { todosAPI } = useTodosAPI();
 
+  const onClickHandler = () => {
+    navigation("/mypage");
+    todosAPI();
+  };
   return (
-    <CustomLink to="/mypage">
-      <Button pathname={pathname}>MY PAGE</Button>
-    </CustomLink>
+    <Button pathname={pathname} onClick={() => onClickHandler()}>
+      MY PAGE
+    </Button>
   );
 }
 
