@@ -12,6 +12,7 @@ export default function AuthSupplyBtn() {
     </>
   );
 }
+
 const Button = styled.button`
   width: 108px;
   height: 40px;

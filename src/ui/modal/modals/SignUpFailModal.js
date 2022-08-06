@@ -1,18 +1,11 @@
 import styled from "styled-components";
-import * as React from "react";
-import Dialog from "@mui/material/Dialog";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
+import React from "react";
 
 export default function SignUpFailModal({ isOpen, setIsOpen }) {
-  const closeHandler = () => {
-    setIsOpen(false);
-  };
-
   return (
     <Dialog
       open={isOpen}
-      onClose={() => closeHandler()}
+      onClose={() => setIsOpen(false)}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
       maxWidth="false"

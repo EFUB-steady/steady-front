@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useLoginAPI } from "../../../../feature/login/api/useLoginAPI";
-
 import { useLoginInput } from "../../../../feature/login/recoil/useLoginInput";
 import { useUserAPI } from "../../../../feature/user/api/useUserAPI";
 import { useMyStudyAPI } from "../../../../feature/studies/myStudy/api/useMyStudyAPI";
@@ -12,9 +11,7 @@ import { useState } from "react";
 export default function LoginBtn() {
   const { loginAPI, isLoading: isLoginLoading } = useLoginAPI();
   const navigation = useNavigate();
-
   const { loginReset } = useLoginInput();
-
   const { rankingAPI } = useRankingAPI();
   const [isOpen, setIsOpen] = useState(false);
 

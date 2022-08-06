@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { Dialog, DialogContent } from "@mui/material";
-import StudyModalTitle from "../recoil/components/StudyModalTitle";
-import { StudyModalPic } from "../recoil/components/StudyModalPic";
-import { StudyModalUrl } from "../recoil/components/StudyModalUrl";
+import StudyModalTitle from "../components/StudyModalTitle";
 import { useStudyPostInput } from "../../../feature/studies/studyPost/recoil/useStudyPost";
-
+import { StudyModalPic } from "../components/StudyModalPic";
+import { StudyModalUrl } from "../components/StudyModalUrl";
 export default function UploadStudySupplyModal({ isOpen, setIsOpen }) {
   const { setLink, setImageUrl } = useStudyPostInput();
+
   const closeHandler = () => {
     setIsOpen(false);
     setLink("");

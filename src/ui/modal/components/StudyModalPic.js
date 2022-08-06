@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { gray100, hintColor } from "../../../../core/colors";
-import icon from "../../../../assets/icon_picture_card_mypage.png";
-import { Subtitle2 } from "../../../../core/texts";
-import { useStudyPostInput } from "../../../../feature/studies/studyPost/recoil/useStudyPost";
+import { gray100, hintColor } from "../../../core/colors";
+import icon from "../../../assets/icon_picture_card_mypage.png";
+import { Subtitle2 } from "../../../core/texts";
+import { useStudyPostInput } from "../../../feature/studies/studyPost/recoil/useStudyPost";
 
 export function StudyModalPic() {
   const { imageUrl, setImageUrl } = useStudyPostInput();

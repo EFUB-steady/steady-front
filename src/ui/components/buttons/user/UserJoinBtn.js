@@ -4,12 +4,11 @@ import { useSignUp } from "../../../../feature/SignUp/recoil/useSignUp";
 import { useSignUpAPI } from "../../../../feature/SignUp/api/useSignUpAPI";
 import { useState } from "react";
 import SignUpFailModal from "../../../modal/modals/SignUpFailModal";
+
 export default function UserJoinBtn() {
   const { signUpAPI } = useSignUpAPI();
   const navigation = useNavigate();
-
   const { signUpReset } = useSignUp();
-
   const { name, nickname, email, password, phone } = useSignUp();
   const [isOpen, setIsOpen] = useState(false);
 

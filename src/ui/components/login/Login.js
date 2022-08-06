@@ -4,7 +4,6 @@ import TextField from "@mui/material/TextField";
 import logo from "../../../assets/logo_horizontal.png";
 import CustomLink from "../commons/CustomLink";
 import { useLoginInput } from "../../../feature/login/recoil/useLoginInput";
-import TestModal from "../../modal/modals/TestModal";
 
 // 로그인 배치
 export default function Login() {

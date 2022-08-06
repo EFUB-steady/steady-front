@@ -4,17 +4,11 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 
 export default function LoginFailModal({ isOpen, setIsOpen }) {
-  // const [open, setOpen] = React.useState(false);
-
-  const closeHandler = () => {
-    setIsOpen(false);
-  };
-
   return (
     <div>
       <Dialog
         open={isOpen}
-        onClose={() => closeHandler()}
+        onClose={() => setIsOpen(false)}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
@@ -23,7 +17,7 @@ export default function LoginFailModal({ isOpen, setIsOpen }) {
             id="alert-dialog-description"
             style={{ color: "red" }}
           >
-            아이디나 비밀번호가 틀렸습니다
+            아이디나 비밀번호가 틀렸습니다.
           </DialogContentText>
         </DialogContent>
       </Dialog>
