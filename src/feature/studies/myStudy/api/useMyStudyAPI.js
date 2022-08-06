@@ -1,11 +1,15 @@
 import { useState } from "react";
 import { axiosInstanceHeader } from "../../../../core/axiosInstance";
-import { useSelectedStudyId } from "../../studySelect/recoil/useSelectedStudy";
+import {
+  useSelectedStudyId,
+  useSelectedStudyIsLeader,
+} from "../../studySelect/recoil/useSelectedStudy";
 import { useMyStudy } from "../recoil/useMyStudy";
 
 export const useMyStudyAPI = () => {
   const { setMyStudy } = useMyStudy();
   const { selectedStudyId, setSelectedStudyId } = useSelectedStudyId();
+  const { setIsLeader } = useSelectedStudyIsLeader();
   const [isLoading, setIsLoading] = useState(false);
 
   const myStudyAPI = async () => {
@@ -16,6 +20,7 @@ export const useMyStudyAPI = () => {
       if (data) {
         if (selectedStudyId.studyId == null) {
           setSelectedStudyId(data[0].studyId);
+          setIsLeader(data[0].leader);
         }
         console.log("myStudyAPI success!!");
         setMyStudy(data);

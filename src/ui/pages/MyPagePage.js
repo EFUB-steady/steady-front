@@ -110,7 +110,7 @@ const InfoHeader = styled.div`
   align-content: center;
   width: 380px;
   height: 120px;
-  //background-color: skyblue;
+
   padding-top: 40px;
   margin-right: 20px;
 `;
@@ -123,7 +123,6 @@ const InfoText = styled.div`
   font-weight: 700;
   font-size: 21px;
   margin-top: 15px;
-  //background-color: pink;
 `;
 
 const Button = styled.button`
@@ -133,7 +132,6 @@ const Button = styled.button`
   border-radius: 5px;
   color: white;
   margin: 4px; */
-  //background-color: yellow;
 `;
 
 const InfoConentWrapper = styled.div``;

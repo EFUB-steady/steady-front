@@ -1,32 +1,26 @@
-import { Dialog, DialogContent } from "@mui/material";
-import styled from "styled-components";
-import { useLoginFailModal } from "../recoil/hooks/useModals";
-import React from "react";
-import { Subtitle3 } from "../../../core/texts";
+import * as React from "react";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
 
-export default function LoginFailModal() {
-  const { isOpen, closeModal } = useLoginFailModal();
-
+export default function LoginFailModal({ isOpen, setIsOpen }) {
   return (
-    <Dialog
-      open={isOpen}
-      onClose={closeModal}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-      maxWidth="false"
-      sx={{ whiteSpace: "break-spaces" }}
-    >
-      <ContentWrapper>
+    <div>
+      <Dialog
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
         <DialogContent>
-          <Subtitle3 style={{ color: "red" }}>
+          <DialogContentText
+            id="alert-dialog-description"
+            style={{ color: "red" }}
+          >
             아이디나 비밀번호가 틀렸습니다.
-          </Subtitle3>
+          </DialogContentText>
         </DialogContent>
-      </ContentWrapper>
-    </Dialog>
+      </Dialog>
+    </div>
   );
 }
-
-const ContentWrapper = styled.div`
-  margin: 10px;
-`;

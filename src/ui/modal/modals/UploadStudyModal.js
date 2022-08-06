@@ -1,18 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import { Dialog, DialogContent } from "@mui/material";
-import StudyModalTitle from "../recoil/components/StudyModalTitle";
-import { useUploadStudyModal } from "../recoil/hooks/useModals";
-import { StudyModalPic } from "../recoil/components/StudyModalPic";
-import { StudyModalUrl } from "../recoil/components/StudyModalUrl";
+import StudyModalTitle from "../components/StudyModalTitle";
+import { StudyModalPic } from "../components/StudyModalPic";
+import { StudyModalUrl } from "../components/StudyModalUrl";
+import { useStudyPostInput } from "../../../feature/studies/studyPost/recoil/useStudyPost";
 
-export default function UploadStudyModal() {
-  const { isOpen, closeModal } = useUploadStudyModal();
+export default function UploadStudyModal({ isOpen, setIsOpen }) {
+  const { setLink, setImageUrl } = useStudyPostInput();
+  const closeHandler = () => {
+    setIsOpen(false);
+    setLink("");
+    setImageUrl("");
+  };
 
   return (
     <Dialog
       open={isOpen}
-      onClose={closeModal}
+      onClose={() => closeHandler()}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
       maxWidth="false"
@@ -25,7 +30,6 @@ export default function UploadStudyModal() {
             titleText={"스터디 인증하기"}
             buttonText={"저장하기"}
           />
-          {/* <MemberList /> */}
           <StudyModalPic />
           <StudyModalUrl />
         </DialogContent>

@@ -1,19 +1,19 @@
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useLoginAPI } from "../../../../feature/login/api/useLoginAPI";
-import { useLoginFailModal } from "../../../modal/recoil/hooks/useModals";
 import { useLoginInput } from "../../../../feature/login/recoil/useLoginInput";
 import { useUserAPI } from "../../../../feature/user/api/useUserAPI";
 import { useMyStudyAPI } from "../../../../feature/studies/myStudy/api/useMyStudyAPI";
 import { useRankingAPI } from "../../../../feature/ranking/api/useRankingAPI";
+import LoginFailModal from "../../../modal/modals/LoginFailModal";
+import { useState } from "react";
 
 export default function LoginBtn() {
   const { loginAPI, isLoading: isLoginLoading } = useLoginAPI();
   const navigation = useNavigate();
-  const { openModal } = useLoginFailModal();
   const { loginReset } = useLoginInput();
-
   const { rankingAPI } = useRankingAPI();
+  const [isOpen, setIsOpen] = useState(false);
 
   // TODO: 에러처리
   const { userAPI } = useUserAPI({
@@ -37,7 +37,7 @@ export default function LoginBtn() {
         rankingAPI();
       },
       onFail: () => {
-        openModal();
+        setIsOpen(true);
       },
     });
   };
@@ -45,7 +45,13 @@ export default function LoginBtn() {
   //TODO: 로딩 처리
   if (isLoginLoading) return <div>loading...</div>;
   if (isMyStudyLoading) return <div>loading...</div>;
-  return <Button onClick={() => loginHandler()}>로그인</Button>;
+
+  return (
+    <>
+      <LoginFailModal isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Button onClick={() => loginHandler()}>로그인</Button>
+    </>
+  );
 }
 
 const Button = styled.button`
