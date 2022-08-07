@@ -76,7 +76,11 @@ export default function UploadStudyModal({ isOpen, setIsOpen }) {
     >
       <ContentWrapper>
         <DialogContent>
-          <StudyModalTitle date={new Date()} titleText={"스터디 인증하기"} />
+          <StudyModalTitle
+            date={new Date()}
+            titleText={"스터디 인증하기"}
+            buttonText=""
+          />
           <PictureWrapper>
             <TitleWrapper>
               <TitleIcon src={icon} />

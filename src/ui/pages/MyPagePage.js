@@ -15,10 +15,13 @@ import CustomLink from "../components/commons/CustomLink";
 import { useStudyListByUserAPI } from "../../feature/studies/studyListByUser/api/useStudyListByUserAPI";
 import { useEffect } from "react";
 import { useStudyListDate } from "../../feature/studyList/recoil/useStudyListDate";
+import UploadStudyModal from "../modal/modals/UploadStudyModal";
 function MyPagePage() {
   const [isNow, setIsNow] = useState(true);
   const { studyListByUserAPI } = useStudyListByUserAPI();
-  const { selectedDate } = useStudyListDate();
+  const { selectedDate, setSelectedDate } = useStudyListDate();
+  const [isOpen, setIsOpen] = useState(false);
+
   const handleConfirm = () => {
     isNow ? setIsNow(false) : setIsNow(true);
   };
@@ -27,16 +30,29 @@ function MyPagePage() {
     studyListByUserAPI();
   }, [selectedDate]);
 
+  const onNavButtonClickHandler = () => {
+    setSelectedDate(new Date());
+    setIsOpen(true);
+  };
+
   return (
     <Wrapper>
+      <UploadStudyModal isOpen={isOpen} setIsOpen={setIsOpen} />
+
       <SideBar />
       <MainContext>
         <Header />
         <TitleWrapper>
           <DateAndBtn />
-          <CustomLink to="/authpage">
-            <NavButton>오늘의 스터디 인증하기</NavButton>
-          </CustomLink>
+          {/* <CustomLink to="/authpage"> */}
+          <NavButton
+            onClick={() => {
+              onNavButtonClickHandler();
+            }}
+          >
+            오늘의 스터디 인증하기
+          </NavButton>
+          {/* </CustomLink> */}
         </TitleWrapper>
         <MidContent>
           <LeftContent>
