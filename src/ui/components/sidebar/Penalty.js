@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Row } from "../commons/Row";
-import { Subtitle2 } from "../../../core/texts";
+import { Subtitle3 } from "../../../core/texts";
 import coin from "../../../assets/icon_coin.png";
 import PenaltyAmount from "./PenaltyAmount";
 import PenaltyAmount2 from "./PenaltyAmount2";
@@ -10,7 +10,7 @@ export default function Penalty() {
     <PenaltyBox>
       <Row>
         <Coin src={coin} />
-        <Subtitle2>이번주 벌금</Subtitle2>
+        <Subtitle3>이번주 벌금</Subtitle3>
       </Row>
 
       <PenaltyAmount />
@@ -21,7 +21,7 @@ export default function Penalty() {
       />
       <Row>
         <Coin src={coin} />
-        <Subtitle2>지난주 벌금</Subtitle2>
+        <Subtitle3>지난주 벌금</Subtitle3>
       </Row>
 
       <PenaltyAmount2 />
@@ -36,8 +36,8 @@ const PenaltyBox = styled.div`
   align-items: center;
 `;
 const Coin = styled.img`
-  width: 15px;
-  height: 18px;
+  width: 13px;
+  height: 15px;
   margin-right: 5px;
   margin-top: -4px;
 `;

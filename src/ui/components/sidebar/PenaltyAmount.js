@@ -1,6 +1,5 @@
 import { Row } from "../commons/Row";
-import { Body2, Subtitle2 } from "../../../core/texts";
-import styled from "styled-components";
+import { Subtitle3 } from "../../../core/texts";
 import { usePenalty } from "../../../feature/penalty/recoil/usePenalty";
 
 export default function PenaltyAmount() {
@@ -15,22 +14,13 @@ export default function PenaltyAmount() {
   };
 
   return (
-    <Row>
-      <Body2>{renderNowFine()}</Body2>
+    <Row style={{ marginTop: 5 }}>
+      <Subtitle3>{renderNowFine()}</Subtitle3>
       <div style={{ width: 5 }} />
-      <Subtitle2>원</Subtitle2>
+      <Subtitle3>원</Subtitle3>
     </Row>
   );
 }
-
-const Button = styled.button`
-  width: 77px;
-  height: 130px;
-  background: black;
-  border-radius: 5px;
-  color: white;
-  margin: 4px;
-`;
 
 //   // 벌금 계산 로직짜기
 //   // 필요한 데이터

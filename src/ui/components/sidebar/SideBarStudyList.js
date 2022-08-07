@@ -18,7 +18,7 @@ export default function SideBarStudyList() {
 }
 
 const Wrapper = styled.div`
-  height: 250px;
+  height: 50%;
   overflow-y: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;

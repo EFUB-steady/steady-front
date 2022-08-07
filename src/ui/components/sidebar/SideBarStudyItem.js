@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { gray100, gray300 } from "../../../core/colors";
-import { Subtitle4, Title5 } from "../../../core/texts";
+import { Title5 } from "../../../core/texts";
 import homewhite from "../../../assets/btn_home_default.png";
 import { useNavigate } from "react-router-dom";
 import {
@@ -22,7 +22,7 @@ export default function SideBarStudy({ study }) {
     setIsLeader(study.leader);
     navigation(`/studies/${study.studyId}`);
   };
-
+  console.log(study);
   return (
     <Wrapper onClick={() => saveSelectedStudyState()}>
       <ImageContainer>
@@ -30,12 +30,6 @@ export default function SideBarStudy({ study }) {
       </ImageContainer>
       <StudyContainer>
         <Title5>{study.name}</Title5>
-        {study.description != null && (
-          <>
-            <div style={{ height: "4px" }} />
-            <Subtitle4>{study.description}</Subtitle4>
-          </>
-        )}
       </StudyContainer>
     </Wrapper>
   );
