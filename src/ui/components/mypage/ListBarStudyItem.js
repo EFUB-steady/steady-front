@@ -1,12 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { gray100, gray300 } from "../../../core/colors";
-import { Body3, Subtitle2 } from "../../../core/texts";
+import { gray300 } from "../../../core/colors";
+import { Subtitle2 } from "../../../core/texts";
 import linkIcon from "../../../assets/icon_link.png";
 import picIcon from "../../../assets/icon_picture.png";
-import GoToStudyBtn from "./../buttons/study/GoToStudyBtn";
+import { useNavigate } from "react-router-dom";
+import { useSelectedStudyId } from "../../../feature/studies/studySelect/recoil/useSelectedStudy";
 
 export default function ListBarStudy({ study }) {
+  const navigation = useNavigate();
+  const { setSelectedStudyId } = useSelectedStudyId();
+
+  const buttonClickHandler = () => {
+    navigation(`/studies/${study.studyId}`);
+    setSelectedStudyId(study.studyId);
+  };
+
   return (
     <Wrapper>
       <ImageContainer>
@@ -17,9 +26,10 @@ export default function ListBarStudy({ study }) {
         <div style={{ marginBottom: "8px" }}>
           <Subtitle2>{study.name}</Subtitle2>
         </div>
-        <Body3>{study.fine}</Body3>
       </StudyContainer>
-      <GoToStudyBtn />
+      <GoToStudyButton onClick={() => buttonClickHandler()}>
+        스터디 페이지로 이동
+      </GoToStudyButton>
     </Wrapper>
   );
 }
@@ -69,4 +79,16 @@ const LinkImage = styled.img`
 const PicImage = styled.img`
   width: 18px;
   height: 18px;
+`;
+
+const GoToStudyButton = styled.button`
+  background-color: black;
+  color: white;
+  width: 170px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 15px;
+  font-family: "Pretendard-regular";
 `;

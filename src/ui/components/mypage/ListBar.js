@@ -8,9 +8,6 @@ export default function ListBar() {
   return (
     <>
       <ContentWrapper>
-        {/* <TitleBox>
-          <TitleText>나의 참여 스터디</TitleText>
-        </TitleBox> */}
         <ListBarBox>
           <ArrowBtn />
           <ListBarStudyList />
