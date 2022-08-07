@@ -25,7 +25,7 @@ function Mcalendar() {
     setTimeout(() => {
       setIsSpinner(false);
       setIsOpen(true);
-    }, [4000]);
+    }, [2000]);
   }, [selectedDate]);
 
   return (
