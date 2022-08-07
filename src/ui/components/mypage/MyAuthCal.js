@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import DatePicker, { registerLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import ko from "date-fns/locale/ko";
+import Form from "react-bootstrap/Form";
 import { getYear } from "date-fns";
 registerLocale("ko", ko);
 const _ = require("lodash");
@@ -30,6 +31,7 @@ const MyAuthList = () => {
     <>
       <Text>나의 인증 목록</Text>
       <DatePicker
+        locale={ko}
         showPopperArrow={false}
         fixedHeight
         style={{
@@ -37,9 +39,19 @@ const MyAuthList = () => {
           position: "absolute",
           fontSize: "1rem",
         }}
-        dateFormat="yyyy/MM/dd"
+        minDate={new Date()}
+        dateFormat="yyyy/MM/dd (eee)"
         selected={startDate}
         onChange={(date) => setStartDate(date)}
+        customInput={
+          <Form.Control
+            as="textarea"
+            rows={1}
+            style={{
+              width: "250px",
+            }}
+          />
+        }
         renderCustomHeader={({
           date,
           decreaseMonth,
@@ -48,7 +60,6 @@ const MyAuthList = () => {
           nextMonthButtonDisabled,
         }) => (
           <div>
-            {" "}
             <button
               onClick={decreaseMonth}
               disabled={preMonthbuttonDisabled}
@@ -70,7 +81,6 @@ const MyAuthList = () => {
 export default MyAuthList;
 
 const Text = styled.div`
-  width: 200px;
   height: 21px;
   margin-top: 40px;
   margin-bottom: 23px;

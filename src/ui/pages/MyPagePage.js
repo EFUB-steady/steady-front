@@ -29,9 +29,11 @@ function MyPagePage() {
             <ToDo />
             <InfoHeader>
               <InfoText>내 정보</InfoText>
-              <Button onClick={() => handleConfirm()}>
-                {isNow ? <ModifyInfoBtn /> : <ModifyCompleteBtn />}
-              </Button>
+              <div style={{ marginBottom: "5px" }}>
+                <Button onClick={() => handleConfirm()}>
+                  {isNow ? <ModifyInfoBtn /> : <ModifyCompleteBtn />}
+                </Button>
+              </div>
             </InfoHeader>
             <InfoConentWrapper>
               {isNow ? <MyInfo /> : <ModifyMyInfo />}
@@ -84,9 +86,10 @@ const RightContent = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-left: 3rem;
-  //margin-top: 2rem;
 `;
+
 const FooterContent = styled.div`
   width: 75%;
   margin-left: 198px;
@@ -109,9 +112,8 @@ const InfoHeader = styled.div`
   justify-content: space-between;
   align-content: center;
   width: 380px;
-  height: 120px;
-
-  padding-top: 40px;
+  height: 100px;
+  padding-top: 30px;
   margin-right: 20px;
 `;
 
@@ -125,13 +127,10 @@ const InfoText = styled.div`
   margin-top: 15px;
 `;
 
-const Button = styled.button`
-  /* width: 400px;
-  height: 50px;
-  background: black;
-  border-radius: 5px;
-  color: white;
-  margin: 4px; */
-`;
+const Button = styled.button``;
 
-const InfoConentWrapper = styled.div``;
+const InfoConentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;

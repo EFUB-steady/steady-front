@@ -22,6 +22,7 @@ const TitleBox = styled.div`
   display: flex;
   height: auto;
   justify-content: space-between;
+  margin-top: 1.5rem;
 `;
 
 const Title = styled.div`
@@ -29,7 +30,6 @@ const Title = styled.div`
   font-weight: 500;
   color: black;
   line-height: 100%;
-  margin-top: 3rem;
 `;
 
 const Button = styled.button`
@@ -46,7 +46,6 @@ const Button = styled.button`
   font-weight: 700;
   font-size: 14px;
   line-height: 100%;
-  margin-top: 3rem;
 
   &:hover {
     background: white;

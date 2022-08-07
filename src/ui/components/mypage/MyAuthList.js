@@ -15,7 +15,6 @@ export default function MyAuthList() {
       <Box>
         <TitleWrapper>
           <Subtitle3>
-            {" "}
             <div style={{ marginLeft: "10px" }}>스터디 이름</div>
           </Subtitle3>
         </TitleWrapper>
