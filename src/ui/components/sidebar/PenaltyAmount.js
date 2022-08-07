@@ -36,7 +36,7 @@ export default function PenaltyAmount() {
 
   return (
     <Row>
-      <Body2>ㆍ{penalty.nowFine}</Body2>
+      <Body2>{penalty.nowFine}</Body2>
       <div style={{ width: 5 }} />
       <Subtitle2>원</Subtitle2>
     </Row>

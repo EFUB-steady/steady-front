@@ -8,15 +8,19 @@ export default function Penalty() {
   return (
     <PenaltyBox>
       <Row>
-        <Subtitle2>이번주 벌금 정산</Subtitle2>
         <Coin src={coin} />
+        <Subtitle2>이번주 벌금</Subtitle2>
       </Row>
 
       <PenaltyAmount />
-
+      <div
+        style={{
+          height: 20,
+        }}
+      />
       <Row>
-        <Subtitle2>지난주 벌금 정산</Subtitle2>
         <Coin src={coin} />
+        <Subtitle2>지난주 벌금</Subtitle2>
       </Row>
 
       <PenaltyAmount />
@@ -33,5 +37,6 @@ const PenaltyBox = styled.div`
 const Coin = styled.img`
   width: 15px;
   height: 18px;
-  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: -4px;
 `;
