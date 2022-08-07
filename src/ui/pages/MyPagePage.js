@@ -11,7 +11,7 @@ import MyInfo from "../components/mypage/MyInfo";
 import ModifyInfoBtn from "../components/buttons/user/ModifyInfoBtn";
 import React, { useState } from "react";
 import ModifyCompleteBtn from "../components/buttons/user/ModifyCompleteBtn";
-
+import CustomLink from "../components/commons/CustomLink";
 function MyPagePage() {
   const [isNow, setIsNow] = useState(true);
 
@@ -23,15 +23,22 @@ function MyPagePage() {
       <SideBar />
       <MainContext>
         <Header />
-        <DateAndBtn />
+        <TitleWrapper>
+          <DateAndBtn />
+          <CustomLink to="/authpage">
+            <NavButton>오늘의 스터디 인증하기</NavButton>
+          </CustomLink>
+        </TitleWrapper>
         <MidContent>
           <LeftContent>
             <ToDo />
             <InfoHeader>
               <InfoText>내 정보</InfoText>
-              <Button onClick={() => handleConfirm()}>
-                {isNow ? <ModifyInfoBtn /> : <ModifyCompleteBtn />}
-              </Button>
+              <div style={{ marginBottom: "5px" }}>
+                <Button onClick={() => handleConfirm()}>
+                  {isNow ? <ModifyInfoBtn /> : <ModifyCompleteBtn />}
+                </Button>
+              </div>
             </InfoHeader>
             <InfoConentWrapper>
               {isNow ? <MyInfo /> : <ModifyMyInfo />}
@@ -84,9 +91,10 @@ const RightContent = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-left: 3rem;
-  //margin-top: 2rem;
 `;
+
 const FooterContent = styled.div`
   width: 75%;
   margin-left: 198px;
@@ -109,9 +117,8 @@ const InfoHeader = styled.div`
   justify-content: space-between;
   align-content: center;
   width: 380px;
-  height: 120px;
-
-  padding-top: 40px;
+  height: 100px;
+  padding-top: 30px;
   margin-right: 20px;
 `;
 
@@ -125,13 +132,42 @@ const InfoText = styled.div`
   margin-top: 15px;
 `;
 
-const Button = styled.button`
-  /* width: 400px;
-  height: 50px;
-  background: black;
-  border-radius: 5px;
-  color: white;
-  margin: 4px; */
+const Button = styled.button``;
+
+const InfoConentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
-const InfoConentWrapper = styled.div``;
+const NavButton = styled.button`
+  width: 200px;
+  height: 40px;
+  background: black;
+  border-radius: 5px;
+  border: 3px solid black;
+  color: white;
+  margin: 4px;
+  text-align: center;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
+  &:active {
+    background: white;
+    color: black;
+  }
+`;
+
+const TitleWrapper = styled.div`
+  display: flex;
+
+  justify-content: space-between;
+  margin-top: 1.5rem;
+`;

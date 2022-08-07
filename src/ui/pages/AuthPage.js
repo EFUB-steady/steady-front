@@ -13,7 +13,11 @@ export default function AuthPage() {
       <SideBar />
       <MainContext>
         <Header />
-        <DateAndBtn />
+        <TitleWrapper>
+          <DateAndBtn />
+
+          <Button>저장하기</Button>
+        </TitleWrapper>
         <MidContent>
           <LeftContent>
             <Search />
@@ -80,4 +84,25 @@ const TitleText = styled.div`
   font-size: 21px;
   line-height: 100%;
   margin-bottom: 18px;
+`;
+const Button = styled.button`
+  width: 100px;
+  height: 40px;
+  background: gray;
+  border-radius: 5px;
+  border: 3px solid gray;
+  color: white;
+  margin: 4px;
+  text-align: center;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+`;
+const TitleWrapper = styled.div`
+  display: flex;
+
+  justify-content: space-between;
+  margin-top: 1.5rem;
 `;
