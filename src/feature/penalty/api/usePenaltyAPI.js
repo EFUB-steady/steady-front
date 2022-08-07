@@ -13,10 +13,11 @@ export const usePenaltyAPI = () => {
   const penaltyAPI = async () => {
     setIsLoading(true);
     try {
-      const { data } = await axiosInstance.get("studies/fines");
+      const { data } = await axiosInstanceHeader.get("studies/fines");
       if (data) {
         console.log("성공");
         setPenalty(data);
+        console.log(data);
       }
     } catch (error) {
       console.log("실패");

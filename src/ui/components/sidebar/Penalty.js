@@ -3,6 +3,7 @@ import { Row } from "../commons/Row";
 import { Subtitle2 } from "../../../core/texts";
 import coin from "../../../assets/icon_coin.png";
 import PenaltyAmount from "./PenaltyAmount";
+import PenaltyAmount2 from "./PenaltyAmount2";
 
 export default function Penalty() {
   return (
@@ -23,7 +24,7 @@ export default function Penalty() {
         <Subtitle2>지난주 벌금</Subtitle2>
       </Row>
 
-      <PenaltyAmount />
+      <PenaltyAmount2 />
     </PenaltyBox>
   );
 }

@@ -1,38 +1,17 @@
 import { Row } from "../commons/Row";
 import { Body2, Subtitle2 } from "../../../core/texts";
 import styled from "styled-components";
-import moment from "moment";
 import { usePenaltyAPI } from "../../../feature/penalty/api/usePenaltyAPI";
 import { usePenalty } from "../../../feature/penalty/recoil/usePenalty";
 import { useEffect } from "react";
 
 export default function PenaltyAmount() {
   const { penalty } = usePenalty();
-  const { penaltyAPI, isLoading } = usePenaltyAPI();
+  const { penaltyAPI } = usePenaltyAPI();
 
   useEffect(() => {
     penaltyAPI();
   }, []);
-
-  // // TODO: 에러처리 - API 저장하고 리코일을 실행하는 함수
-  // const { penaltyAPI } = usePenaltyAPI({
-  //   onSuccess: () => {
-  //     console.log("success!!");
-  //   },
-  //   onFail: () => {
-  //     console.log("fail....");
-  //   },
-  // });
-
-  // const penaltyHandler = () => {
-  //   penalty({
-  //     onSuccess: () => {
-  //       penaltyAPI(); // 위에 함수를 이런 식으로 사용
-  //     },
-  //   });
-  // };
-
-  // if (isLoading) return <div>loading...</div>;
 
   return (
     <Row>
