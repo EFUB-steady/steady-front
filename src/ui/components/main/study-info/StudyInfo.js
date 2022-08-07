@@ -9,7 +9,11 @@ export default function StudyInfo() {
   return (
     <>
       <StudyInfoTitle />
-      <Content>{selectedStudy.description}</Content>
+      <Content>
+        {selectedStudy.description
+          ? selectedStudy.description
+          : selectedStudy.summary}
+      </Content>
     </>
   );
 }
