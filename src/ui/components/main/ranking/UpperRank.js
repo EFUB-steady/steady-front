@@ -8,9 +8,10 @@ export default function UpperRank() {
   const renderUpperRank = () => {
     const result = [];
     for (let i = 0; i < 3; i++) {
-      if (ranking[i])
+      if (ranking[i]) {
         result.push(<UpperRankItem ranking={ranking[i]} rank={i + 1} />);
-      if (i < 2) result.push(<Divider />);
+        if (i < 2) result.push(<Divider />);
+      }
     }
     return result;
   };

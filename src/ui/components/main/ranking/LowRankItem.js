@@ -2,13 +2,14 @@ import styled from "styled-components";
 import { Subtitle5 } from "../../../../core/texts";
 
 export default function LowerRankItem({ ranking, rank }) {
-  // TODO: 이름
   return (
     <Wrapper>
       <Rank>
         <Subtitle5> ㆍ {rank}위</Subtitle5>
       </Rank>
-      <User>{/* <Subtitle5>{rank.name}</Subtitle5> */}</User>
+      <User>
+        <Subtitle5>{ranking?.nickname}</Subtitle5>
+      </User>
     </Wrapper>
   );
 }
