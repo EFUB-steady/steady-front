@@ -8,7 +8,7 @@ export default function ({ children, ...props }) {
 
 const StyledLink = styled(Link)`
   color: ${(props) => props.textColor};
-  color: "white";
+  color: black;
   text-decoration: none;
   &:focus,
   &:hover,

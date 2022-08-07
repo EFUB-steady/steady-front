@@ -8,18 +8,16 @@ export const useRankingAPI = () => {
   const { selectedStudyId } = useSelectedStudyId();
   const [isLoading, setIsLoading] = useState(false);
 
-  const rankingAPI = async ({ onSuccess, onFail }) => {
+  const rankingAPI = async () => {
     setIsLoading(true);
     try {
       const { data } = await axiosInstanceHeader.get(
         `studies/ranking/${selectedStudyId}`,
       );
       if (data) {
-        onSuccess && onSuccess();
         setRanking(data);
       }
     } catch (error) {
-      onFail && onFail();
     } finally {
       setIsLoading(false);
     }

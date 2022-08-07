@@ -2,7 +2,7 @@ import { atom } from "recoil";
 
 export const selectedStudyIdState = atom({
   key: "selectedStudyIdState",
-  default: { studyId: null },
+  default: { studyId: 0 },
 });
 
 export const selectedStudyInfoState = atom({

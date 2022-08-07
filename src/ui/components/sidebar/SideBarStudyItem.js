@@ -13,12 +13,14 @@ export default function SideBarStudy({ study }) {
   const navigation = useNavigate();
   const { selectedStudyId, setSelectedStudyId } = useSelectedStudyId();
   const { setIsLeader } = useSelectedStudyIsLeader();
+
   const saveSelectedStudyState = () => {
     if (study.studyId != selectedStudyId) {
       setSelectedStudyId(study.studyId);
     }
+    console.log(selectedStudyId, study.studyId);
     setIsLeader(study.leader);
-    navigation(`/studies/${selectedStudyId}`);
+    navigation(`/studies/${study.studyId}`);
   };
 
   return (

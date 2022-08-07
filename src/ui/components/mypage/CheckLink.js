@@ -11,7 +11,7 @@ function CheckLink() {
           <Input>
             <input type="text" placeholder="https://" />
           </Input>
-          <Button>업로드 하기 </Button>
+          {/* <Button>업로드 하기 </Button> */}
         </AuthBox>
       </Box>
     </>
