@@ -11,12 +11,15 @@ export default function MemberListItem({ study }) {
   const onClickToggle = () => {
     setIsReportOpen((prev) => !prev);
   };
+  console.log(study);
   return (
     <>
       <Wrapper>
         {isReportOpen && (
           <ReportToggle name={study.userNickname} date={study.date} />
         )}
+        <UserName>{study.userNickname}님</UserName>
+
         <TitleWrapper>
           <TItleContainer>
             <TitleIcon src={icon} />
@@ -37,21 +40,32 @@ export default function MemberListItem({ study }) {
           }}
         />
       </Wrapper>
-      <UserName>{study.userNickname}님</UserName>
+
+      <WrapperLink>
+        <TitleWrapper>
+          <TItleContainer>
+            <TitleIcon src={icon} />
+            <Subtitle2>링크 인증</Subtitle2>
+          </TItleContainer>
+        </TitleWrapper>
+        <LinkWrapper>
+          <LinkContext>
+            {study.link == "" ? "링크가 없습니다." : study.link}
+          </LinkContext>
+        </LinkWrapper>
+      </WrapperLink>
 
       <Divider />
     </>
   );
 }
-
 const Divider = styled.div`
   height: 16px;
   background-color: white;
 `;
-
 const Wrapper = styled.div`
   width: 920px;
-  height: 517.5px;
+  height: 520px;
   background-color: ${gray100};
   border: 3px solid #000000;
   margin-top: 40px;
@@ -63,7 +77,7 @@ const WrapperLink = styled.div`
   width: 920px;
   background-color: ${gray100};
   border: 3px solid #000000;
-  margin-top: 40px;
+  margin-top: 10px;
   box-sizing: border-box;
   border-radius: 5px;
 `;
@@ -109,7 +123,7 @@ const TitleIcon = styled.img`
 
 const UserName = styled.div`
   position: absolute;
-  margin-top: -41px;
+  margin-top: 40px;
   background-color: black;
   width: 141px;
   height: 40px;
@@ -161,4 +175,21 @@ const UrlUserCircle = styled.span`
   border: 1px solid #ffffff;
   background-color: ${(props) => props.color};
   margin-right: 13px;
+`;
+
+const LinkWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+`;
+
+const LinkContext = styled.div`
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
 `;
