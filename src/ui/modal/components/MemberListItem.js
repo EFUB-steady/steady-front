@@ -3,18 +3,27 @@ import { gray100, button2Color } from "../../../core/colors";
 import icon from "../../../assets/icon_picture_card_mypage.png";
 import alerticon from "../../../assets/icon_alert_white.png";
 import { Subtitle2 } from "../../../core/texts";
+import { useState } from "react";
+import ReportToggle from "./ReportToggle";
 
 export default function MemberListItem({ study }) {
+  const [isReportOpen, setIsReportOpen] = useState(false);
+  const onClickToggle = () => {
+    setIsReportOpen((prev) => !prev);
+  };
   return (
     <>
       <Wrapper>
+        {isReportOpen && (
+          <ReportToggle name={study.userNickname} date={study.date} />
+        )}
         <TitleWrapper>
           <TItleContainer>
             <TitleIcon src={icon} />
             <Subtitle2>사진 인증</Subtitle2>
           </TItleContainer>
 
-          <IconWrapper>
+          <IconWrapper onClick={() => onClickToggle()}>
             <AlertIcon src={alerticon} />
           </IconWrapper>
         </TitleWrapper>
@@ -90,7 +99,6 @@ const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0px 5px 5px 0px;
 `;
 
 const TitleIcon = styled.img`
