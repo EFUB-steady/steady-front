@@ -7,6 +7,7 @@ export const axiosInstanceHeader = axios.create({
   headers: {
     "Content-Type": "application/json",
     "X-AUTH-TOKEN": localStorage.getItem("accessToken"),
+    "Access-Control-Allow-Origin": "*",
   },
 });
 

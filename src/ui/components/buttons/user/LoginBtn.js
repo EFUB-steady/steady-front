@@ -2,41 +2,27 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useLoginAPI } from "../../../../feature/login/api/useLoginAPI";
 import { useLoginInput } from "../../../../feature/login/recoil/useLoginInput";
-import { useUserAPI } from "../../../../feature/user/api/useUserAPI";
 import { useMyStudyAPI } from "../../../../feature/studies/myStudy/api/useMyStudyAPI";
-import { useRankingAPI } from "../../../../feature/ranking/api/useRankingAPI";
 import LoginFailModal from "../../../modal/modals/LoginFailModal";
 import { useState } from "react";
-import { useMyStudy } from "../../../../feature/studies/myStudy/recoil/useMyStudy";
+import { useSelectedStudyAPI } from "../../../../feature/studies/studySelect/api/useSelectedStudyAPI";
 
 export default function LoginBtn() {
   const { loginAPI, isLoading: isLoginLoading } = useLoginAPI();
   const navigation = useNavigate();
-  const { loginReset } = useLoginInput();
-  const { rankingAPI } = useRankingAPI();
+  const { myStudyAPI } = useMyStudyAPI();
   const [isOpen, setIsOpen] = useState(false);
-
-  // TODO: 에러처리
-  const { userAPI } = useUserAPI({
-    onSuccess: () => {
-      console.log("success!!");
-    },
-    onFail: () => {
-      console.log("fail....");
-    },
-  });
-
-  const { myStudyAPI, isLoading: isMyStudyLoading } = useMyStudyAPI();
-  const { myStudy } = useMyStudy();
+  const { loginReset } = useLoginInput();
 
   const loginHandler = () => {
     loginAPI({
       onSuccess: () => {
         myStudyAPI();
-        userAPI();
-        rankingAPI();
-        loginReset();
-        navigation(`/studies/53`);
+
+        setTimeout(() => {
+          navigation(`/studies/53`); // TODO: 첫페이지로 변경 필요
+          loginReset();
+        }, 1000);
       },
       onFail: () => {
         setIsOpen(true);
@@ -46,7 +32,6 @@ export default function LoginBtn() {
 
   //TODO: 로딩 처리
   if (isLoginLoading) return <div>loading...</div>;
-  if (isMyStudyLoading) return <div>loading...</div>;
 
   return (
     <>
