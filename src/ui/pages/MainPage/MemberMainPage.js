@@ -1,7 +1,4 @@
-import { useEffect } from "react";
 import styled from "styled-components";
-import { useSelectedStudyAPI } from "../../../feature/studies/studySelect/api/useSelectedStudyAPI";
-import { useSelectedStudyId } from "../../../feature/studies/studySelect/recoil/useSelectedStudy";
 import Header from "../../components/header/Header";
 import Mcalendar from "../../components/main/calendar/Mcalendar";
 import Notice from "../../components/main/notice/Notice";
@@ -10,13 +7,6 @@ import Rule from "../../components/main/rule/Rule";
 import StudyInfo from "../../components/main/study-info/StudyInfo";
 
 export default function MemberMainPage() {
-  const { selectedStudyId } = useSelectedStudyId();
-  const { selectedStudyAPI } = useSelectedStudyAPI();
-
-  useEffect(() => {
-    selectedStudyAPI();
-  }, [selectedStudyId]);
-
   return (
     <MainContext>
       <Header />

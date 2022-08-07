@@ -18,11 +18,13 @@ export const useMyStudyAPI = () => {
     try {
       const { data } = await axiosInstanceHeader.get("studies/my-study");
       if (data) {
-        if (selectedStudyId.studyId == null) {
-          setSelectedStudyId(data[0].studyId);
-          setIsLeader(data[0].leader);
-        }
-        console.log("myStudyAPI success!!");
+        setTimeout(() => {
+          if (selectedStudyId.studyId == 0) {
+            setSelectedStudyId(data[0].studyId);
+            setIsLeader(data[0].leader);
+          }
+        }, [1000]);
+
         setMyStudy(data);
       }
     } catch (error) {

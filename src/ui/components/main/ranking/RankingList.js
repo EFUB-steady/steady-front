@@ -3,24 +3,9 @@ import { gray100 } from "../../../../core/colors";
 import UpperRank from "./UpperRank";
 import LowerRank from "./LowerRank";
 import { useRankingAPI } from "../../../../feature/ranking/api/useRankingAPI";
-import { useEffect } from "react";
-import { useSelectedStudyId } from "../../../../feature/studies/studySelect/recoil/useSelectedStudy";
 
 export default function RankingList() {
-  const { selectedStudyId } = useSelectedStudyId();
-
-  const { rankingAPI, isLoading } = useRankingAPI();
-
-  useEffect(() => {
-    rankingAPI({
-      onSuccess: () => {
-        console.log("rankingAPI success!!");
-      },
-      onFail: () => {
-        console.log("rankingAPI fail....");
-      },
-    });
-  }, [selectedStudyId]);
+  const { isLoading } = useRankingAPI();
 
   if (isLoading) return <div>loading...</div>;
   return (

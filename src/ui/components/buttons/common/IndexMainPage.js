@@ -9,8 +9,8 @@ export default function IndexMainPage() {
   const navigation = useNavigate();
   const { setSelectedStudyId } = useSelectedStudyId();
   const buttonClickHandler = () => {
-    navigation("/studies/7");
-    setSelectedStudyId(7);
+    navigation("/studies/53");
+    setSelectedStudyId(53);
   };
 
   return (

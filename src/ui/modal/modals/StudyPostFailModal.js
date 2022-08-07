@@ -1,10 +1,7 @@
-import styled from "styled-components";
 import React from "react";
-import { Dialog } from "@mui/material";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
+import { Dialog, DialogContent, DialogContentText } from "@mui/material";
 
-export default function SignUpFailModal({ isOpen, setIsOpen }) {
+export default function StudyPostFailModal({ isOpen, setIsOpen }) {
   return (
     <Dialog
       open={isOpen}
@@ -19,7 +16,7 @@ export default function SignUpFailModal({ isOpen, setIsOpen }) {
           id="alert-dialog-description"
           style={{ color: "red" }}
         >
-          이미 가입된 계정이거나 입력되지 않은 부분이 있습니다.
+          입력되지 않은 정보가 있습니다.
         </DialogContentText>
       </DialogContent>
     </Dialog>

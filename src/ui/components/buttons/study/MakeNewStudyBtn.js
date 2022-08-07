@@ -3,7 +3,8 @@ import CustomLink from "../../commons/CustomLink";
 
 export default function MakeNewStudyBtn() {
   return (
-    <CustomLink to="/makenew" textColor="white">
+    // <CustomLink to="/makenew" textColor="white">
+    <CustomLink to="/studies" texColor="white">
       <Button>
         <Text>스터디 개설하기</Text>
       </Button>
