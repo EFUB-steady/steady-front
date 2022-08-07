@@ -38,7 +38,7 @@ function CheckPic() {
           </Box2>
           <label for="file">
             <UploadBtn>
-              <div>업로드 하기</div>
+              <div>사진 첨부</div>
             </UploadBtn>
           </label>
         </AuthBox>
@@ -97,7 +97,7 @@ const AuthBox = styled.div`
 const UploadBtn = styled.div`
   width: 108px;
   height: 40px;
-  background: gray;
+  background: black;
   border-radius: 5px;
   color: white;
   display: flex;
@@ -109,4 +109,14 @@ const UploadBtn = styled.div`
   font-size: 14px;
   line-height: 100%;
   margin-top: 15px;
+  border-radius: 5px;
+  border: 3px solid black;
+  &:hover {
+    background: white;
+    color: black;
+  }
+  &:active {
+    background: white;
+    color: black;
+  }
 `;

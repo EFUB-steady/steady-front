@@ -11,7 +11,7 @@ import MyInfo from "../components/mypage/MyInfo";
 import ModifyInfoBtn from "../components/buttons/user/ModifyInfoBtn";
 import React, { useState } from "react";
 import ModifyCompleteBtn from "../components/buttons/user/ModifyCompleteBtn";
-
+import CustomLink from "../components/commons/CustomLink";
 function MyPagePage() {
   const [isNow, setIsNow] = useState(true);
 
@@ -23,7 +23,12 @@ function MyPagePage() {
       <SideBar />
       <MainContext>
         <Header />
-        <DateAndBtn />
+        <TitleWrapper>
+          <DateAndBtn />
+          <CustomLink to="/authpage">
+            <NavButton>오늘의 스터디 인증하기</NavButton>
+          </CustomLink>
+        </TitleWrapper>
         <MidContent>
           <LeftContent>
             <ToDo />
@@ -133,4 +138,36 @@ const InfoConentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+`;
+
+const NavButton = styled.button`
+  width: 200px;
+  height: 40px;
+  background: black;
+  border-radius: 5px;
+  border: 3px solid black;
+  color: white;
+  margin: 4px;
+  text-align: center;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
+  &:active {
+    background: white;
+    color: black;
+  }
+`;
+
+const TitleWrapper = styled.div`
+  display: flex;
+
+  justify-content: space-between;
+  margin-top: 1.5rem;
 `;

@@ -10,9 +10,6 @@ export default function DateAndBtn() {
     <>
       <TitleBox>
         <Title>{formattedToday}</Title>
-        <CustomLink to="/authpage">
-          <Button>오늘의 스터디 인증하기</Button>
-        </CustomLink>
       </TitleBox>
     </>
   );
