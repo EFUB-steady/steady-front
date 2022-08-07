@@ -18,7 +18,6 @@ export default function MemberListItem({ study }) {
             <AlertIcon src={alerticon} />
           </IconWrapper>
         </TitleWrapper>
-
         <img
           src={study.studyPostImageURL}
           alt="img"
@@ -28,8 +27,8 @@ export default function MemberListItem({ study }) {
             objectFit: "cover",
           }}
         />
-        <UserName>{study.userNickname}님</UserName>
       </Wrapper>
+      <UserName>{study.userNickname}님</UserName>
 
       <Divider />
     </>
@@ -102,27 +101,25 @@ const TitleIcon = styled.img`
 
 const UserName = styled.div`
   position: absolute;
-  right: 115px;
-  margin-top: -43px;
+  margin-top: -41px;
   background-color: black;
   width: 141px;
   height: 40px;
   border-radius: 5px;
-  padding-top: -10px;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-const UserCircle = styled.span`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1px solid #ffffff;
-  background-color: ${(props) => props.color};
-  margin-right: 13px;
-`;
+// const UserCircle = styled.span`
+//   width: 20px;
+//   height: 20px;
+//   border-radius: 50%;
+//   border: 1px solid #ffffff;
+//   background-color: ${(props) => props.color};
+//   margin-right: 13px;
+// `;
 
 const InputUrl = styled.input`
   width: 839.5px;
