@@ -6,6 +6,7 @@ import { useStudyListByDateAPI } from "../../../../feature/studies/studyListByDa
 import { useEffect, useState } from "react";
 import StudyListModal from "../../../modal/modals/StudyListModal";
 import SpinnerModal from "../../../modal/modals/SpinnerModal";
+import moment from "moment";
 
 // 제목
 function NavigationLabel(month) {
@@ -30,7 +31,6 @@ function Mcalendar() {
 
   return (
     <>
-      <SpinnerModal isOpen={isSpinner} setIsOpen={setIsSpinner} />
       <StudyListModal isOpen={isOpen} setIsOpen={setIsOpen} />
       <Container>
         <Calendar
@@ -48,13 +48,9 @@ function Mcalendar() {
           next2Label={null}
           // 캘린더 안에 내용물
           tileContent={({ date }) => {
-            const lastDate = new Date(
-              date.getFullYear(),
-              date.getMonth() + 1,
-              0,
-            ).getDate();
+            const today = new Date().getDate();
 
-            return date.getDate() === lastDate ? (
+            return date.getDate() === today ? (
               <div className="dot-container">
                 <div className="dot"></div>
               </div>
@@ -166,17 +162,17 @@ const Container = styled.div`
               center/23% 23%,
             radial-gradient(farthest-side, #ffd600 100%, transparent) top
               right/23% 23%,
-            radial-gradient(farthest-side, #26c983 100%, transparent) left
+            radial-gradient(farthest-side, #26c983 0%, transparent) left
               center/23% 23%,
-            radial-gradient(farthest-side, #9be23f 100%, transparent) center/23%
+            radial-gradient(farthest-side, #9be23f 0%, transparent) center/23%
               23%,
-            radial-gradient(farthest-side, #43bbff 100%, transparent) right
+            radial-gradient(farthest-side, #43bbff 0%, transparent) right
               center/23% 23%,
-            radial-gradient(farthest-side, #286ccf 100%, transparent) bottom
+            radial-gradient(farthest-side, #286ccf 0%, transparent) bottom
               left/23% 23%,
-            radial-gradient(farthest-side, #ff5cef 100%, transparent) bottom
+            radial-gradient(farthest-side, #ff5cef 0%, transparent) bottom
               center/23% 23%,
-            radial-gradient(farthest-side, #934cff 100%, transparent) bottom
+            radial-gradient(farthest-side, #934cff 0%, transparent) bottom
               right/23% 23%;
 
           background-repeat: no-repeat;
