@@ -22,7 +22,6 @@ export default function SideBarStudy({ study }) {
     setIsLeader(study.leader);
     navigation(`/studies/${study.studyId}`);
   };
-  console.log(study);
   return (
     <Wrapper onClick={() => saveSelectedStudyState()}>
       <ImageContainer>

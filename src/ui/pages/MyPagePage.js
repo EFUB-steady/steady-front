@@ -12,12 +12,21 @@ import ModifyInfoBtn from "../components/buttons/user/ModifyInfoBtn";
 import React, { useState } from "react";
 import ModifyCompleteBtn from "../components/buttons/user/ModifyCompleteBtn";
 import CustomLink from "../components/commons/CustomLink";
+import { useStudyListByUserAPI } from "../../feature/studies/studyListByUser/api/useStudyListByUserAPI";
+import { useEffect } from "react";
+import { useStudyListDate } from "../../feature/studyList/recoil/useStudyListDate";
 function MyPagePage() {
   const [isNow, setIsNow] = useState(true);
-
+  const { studyListByUserAPI } = useStudyListByUserAPI();
+  const { selectedDate } = useStudyListDate();
   const handleConfirm = () => {
     isNow ? setIsNow(false) : setIsNow(true);
   };
+
+  useEffect(() => {
+    studyListByUserAPI();
+  }, [selectedDate]);
+
   return (
     <Wrapper>
       <SideBar />

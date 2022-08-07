@@ -1,46 +1,66 @@
+import { Divider } from "@mui/material";
+import { useEffect } from "react";
 import styled from "styled-components";
-import { gray200 } from "../../../core/colors";
-import { Subtitle3 } from "./../../../core/texts";
+import { useStudyListByUser } from "../../../feature/studies/studyListByUser/recoil/useStudyListByUser";
+import MyAuthListItem from "./MyAuthListItem";
 
 export default function MyAuthList() {
+  const { studyListByUser } = useStudyListByUser();
+
+  const renderAuthList1 = () => {
+    const result = [];
+    if (studyListByUser.length == 0) {
+      return <div>등록된 인증이 없습니다.</div>;
+    } else {
+      for (let i = 0; i < studyListByUser.length; i++) {
+        if (studyListByUser[i].studyId == 53) {
+          result.push(
+            <MyAuthListItem
+              title="EFUB 운동 스터디"
+              auth={studyListByUser[i]}
+            />,
+          );
+        }
+      }
+    }
+    {
+      return result;
+    }
+  };
+
+  const renderAuthList2 = () => {
+    const result = [];
+    if (studyListByUser.length == 0) {
+      return <div>등록된 인증이 없습니다.</div>;
+    } else {
+      for (let i = 0; i < studyListByUser.length; i++) {
+        if (studyListByUser[i].studyId == 55) {
+          result.push(
+            <MyAuthListItem
+              title="잔디 채우기 스터디"
+              auth={studyListByUser[i]}
+            />,
+          );
+        }
+      }
+    }
+    {
+      return result;
+    }
+  };
+
+  useEffect(() => {
+    renderAuthList1();
+  }, [studyListByUser]);
+
   return (
     <ListContaniner>
-      <Box>
-        <TitleWrapper>
-          <Subtitle3>
-            <div style={{ marginLeft: "10px" }}>스터디 이름</div>
-          </Subtitle3>
-        </TitleWrapper>
-      </Box>
-      <Box>
-        <TitleWrapper>
-          <Subtitle3>
-            <div style={{ marginLeft: "10px" }}>스터디 이름</div>
-          </Subtitle3>
-        </TitleWrapper>
-      </Box>
+      {renderAuthList1()}
+      <Divider style={{ marginTop: 20, marginBottom: 10 }} />
+      {renderAuthList2()}
     </ListContaniner>
   );
 }
-
-const Box = styled.div`
-  width: 480px;
-  height: 300px;
-  border: 3px solid #000000;
-  border-radius: 5px;
-  margin-bottom: 20px;
-`;
-
-const TitleWrapper = styled.div`
-  width: 477px;
-  height: 22px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  border-bottom: 3px solid #000000;
-  border-right: 3px solid #000000;
-  background-color: ${gray200};
-`;
 
 const ListContaniner = styled.div`
   overflow: scroll;

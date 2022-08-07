@@ -1,19 +1,9 @@
 import styled from "styled-components";
-import ModifyInfoBtn from "../buttons/user/ModifyInfoBtn";
-
 import { gray100 } from "../../../core/colors";
-import { Input } from "@mui/material";
 import { useUser } from "../../../feature/user/recoil/useUser";
-import ModifyCompleteBtn from "../buttons/user/ModifyCompleteBtn";
-import React, { useState } from "react";
+import React from "react";
 
 export default function ModifyMyInfo() {
-  const [nickInput, setNickInput] = useState("");
-  const [nameInput, setNameInput] = useState("");
-  const [idInput, setIdInput] = useState("");
-  const [pwInput, setPwInput] = useState("");
-  const [phoneNumInput, setPhoneNumInput] = useState("");
-
   const { user } = useUser();
 
   return (
@@ -29,27 +19,6 @@ export default function ModifyMyInfo() {
       <SignBox>
         <Text>ID</Text>
         <InputBox>{user.email}</InputBox>
-      </SignBox>
-      <SignBox>
-        <Text>PW</Text>
-        <Input
-          placeholder="*******"
-          value={pwInput}
-          onChange={(e) => {
-            setPwInput(e.target.value);
-          }}
-          fullWidth={true}
-          disableUnderline={true}
-          style={{
-            backgroundColor: gray100,
-            padding: "8px",
-            fontSize: 10,
-            fontWeight: 400,
-            width: 220,
-            height: 28,
-            borderRadius: "5px",
-          }}
-        />
       </SignBox>
       <SignBox>
         <Text>연락처</Text>

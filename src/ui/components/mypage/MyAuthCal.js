@@ -5,11 +5,18 @@ import "react-datepicker/dist/react-datepicker.css";
 import ko from "date-fns/locale/ko";
 import Form from "react-bootstrap/Form";
 import { getYear } from "date-fns";
+import { useStudyListDate } from "../../../feature/studyList/recoil/useStudyListDate";
 registerLocale("ko", ko);
 const _ = require("lodash");
 
 const MyAuthList = () => {
   const [startDate, setStartDate] = useState(new Date());
+  const { setSelectedDate } = useStudyListDate();
+
+  const onChangeHandler = (date) => {
+    setStartDate(date);
+    setSelectedDate(date);
+  };
 
   const years = _.range(1990, getYear(new Date()) + 1, 1);
   const months = [
@@ -39,10 +46,10 @@ const MyAuthList = () => {
           position: "absolute",
           fontSize: "1rem",
         }}
-        minDate={new Date()}
+        // minDate={new Date()}
         dateFormat="yyyy/MM/dd (eee)"
         selected={startDate}
-        onChange={(date) => setStartDate(date)}
+        onChange={(date) => onChangeHandler(date)}
         customInput={
           <Form.Control
             as="textarea"
