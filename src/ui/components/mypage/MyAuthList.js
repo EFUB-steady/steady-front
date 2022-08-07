@@ -7,11 +7,15 @@ import MyAuthListItem from "./MyAuthListItem";
 export default function MyAuthList() {
   const { studyListByUser } = useStudyListByUser();
 
-  const renderAuthList1 = () => {
-    const result = [];
+  const renderNoResult = () => {
     if (studyListByUser.length == 0) {
       return <div>등록된 인증이 없습니다.</div>;
-    } else {
+    }
+  };
+
+  const renderAuthList1 = () => {
+    const result = [];
+    if (studyListByUser.length != 0) {
       for (let i = 0; i < studyListByUser.length; i++) {
         if (studyListByUser[i].studyId == 53) {
           result.push(
@@ -30,9 +34,7 @@ export default function MyAuthList() {
 
   const renderAuthList2 = () => {
     const result = [];
-    if (studyListByUser.length == 0) {
-      return <div>등록된 인증이 없습니다.</div>;
-    } else {
+    if (studyListByUser.length != 0) {
       for (let i = 0; i < studyListByUser.length; i++) {
         if (studyListByUser[i].studyId == 55) {
           result.push(
@@ -55,6 +57,7 @@ export default function MyAuthList() {
 
   return (
     <ListContaniner>
+      {renderNoResult()}
       {renderAuthList1()}
       <Divider style={{ marginTop: 20, marginBottom: 10 }} />
       {renderAuthList2()}
