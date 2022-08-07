@@ -5,7 +5,6 @@ import { useLoginInput } from "../../../../feature/login/recoil/useLoginInput";
 import { useMyStudyAPI } from "../../../../feature/studies/myStudy/api/useMyStudyAPI";
 import LoginFailModal from "../../../modal/modals/LoginFailModal";
 import { useState } from "react";
-import { useSelectedStudyAPI } from "../../../../feature/studies/studySelect/api/useSelectedStudyAPI";
 import { usePenaltyAPI } from "../../../../feature/penalty/api/usePenaltyAPI";
 
 export default function LoginBtn() {

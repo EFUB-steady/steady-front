@@ -6,7 +6,7 @@ export default function NoticeItem() {
   const { noticeOne } = useNoticeOne();
   return (
     <Wrapper>
-      <Body2>ㆍ {noticeOne.content}</Body2>
+      <Body2>ㆍ {noticeOne[0].content}</Body2>
     </Wrapper>
   );
 }
