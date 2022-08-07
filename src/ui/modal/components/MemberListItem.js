@@ -1,11 +1,10 @@
 import styled from "styled-components";
-
 import { gray100, button2Color } from "../../../core/colors";
 import icon from "../../../assets/icon_picture_card_mypage.png";
 import alerticon from "../../../assets/icon_alert_white.png";
 import { Subtitle2 } from "../../../core/texts";
 
-export default function MemberListItem({ member }) {
+export default function MemberListItem({ study }) {
   return (
     <>
       <Wrapper>
@@ -14,33 +13,25 @@ export default function MemberListItem({ member }) {
             <TitleIcon src={icon} />
             <Subtitle2>사진 인증</Subtitle2>
           </TItleContainer>
+
           <IconWrapper>
             <AlertIcon src={alerticon} />
           </IconWrapper>
         </TitleWrapper>
-        <UserName>
-          <UserCircle color={member.color} /> {member.name}님
-        </UserName>
+
+        <img
+          src={study.studyPostImageURL}
+          alt="img"
+          style={{
+            width: "100%",
+            height: "92.5%",
+            objectFit: "cover",
+          }}
+        />
+        <UserName>{study.userNickname}님</UserName>
       </Wrapper>
 
       <Divider />
-
-      <WrapperLink>
-        <TitleWrapper>
-          <TItleContainer>
-            <TitleIcon src={icon} />
-            <Subtitle2>URL 인증</Subtitle2>
-          </TItleContainer>
-          <IconWrapper>
-            <AlertIcon src={alerticon} />
-          </IconWrapper>
-        </TitleWrapper>
-
-        <div>{member.link}</div>
-        <UrlUserName>
-          <UrlUserCircle color={member.color} /> {member.name}님
-        </UrlUserName>
-      </WrapperLink>
     </>
   );
 }
@@ -110,12 +101,14 @@ const TitleIcon = styled.img`
 `;
 
 const UserName = styled.div`
+  position: absolute;
+  right: 115px;
+  margin-top: -43px;
   background-color: black;
   width: 141px;
   height: 40px;
   border-radius: 5px;
-  margin-top: 432.4px;
-  margin-left: 775px;
+  padding-top: -10px;
   color: white;
   display: flex;
   justify-content: center;

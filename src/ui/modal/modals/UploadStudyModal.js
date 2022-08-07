@@ -114,7 +114,7 @@ export default function UploadStudyModal({ isOpen, setIsOpen }) {
                   name="profile_files"
                   accept="img/*"
                 />
-                <Button type="submit" id="file">
+                <Button type="submit" id="file" onClick={() => closeHandler()}>
                   <ButtonText>저장하기</ButtonText>
                 </Button>
               </form>
