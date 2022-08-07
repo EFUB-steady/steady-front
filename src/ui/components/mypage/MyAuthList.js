@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { gray200 } from "../../../core/colors";
 import { Subtitle3 } from "./../../../core/texts";
 
 export default function MyAuthList() {
@@ -6,12 +7,16 @@ export default function MyAuthList() {
     <ListContaniner>
       <Box>
         <TitleWrapper>
-          <Subtitle3>스터디 이름</Subtitle3>
+          <Subtitle3>
+            <div style={{ marginLeft: "10px" }}>스터디 이름</div>
+          </Subtitle3>
         </TitleWrapper>
       </Box>
       <Box>
         <TitleWrapper>
-          <Subtitle3>스터디 이름</Subtitle3>
+          <Subtitle3>
+            <div style={{ marginLeft: "10px" }}>스터디 이름</div>
+          </Subtitle3>
         </TitleWrapper>
       </Box>
     </ListContaniner>
@@ -28,9 +33,13 @@ const Box = styled.div`
 
 const TitleWrapper = styled.div`
   width: 477px;
-  height: 20px;
-
+  height: 22px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
   border-bottom: 3px solid #000000;
+  border-right: 3px solid #000000;
+  background-color: ${gray200};
 `;
 
 const ListContaniner = styled.div`

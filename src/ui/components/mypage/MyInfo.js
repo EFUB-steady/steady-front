@@ -47,6 +47,7 @@ export default function ModifyMyInfo() {
             fontWeight: 400,
             width: 220,
             height: 28,
+            borderRadius: "5px",
           }}
         />
       </SignBox>
@@ -70,15 +71,6 @@ const Text = styled.div`
   align-items: center;
 `;
 
-const InfoHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 380px;
-
-  padding-top: 40px;
-  margin-right: 20px;
-`;
-
 const SignBox = styled.div`
   display: flex;
   flex-direction: row;
@@ -92,4 +84,5 @@ const InputBox = styled.div`
   font-weight: 400;
   width: 220px;
   height: 28px;
+  border-radius: 5px;
 `;
