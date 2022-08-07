@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Dialog, DialogContent } from "@mui/material";
 import StudyModalTitle from "../components/StudyModalTitle";
 import { useStudyPostInput } from "../../../feature/studies/studyPost/recoil/useStudyPost";
-import { StudyModalPic } from "../components/StudyModalPic";
+// import { StudyModalPic } from "../components/StudyModalPic";
 import { StudyModalUrl } from "../components/StudyModalUrl";
 export default function UploadStudySupplyModal({ isOpen, setIsOpen }) {
   const { setLink, setImageUrl } = useStudyPostInput();
@@ -31,7 +31,7 @@ export default function UploadStudySupplyModal({ isOpen, setIsOpen }) {
             buttonText={"저장하기"}
           />
           {/* <MemberList /> */}
-          <StudyModalPic />
+          {/* <StudyModalPic /> */}
           <StudyModalUrl />
         </DialogContent>
       </ContentWrapper>

@@ -10,6 +10,9 @@ export const useStudyListByDateAPI = () => {
 
   // TODO: 에러처리
   const studyListByDateAPI = async () => {
+    console.log(
+      `list link: /studyPosts/studies/${selectedStudyId}/${formattedDate}`,
+    );
     try {
       const { data } = await axiosInstanceHeader.get(
         `/studyPosts/studies/${selectedStudyId}/${formattedDate}`,
@@ -17,6 +20,7 @@ export const useStudyListByDateAPI = () => {
 
       if (data) {
         setStudyListByDate(data);
+        console.log(data);
       }
     } catch (error) {
       console.log(error);
