@@ -6,11 +6,13 @@ import { useMyStudyAPI } from "../../../../feature/studies/myStudy/api/useMyStud
 import LoginFailModal from "../../../modal/modals/LoginFailModal";
 import { useState } from "react";
 import { useSelectedStudyAPI } from "../../../../feature/studies/studySelect/api/useSelectedStudyAPI";
+import { usePenaltyAPI } from "../../../../feature/penalty/api/usePenaltyAPI";
 
 export default function LoginBtn() {
   const { loginAPI, isLoading: isLoginLoading } = useLoginAPI();
   const navigation = useNavigate();
   const { myStudyAPI } = useMyStudyAPI();
+  const { penaltyAPI } = usePenaltyAPI();
   const [isOpen, setIsOpen] = useState(false);
   const { loginReset } = useLoginInput();
 
@@ -18,7 +20,7 @@ export default function LoginBtn() {
     loginAPI({
       onSuccess: () => {
         myStudyAPI();
-
+        penaltyAPI();
         setTimeout(() => {
           navigation(`/studies/53`); // TODO: 첫페이지로 변경 필요
           loginReset();
