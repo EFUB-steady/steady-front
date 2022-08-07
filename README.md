@@ -92,6 +92,9 @@ STEADY DAY와 함께라면,<br>
 <br>
 이번 주엔 꼭 1위를 차지해 보세요!
 
+![image](https://user-images.githubusercontent.com/101639449/183287966-5615c0fe-3ebb-4cfe-8893-306c5b523814.png)
+
+
 
 ### `5️⃣스터디 개설하기 for 방장 `
 직접 스터디를 운영하고 싶은 당신! <br>
