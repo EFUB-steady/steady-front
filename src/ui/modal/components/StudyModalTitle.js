@@ -15,13 +15,15 @@ export default function StudyModalTitle({ date, titleText, buttonText }) {
         <Title>
           {formattedDate} {titleText}
         </Title>
-        <Button
-          onClick={() => {
-            (imageUrl != "" || link != "") && studyPostAPI();
-          }}
-        >
-          <ButtonText>{buttonText}</ButtonText>
-        </Button>
+        {buttonText != "" && (
+          <Button
+            onClick={() => {
+              (imageUrl != "" || link != "") && studyPostAPI();
+            }}
+          >
+            <ButtonText>{buttonText}</ButtonText>
+          </Button>
+        )}
       </Wrapper>
       <Divider />
     </>

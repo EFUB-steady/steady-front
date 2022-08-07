@@ -17,6 +17,7 @@ export const useStudyListByDateAPI = () => {
 
       if (data) {
         setStudyListByDate(data);
+        console.log("studyListByDate:", data);
       }
     } catch (error) {
       console.log(error);

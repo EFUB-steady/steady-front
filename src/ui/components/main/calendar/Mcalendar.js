@@ -3,8 +3,9 @@ import "../../../../core/reset.css";
 import Calendar from "react-calendar";
 import { useStudyListDate } from "../../../../feature/studyList/recoil/useStudyListDate";
 import { useStudyListByDateAPI } from "../../../../feature/studies/studyListByDate/api/useStudyListByDateAPI";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import StudyListModal from "../../../modal/modals/StudyListModal";
+import SpinnerModal from "../../../modal/modals/SpinnerModal";
 
 // 제목
 function NavigationLabel(month) {
@@ -16,14 +17,20 @@ function Mcalendar() {
   const { selectedDate, setSelectedDate } = useStudyListDate();
   const { studyListByDateAPI } = useStudyListByDateAPI();
   const [isOpen, setIsOpen] = useState(false);
+  const [isSpinner, setIsSpinner] = useState(false);
 
-  const onClickDayHandler = () => {
-    setIsOpen(true);
+  useEffect(() => {
+    setIsSpinner(true);
     studyListByDateAPI();
-  };
+    setTimeout(() => {
+      setIsSpinner(false);
+      setIsOpen(true);
+    }, [4000]);
+  }, [selectedDate]);
 
   return (
     <>
+      <SpinnerModal isOpen={isSpinner} setIsOpen={setIsSpinner} />
       <StudyListModal isOpen={isOpen} setIsOpen={setIsOpen} />
       <Container>
         <Calendar
@@ -40,7 +47,6 @@ function Mcalendar() {
           prev2Label={null}
           next2Label={null}
           // 캘린더 안에 내용물
-          onClickDay={onClickDayHandler}
           tileContent={({ date }) => {
             const lastDate = new Date(
               date.getFullYear(),
