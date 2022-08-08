@@ -92,10 +92,9 @@ PW: test5
 <img src="https://user-images.githubusercontent.com/101639449/183249382-45783ef0-10c4-4dec-a09b-b7e949a62730.png" width="800" />
 
 
-
-
 <br>
 
+![image](https://user-images.githubusercontent.com/101639449/183435255-e4f6f6c2-b64f-4859-8a6e-0e285a6faef7.png)
 
 
 
@@ -109,6 +108,9 @@ PW: test5
 
 
 ### `5️⃣ 벌금 정산`
+
+![image](https://user-images.githubusercontent.com/101639449/183434827-9464153c-0060-4337-bc63-a42070d1db19.png)
+
 스터디 개설 시 방장은 벌금 규칙을 지정해야 합니다.<br>
 방장이 지정한대로, 지각 시와 결석 시 벌금이 각기 책정됩니다.<br>
 <br>
