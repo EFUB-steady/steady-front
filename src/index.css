@@ -1,7 +1,8 @@
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
-
-* {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
-    "Malgun Gothic", sans-serif;
+@font-face {
+  font-family: "Bauhaus93";
+  src: url("../src/core/font/BAUHS93.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("../src/core/font/Pretendard-Regular.ttf") format("truetype");
 }
